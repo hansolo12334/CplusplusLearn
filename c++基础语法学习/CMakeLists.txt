@@ -44,3 +44,8 @@ add_executable(4_11 ${PROJECT_SOURCE_DIR}/src/4_11字符/4_11.cc)
 add_executable(4_12 ${PROJECT_SOURCE_DIR}/src/4_12类型转换和static_cast简介/4_12.cc)
 add_executable(4_13 ${PROJECT_SOURCE_DIR}/src/4_13const变量和符号常量/4_13.cc)
 add_executable(4_14 ${PROJECT_SOURCE_DIR}/src/4_14编译时常量_常量表达式和constexpr/4_14.cc)
+add_executable(4_15 ${PROJECT_SOURCE_DIR}/src/4_15文字/4_15文字.cc)
+
+add_executable(4_16 ${PROJECT_SOURCE_DIR}/src/4_16数字系统/4_16数字系统.cc)
+
+add_executable(4_17 ${PROJECT_SOURCE_DIR}/src/4_17字符串string/4_17字符串string.cc)
