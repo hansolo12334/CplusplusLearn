@@ -48,4 +48,13 @@ add_executable(4_15 ${PROJECT_SOURCE_DIR}/src/4_15文字/4_15文字.cc)
 
 add_executable(4_16 ${PROJECT_SOURCE_DIR}/src/4_16数字系统/4_16数字系统.cc)
 
-add_executable(4_17 ${PROJECT_SOURCE_DIR}/src/4_17字符串string/4_17字符串string.cc)
+#新
+#添加子目录 编译CMake
+#message
+message("使用子目录寻找CMakeLists")
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/4_17字符串string)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/4_18string_view)
+
+
+#add_executable(4_17 ${PROJECT_SOURCE_DIR}/src/4_17字符串string/4_17字符串string.cc)
