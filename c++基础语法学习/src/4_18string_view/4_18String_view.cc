@@ -45,5 +45,16 @@ int main()
     printString(std::string{s5});
     //2. 通过 static_cast 运算符进行显式类型转换
     printString(static_cast<std::string>(s5));
+
+    //在双引号后使用sv后缀创建带有类型的std::string_view字符串文字
+    using namespace std::string_literals;
+    using namespace std::string_view_literals;
+    std::cout << "moo\n"sv;
+
+    //std::string_view支持 constexpr
+    constexpr std::string_view s7{"helll"};
+    std::cout << s7 << '\n';
+
+
     return 0;
 }
