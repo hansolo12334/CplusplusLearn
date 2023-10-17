@@ -21,6 +21,5 @@ int main()
 
     std::string_view name { getName() }; // name initialized with return value of function
     std::cout << name << '\n'; // undefined behavior ????没出错
-
     return 0;
 }
