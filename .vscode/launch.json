@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/hansolo/CplusplusLearn/c++基础语法学习/src/4_18string_view",
-      "program": "/home/hansolo/CplusplusLearn/c++基础语法学习/src/4_18string_view/build/Debug/outDebug",
+      "cwd": "/home/hansolo/CplusplusLearn/c++基础语法学习/src/4_17字符串string",
+      "program": "/home/hansolo/CplusplusLearn/c++基础语法学习/src/4_17字符串string/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
