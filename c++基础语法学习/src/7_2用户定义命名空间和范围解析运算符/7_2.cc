@@ -21,5 +21,11 @@ int main()
     Hh::Ll::print();//嵌套
 
     ::print();//call 全局命名空间
+
+
+    //C++允许创建命名空间别名 将一长串命名空间暂时缩短为更短的名称
+    namespace Hansolo = Koo::Soo;
+    std::cout << Hansolo ::add(1, 2) << '\n';
+
     return 0;
 }

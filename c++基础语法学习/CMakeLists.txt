@@ -103,4 +103,22 @@ target_link_libraries(7_2 Dosomething7_21)
 #方式二 直接调用头文件对应的cc
 #add_executable(7_2 ${PROJECT_SOURCE_DIR}/src/7_2用户定义命名空间和范围解析运算符/7_2.cc src/7_2用户定义命名空间和范围解析运算符/dosomething7_21.cc)
 
+message("编译7_3")
+add_executable(7_3_test ${PROJECT_SOURCE_DIR}/src/7_3局部变量/7_3_test.cc)
+
+message("编译7_4")
+add_executable(7_4 ${PROJECT_SOURCE_DIR}/src/7_4全局变量/7_4.cc)
+
+message("编译7_5")
+add_executable(7_5 ${PROJECT_SOURCE_DIR}/src/7_5变量阴影_名称隐藏/7_5.cc)
+
+message("编译7_6")
+add_executable(7_6 ${PROJECT_SOURCE_DIR}/src/7_6内联/7_6.cc)
+
+message("编译7_7")
+add_executable(7_7 ${PROJECT_SOURCE_DIR}/src/7_7外部联系和可变前向声明/7_7.cc
+                    src/7_7外部联系和可变前向声明/extern_fun.cc)
+
+
+
 #add_executable(4_17 ${PROJECT_SOURCE_DIR}/src/4_17字符串string/4_17字符串string.cc)
