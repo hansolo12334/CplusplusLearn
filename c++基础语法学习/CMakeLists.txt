@@ -119,6 +119,18 @@ message("编译7_7")
 add_executable(7_7 ${PROJECT_SOURCE_DIR}/src/7_7外部联系和可变前向声明/7_7.cc
                     src/7_7外部联系和可变前向声明/extern_fun.cc)
 
+message("编译7_71")
+add_executable(7_71 ${PROJECT_SOURCE_DIR}/src/7_7外部联系和可变前向声明/7_71.cc)
 
+
+message("编译7_9")
+add_executable(7_9 ${PROJECT_SOURCE_DIR}/src/7_9在多个文件之间共享全局常量_使用内联变量/c++17/7_9.cc)
+
+message("编译7_92")
+include_directories(${PROJECT_SOURCE_DIR}/include/7_9/c++17前)
+add_executable(7_92
+            ${PROJECT_SOURCE_DIR}/src/7_9在多个文件之间共享全局常量_使用内联变量/c++17前/7_92.cc
+            src/7_9在多个文件之间共享全局常量_使用内联变量/c++17前/constants_before17_2.cc
+                )
 
 #add_executable(4_17 ${PROJECT_SOURCE_DIR}/src/4_17字符串string/4_17字符串string.cc)
