@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+#SET(CMAKE_COLOR_MAKEFILE ON)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
@@ -178,3 +179,48 @@ add_executable(7_15_3
                 ${PROJECT_SOURCE_DIR}/src/第七章/7_15未命名和内联命名空间/7_15_3.cc
                 )
 #add_executable(4_17 ${PROJECT_SOURCE_DIR}/src/4_17字符串string/4_17字符串string.cc)
+
+message("编译7_test")
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/第七章/7_测试)
+
+
+message("编译8_1")
+add_executable(8_1
+                ${PROJECT_SOURCE_DIR}/src/第八章/8_2if语句和块/8_1.cc
+                )
+message("编译8_3")
+
+add_executable(8_3
+                ${PROJECT_SOURCE_DIR}/src/第八章/8_3switch语句/8_3.cc
+                )
+target_compile_options(8_3 PUBLIC -W -Wall)
+
+message("编译8_3_test")
+add_executable(8_3_test
+                ${PROJECT_SOURCE_DIR}/src/第八章/8_3switch语句/test.cc
+                )
+
+message("编译8_4")
+add_executable(8_4
+                ${PROJECT_SOURCE_DIR}/src/第八章/8_4Goto语句/8_4.cc
+                )
+
+message("编译8_5_test")
+add_executable(8_5_test
+                ${PROJECT_SOURCE_DIR}/src/第八章/8_5Loop和while/test.cc
+                )
+
+message("编译8_7")
+add_executable(8_7
+                ${PROJECT_SOURCE_DIR}/src/第八章/8_7For语句/8_7.cc
+                )
+
+message("编译8_9")
+add_executable(8_9
+                ${PROJECT_SOURCE_DIR}/src/第八章/8_9Halts提前退出程序/8_9.cc
+                )
+
+message("编译8_11")
+add_executable(8_11
+                ${PROJECT_SOURCE_DIR}/src/第八章/8_11Assert和static_assert/8_11.cc
+                )
