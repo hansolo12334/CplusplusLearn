@@ -224,3 +224,36 @@ message("编译8_11")
 add_executable(8_11
                 ${PROJECT_SOURCE_DIR}/src/第八章/8_11Assert和static_assert/8_11.cc
                 )
+message("编译8_12")
+add_executable(8_12 ${PROJECT_SOURCE_DIR}/src/第八章/8_12随机数生成/8_12.cc)
+
+message("编译8_12_Mersenne_Twister")
+add_executable(8_12_Mersenne_Twister ${PROJECT_SOURCE_DIR}/src/第八章/8_12随机数生成/8_12梅森旋转算法.cc)
+
+message("编译8_12设置随机种子")
+add_executable(8_12_random_seed ${PROJECT_SOURCE_DIR}/src/第八章/8_12随机数生成/8_12设置随机种子.cc)
+
+message("编译8_测试")
+add_executable(8_test ${PROJECT_SOURCE_DIR}/src/第八章/8_测试/8_test.cc)
+
+message("编译8_测试")
+include_directories(${PROJECT_SOURCE_DIR}/src/第八章/8_测试/include)
+add_executable(8_test2 ${PROJECT_SOURCE_DIR}/src/第八章/8_测试/8_test2.cc)
+
+message("编译10_1")
+add_executable(10_1 ${PROJECT_SOURCE_DIR}/src/第十章/10_1隐式类型转换/10_1.cc)
+
+message("编译10_2")
+add_executable(10_2 ${PROJECT_SOURCE_DIR}/src/第十章/10_2浮点和integral_promotion/10_2.cc)
+
+message("编译10_3")
+add_executable(10_3 ${PROJECT_SOURCE_DIR}/src/第十章/10_3数值转换/10_3.cc)
+
+message("编译10_5")
+add_executable(10_5 ${PROJECT_SOURCE_DIR}/src/第十章/10_5显式类型转换/10_5.cc)
+
+message("编译10_7")
+add_executable(10_7 ${PROJECT_SOURCE_DIR}/src/第十章/10_7类型定义和类型别名/10_7.cc)
+
+message("编译10_8")
+add_executable(10_8 ${PROJECT_SOURCE_DIR}/src/第十章/10_8使用auto关键字为对象类型推导type_deduction/10_8.cc)
