@@ -269,3 +269,32 @@ add_executable(10_11 ${PROJECT_SOURCE_DIR}/src/第十章/10_11函数重载区分
 
 message("编译10_13")
 add_executable(10_13 ${PROJECT_SOURCE_DIR}/src/第十章/10_13删除函数/10_13.cc)
+
+message("编译10_14")
+add_executable(10_14 ${PROJECT_SOURCE_DIR}/src/第十章/10_14默认参数/10_14.cc)
+
+message("编译10_15")
+add_executable(10_15 ${PROJECT_SOURCE_DIR}/src/第十章/10_15函数模板/10_15.cc)
+
+message("编译10_16")
+add_executable(10_16 ${PROJECT_SOURCE_DIR}/src/第十章/10_16函数模板实例化/10_16.cc)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/第十章/10_16函数模板实例化)
+
+message("编译10_17")
+add_executable(10_17 ${PROJECT_SOURCE_DIR}/src/第十章/10_17具有多种模板类型的函数模板/10_17.cc)
+
+message("编译10_18")
+add_executable(10_18 ${PROJECT_SOURCE_DIR}/src/第十章/10_18非类型模板参数/10_18.cc)
+
+message("编译10_test")
+add_executable(10_test ${PROJECT_SOURCE_DIR}/src/第十章/10_18非类型模板参数/test.cc)
+
+message("编译10_test2")
+add_executable(10_test2 ${PROJECT_SOURCE_DIR}/src/第十章/10_18非类型模板参数/test2.cc)
+
+message("编译10_test3")
+add_executable(10_test3 ${PROJECT_SOURCE_DIR}/src/第十章/10_18非类型模板参数/test3.cc)
+
+message("编译12_test")
+add_executable(12_test ${PROJECT_SOURCE_DIR}/src/第十二章/12_2值类别_左值和右值/test.cc)

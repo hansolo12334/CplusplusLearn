@@ -44,6 +44,6 @@ int main()
     printInt(2);
     //printInt ('a');//error: use of deleted function ‘void printInt(char)’
 
-    printDouble('a');//error: use of deleted function ‘void printDouble(T) [with T = char]’
+   // printDouble('a');//error: use of deleted function ‘void printDouble(T) [with T = char]’
 
 }
