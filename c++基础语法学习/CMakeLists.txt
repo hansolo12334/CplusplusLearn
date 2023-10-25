@@ -257,3 +257,15 @@ add_executable(10_7 ${PROJECT_SOURCE_DIR}/src/第十章/10_7类型定义和类�
 
 message("编译10_8")
 add_executable(10_8 ${PROJECT_SOURCE_DIR}/src/第十章/10_8使用auto关键字为对象类型推导type_deduction/10_8.cc)
+
+message("编译10_9")
+add_executable(10_9 ${PROJECT_SOURCE_DIR}/src/第十章/10_9函数的类型推导/10_9.cc)
+
+message("编译10_10")
+add_executable(10_10 ${PROJECT_SOURCE_DIR}/src/第十章/10_10函数重载简介/10_10.cc)
+
+message("编译10_11")
+add_executable(10_11 ${PROJECT_SOURCE_DIR}/src/第十章/10_11函数重载区分/10_11.cc)
+
+message("编译10_13")
+add_executable(10_13 ${PROJECT_SOURCE_DIR}/src/第十章/10_13删除函数/10_13.cc)
