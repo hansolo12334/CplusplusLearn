@@ -296,5 +296,24 @@ add_executable(10_test2 ${PROJECT_SOURCE_DIR}/src/第十章/10_18非类型模板
 message("编译10_test3")
 add_executable(10_test3 ${PROJECT_SOURCE_DIR}/src/第十章/10_18非类型模板参数/test3.cc)
 
+
 message("编译12_test")
 add_executable(12_test ${PROJECT_SOURCE_DIR}/src/第十二章/12_2值类别_左值和右值/test.cc)
+
+message("编译12_7")
+add_executable(12_7 ${PROJECT_SOURCE_DIR}/src/第十二章/12_7指针/12_7.cc)
+
+message("编译12_7_dangling_pointer")
+add_executable(12_7_dangling_pointer ${PROJECT_SOURCE_DIR}/src/第十二章/12_7指针/dangling_pointer.cc)
+
+message("编译12_8")
+add_executable(12_8 ${PROJECT_SOURCE_DIR}/src/第十二章/12_8空指针/12_8.cc)
+
+message("编译12_9")
+add_executable(12_9 ${PROJECT_SOURCE_DIR}/src/第十二章/12_9指针和常量/12_9.cc)
+
+message("编译12_10")
+add_executable(12_10 ${PROJECT_SOURCE_DIR}/src/第十二章/12_10按地址传递/12_10.cc)
+
+message("编译12_12")
+add_executable(12_12 ${PROJECT_SOURCE_DIR}/src/第十二章/12_12按引用返回和按地址返回/12_12.cc)
