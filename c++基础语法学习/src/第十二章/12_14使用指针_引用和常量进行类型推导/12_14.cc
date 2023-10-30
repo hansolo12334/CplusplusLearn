@@ -29,7 +29,16 @@ const int *const ptr3;//左侧的const是低级，右侧的const是高级
 
 
 //常量推导和常量引用
+//与引用不同，类型推导不会删除指针：
 
+std::string *getPtr();
+
+// 类型推导和指针
+// 与引用不同，类型推导不会删除指针：
+auto ptr1{getPtr()};
+//我们还可以将星号与指针类型推导结合使用：
+auto* ptr2{ getPtr() };
+//auto 和 auto* 的区别
 
 int main()
 {

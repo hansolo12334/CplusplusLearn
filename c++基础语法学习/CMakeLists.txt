@@ -1,7 +1,7 @@
 ##1. cmake基础学习 预处理器 指令 宏定义 标头保护学习 20230901
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.20)
 project(CppPorject)
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -320,3 +320,23 @@ add_executable(12_12 ${PROJECT_SOURCE_DIR}/src/第十二章/12_12按引用返回
 
 # message("编译12_14")
 # add_executable(12_14 ${PROJECT_SOURCE_DIR}/src/第十二章/12_14使用指针_引用和常量进行类型推导/12_14.cc)
+
+message("编译12_chapter_test")
+add_executable(12_chapter_test ${PROJECT_SOURCE_DIR}/src/第十二章/12_test/12_test.cc)
+
+message("编译13_1")
+include_directories(${PROJECT_SOURCE_DIR}/src/第十三章/13_1程序定义_用户定义类型简介/include)
+add_executable(13_1 ${PROJECT_SOURCE_DIR}/src/第十三章/13_1程序定义_用户定义类型简介/13_1程序定义_用户定义类型简介.cc)
+
+message("编译13_2")
+add_executable(13_2 ${PROJECT_SOURCE_DIR}/src/第十三章/13_2无作用域枚举/13_2.cc)
+
+message("编译13_2_test")
+add_executable(13_2_test ${PROJECT_SOURCE_DIR}/src/第十三章/13_2无作用域枚举/13_2test.cc)
+
+message("编译13_3")
+add_executable(13_3 ${PROJECT_SOURCE_DIR}/src/第十三章/13_3无作用域枚举的输入和输出/13_3.cc)
+
+message("编译13_4")
+add_executable(13_4 ${PROJECT_SOURCE_DIR}/src/第十三章/13_4作用域枚举_枚举类/13_4.cc)
+#target_compile_features(13_4  PUBLIC cxx_std_23)
