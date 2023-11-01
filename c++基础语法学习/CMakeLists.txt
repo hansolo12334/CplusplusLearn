@@ -343,16 +343,16 @@ add_executable(13_4 ${PROJECT_SOURCE_DIR}/src/第十三章/13_4作用域枚举_�
 
 
 
-find_package(GSL REQUIRED)
-find_package(OpenCV REQUIRED)
+# find_package(GSL REQUIRED)
+# find_package(OpenCV REQUIRED)
 
-include_directories(${GSL_INCLUDE_DIRES}
-                    ${GSLCBLAS_INCLUDE_DIRS})
+# include_directories(${GSL_INCLUDE_DIRES}
+#                     ${GSLCBLAS_INCLUDE_DIRS})
 
-include_directories(${OPENCV_INCLUDE_DIRS})
+# include_directories(${OPENCV_INCLUDE_DIRS})
 
-add_executable(particle_filter ${PROJECT_SOURCE_DIR}/src/粒子滤波/main.cc)
-target_link_libraries (particle_filter
-                        ${GSL_LIBRARIES}
-                        ${GSLBLAS_LIBRARIES}
-                        ${OpenCV_LIBS})
+# add_executable(particle_filter ${PROJECT_SOURCE_DIR}/src/粒子滤波/main.cc)
+# target_link_libraries (particle_filter
+#                         ${GSL_LIBRARIES}
+#                         ${GSLBLAS_LIBRARIES}
+#                         ${OpenCV_LIBS})
