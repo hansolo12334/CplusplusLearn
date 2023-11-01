@@ -3,9 +3,17 @@
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_randist.h>
 /* From opencv*/
-#include<opencv4/opencv2/imgproc/imgproc.hpp>
-#include<opencv4/opencv2/highgui/highgui.hpp>
-#include<opencv4/opencv2/core/core.hpp>
+#include "opencv4/opencv2/imgcodecs.hpp"
+#include "opencv4/opencv2/highgui.hpp"
+#include "opencv4/opencv2/imgproc.hpp"
+#include "opencv4/opencv2/photo.hpp"
+#include <iostream>
+#include <string>
+#include <opencv4/opencv2/core/core.hpp>
+#include <opencv4/opencv2/highgui/highgui.hpp>
+#include <opencv4/opencv2/objdetect.hpp>
+#include <opencv4/opencv2/imgproc/types_c.h>
+#include <opencv4/opencv2/highgui/highgui_c.h>
 
 #include<iostream>
 #include<stdlib.h>
@@ -35,7 +43,7 @@ typedef struct particle {
 } PARTICLE;
 
 /*************************全局变量*************************/
-char* video_file_name = "soccer.avi";
+char* video_file_name = "/home/hansolo/CplusplusLearn/算法学习/src/粒子滤波/soccer.avi";
 #define NUM_PARTICLE 50 //粒子数
 /************************鼠标回调部分*************************/
 Rect roiRect;//选取矩形区
@@ -185,10 +193,10 @@ int histSize[] = { hbins, sbins };//vbin
 //h的范围
 float hranges[] = { 0, 180 };
 //s的范围
-float sranges[] = { 0, 256 };
-float vranges[] = { 0, 256 };
+float sranges[2] = { 0, 256 };
+float vranges[2] = { 0, 256 };
 //一般只比较hsv的h和s两个通道就够了
-const float* ranges[] = { hranges, sranges };
+const float* hsvHistRanges[2] = { hranges, sranges };
 // we compute the histogram from the 0-th and 1-st channels
 int channels[] = { 0, 1 };
 
@@ -238,11 +246,16 @@ void resample(particle* particles,particle* new_particles,int num_particles)
 }
 
 /*****************************************************************/
+namespace cv
+{
+    using std::vector;
+}
+
 int main()
 {
 	//cv::RNG rng; //新版OPENCV自带随机数生成器
 	Mat frame, hsv_frame;
-	Vector<Mat> frames;
+	cv::vector<Mat> frames;
 	//目标的直方图
 	MatND hist;
 	VideoCapture capture(video_file_name);	// 视频文件video_file_name
@@ -281,7 +294,7 @@ int main()
 		namedWindow("frame", CV_WINDOW_NORMAL);
 		//复制一个原始帧，给框定目标回调函数用
 		current_frame = frame.clone();
-		setMouseCallback("frame", MouseEvent,"frame");
+		setMouseCallback("frame", MouseEvent,(void*)(&frame));
 		frames.push_back(frame.clone());
 		imshow("frame", frame);
 		cvWaitKey(40);
@@ -291,7 +304,7 @@ int main()
 			//cvtColor(frame, hsv_frame, COLOR_BGR2HSV);
 			cvtColor(roiImage, hsv_roiImage, COLOR_BGR2HSV);
 			//计算目标区域的直方图
-			calcHist(&hsv_roiImage, 1, channels, Mat(), hist, 2, histSize, ranges);
+			calcHist(&hsv_roiImage, 1, channels, Mat(), hist, 2, histSize,  hsvHistRanges);
 			normalize(hist, hist,0,1,NORM_MINMAX,-1,Mat());	// 归一化L2
 			//粒子初始化
 			particle_init(particles, num_particles, hist);
@@ -350,7 +363,7 @@ int main()
 				//上述区域转换到hsv空间
 				cvtColor(imgParticle, imgParticle, CV_BGR2HSV);
 				//计算区域的直方图
-				calcHist(&imgParticle, 1, channels, Mat(), particles[j].hist, 2, histSize, ranges);
+				calcHist(&imgParticle, 1, channels, Mat(), particles[j].hist, 2, histSize, hsvHistRanges);
 				//直方图归一化到（0，1）
 				normalize(particles[j].hist, particles[j].hist, 0, 1, NORM_MINMAX, -1, Mat());	// 归一化L2
 				//画出蓝色的粒子框
