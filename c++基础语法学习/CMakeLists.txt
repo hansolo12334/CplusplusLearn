@@ -341,8 +341,11 @@ message("编译13_4")
 add_executable(13_4 ${PROJECT_SOURCE_DIR}/src/第十三章/13_4作用域枚举_枚举类/13_4.cc)
 #target_compile_features(13_4  PUBLIC cxx_std_23)
 
+message("编译13_4_quiz")
+add_executable(13_4_quiz ${PROJECT_SOURCE_DIR}/src/第十三章/13_4作用域枚举_枚举类/quiz.cc)
 
-
+message("编译13_5")
+add_executable(13_5 ${PROJECT_SOURCE_DIR}/src/第十三章/13_5结构体_成员和成员选择/13_5.cc)
 # find_package(GSL REQUIRED)
 # find_package(OpenCV REQUIRED)
 
@@ -352,7 +355,24 @@ add_executable(13_4 ${PROJECT_SOURCE_DIR}/src/第十三章/13_4作用域枚举_�
 # include_directories(${OPENCV_INCLUDE_DIRS})
 
 # add_executable(particle_filter ${PROJECT_SOURCE_DIR}/src/粒子滤波/main.cc)
-# target_link_libraries (particle_filter
-#                         ${GSL_LIBRARIES}
+# t                         ${GSL_LIBRARIES}
 #                         ${GSLBLAS_LIBRARIES}
 #                         ${OpenCV_LIBS})
+
+ # include_directories("${Simbody_INCLUDE_DIR}")
+# add_executable(sim ${PROJECT_SOURCE_DIR}/src/第十三章/13_4作用域枚举_枚举类/sim.cc)
+message("编译13_7")
+add_executable(13_7 ${PROJECT_SOURCE_DIR}/src/第十三章/13_7结构体默认成员初始化/13_7.cc)
+
+message("编译13_8")
+add_executable(13_8 ${PROJECT_SOURCE_DIR}/src/第十三章/13_8结构体传递和返回结构/13_8.cc)
+
+
+message("编译13_8_quiz")
+add_executable(13_8_quiz ${PROJECT_SOURCE_DIR}/src/第十三章/13_8结构体传递和返回结构/13_8_quiz.cc)
+
+message("编译13_8_quiz2")
+add_executable(13_8_quiz2 ${PROJECT_SOURCE_DIR}/src/第十三章/13_8结构体传递和返回结构/13_8quiz2.cc)
+
+message("编译13_9")
+add_executable(13_9 ${PROJECT_SOURCE_DIR}/src/第十三章/13_9结构体杂项/13_9.cc)

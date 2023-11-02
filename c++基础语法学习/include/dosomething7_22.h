@@ -1,5 +1,6 @@
 #ifndef DOSOMETHING7_22_H
 #define DOSOMETHING7_22_H
+#include<iostream>
 
 namespace Goo
 {
