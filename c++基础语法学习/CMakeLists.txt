@@ -376,3 +376,16 @@ add_executable(13_8_quiz2 ${PROJECT_SOURCE_DIR}/src/第十三章/13_8结构体�
 
 message("编译13_9")
 add_executable(13_9 ${PROJECT_SOURCE_DIR}/src/第十三章/13_9结构体杂项/13_9.cc)
+
+message("编译13_10")
+add_executable(13_10 ${PROJECT_SOURCE_DIR}/src/第十三章/13_10使用指针和引用选择成员/13_10.cc)
+
+message("编译13_11")
+include_directories(${PROJECT_SOURCE_DIR}/src/第十三章/13_11类模板/include/)
+add_executable(13_11
+    ${PROJECT_SOURCE_DIR}/src/第十三章/13_11类模板/13_11.cc
+    ${PROJECT_SOURCE_DIR}/src/第十三章/13_11类模板/goo.cc
+)
+
+message("编译13_12")
+add_executable(13_12 ${PROJECT_SOURCE_DIR}/src/第十三章/13_12类模板参数推导_CTAD和推导指南/13_12.cc)
