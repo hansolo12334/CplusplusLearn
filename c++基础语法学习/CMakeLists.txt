@@ -396,3 +396,16 @@ add_executable(13_13 ${PROJECT_SOURCE_DIR}/src/第十三章/13_13别名模板/13
 message("编译13_quiz")
 add_executable(13_quiz ${PROJECT_SOURCE_DIR}/src/第十三章/13_quiz/13_quiz.cc)
 add_executable(13_quiz2 ${PROJECT_SOURCE_DIR}/src/第十三章/13_quiz/13_quiz2.cc)
+
+
+message("编译14_2")
+add_executable(14_2 ${PROJECT_SOURCE_DIR}/src/第十四章/14_2类简介/14_2.cc)
+
+message("编译14_3")
+add_executable(14_3 ${PROJECT_SOURCE_DIR}/src/第十四章/14_3成员函数/14_3.cc)
+
+message("编译14_3quiz")
+add_executable(14_3quiz ${PROJECT_SOURCE_DIR}/src/第十四章/14_3成员函数/14_3quiz.cc)
+
+message("编译14_4")
+add_executable(14_4 ${PROJECT_SOURCE_DIR}/src/第十四章/14_4const类对象和const成员函数/14_4.cc)
