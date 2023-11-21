@@ -53,7 +53,7 @@ void print1(T p)
 template<typename T,typename U>
 void print3(std::pair<T,U> p)
 {
-    std::cout << '[' << p.first << ", " << p.second << "]\n";
+    std::cout << '[' << p.first << ", " << p.second <<" ]\n";
 }
 
 

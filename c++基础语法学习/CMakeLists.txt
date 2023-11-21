@@ -389,3 +389,10 @@ add_executable(13_11
 
 message("编译13_12")
 add_executable(13_12 ${PROJECT_SOURCE_DIR}/src/第十三章/13_12类模板参数推导_CTAD和推导指南/13_12.cc)
+
+message("编译13_13")
+add_executable(13_13 ${PROJECT_SOURCE_DIR}/src/第十三章/13_13别名模板/13_13.cc)
+
+message("编译13_quiz")
+add_executable(13_quiz ${PROJECT_SOURCE_DIR}/src/第十三章/13_quiz/13_quiz.cc)
+add_executable(13_quiz2 ${PROJECT_SOURCE_DIR}/src/第十三章/13_quiz/13_quiz2.cc)
