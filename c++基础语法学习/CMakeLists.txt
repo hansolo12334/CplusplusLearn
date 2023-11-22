@@ -1,5 +1,5 @@
 ##1. cmake基础学习 预处理器 指令 宏定义 标头保护学习 20230901
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.25)
 project(CppPorject)
 set(CMAKE_CXX_STANDARD 23)
 
@@ -407,5 +407,22 @@ add_executable(14_3 ${PROJECT_SOURCE_DIR}/src/第十四章/14_3成员函数/14_3
 message("编译14_3quiz")
 add_executable(14_3quiz ${PROJECT_SOURCE_DIR}/src/第十四章/14_3成员函数/14_3quiz.cc)
 
-message("编译14_4")
-add_executable(14_4 ${PROJECT_SOURCE_DIR}/src/第十四章/14_4const类对象和const成员函数/14_4.cc)
+message("编译14_4_1")
+add_executable(14_4_1 ${PROJECT_SOURCE_DIR}/src/第十四章/14_4const类对象和const成员函数/14_4_1.cc)
+
+
+message("编译14_4_2")
+add_executable(14_4_2 ${PROJECT_SOURCE_DIR}/src/第十四章/14_4const类对象和const成员函数/14_4_2.cc)
+
+
+message("编译14_5")
+add_executable(14_5 ${PROJECT_SOURCE_DIR}/src/第十四章/14_5公有和私有成员以及访问限定符/14_5.cc)
+
+message("编译14_5quiz")
+add_executable(14_5quiz ${PROJECT_SOURCE_DIR}/src/第十四章/14_5公有和私有成员以及访问限定符/14_5quiz.cc)
+
+message("编译14_6")
+add_executable(14_6 ${PROJECT_SOURCE_DIR}/src/第十四章/14_6访问函数/14_6.cc)
+
+message("编译14_7")
+add_executable(14_7 ${PROJECT_SOURCE_DIR}/src/第十四章/14_7返回对数据成员的引用的成员函数/14_7.cc)
