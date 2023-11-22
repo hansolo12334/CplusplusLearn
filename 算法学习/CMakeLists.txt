@@ -22,3 +22,6 @@ target_link_libraries (particle_filter
                         ${GSL_LIBRARIES}
                         ${GSLBLAS_LIBRARIES}
                         ${OpenCV_LIBS})
+
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/数组/)
