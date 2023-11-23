@@ -24,4 +24,4 @@ target_link_libraries (particle_filter
                         ${OpenCV_LIBS})
 
 
-add_subdirectory(${PROJECT_SOURCE_DIR}/src/数组/)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/数据结构/数组/)
