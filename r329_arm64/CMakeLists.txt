@@ -30,3 +30,6 @@ add_executable(lcd2 ${PROJECT_SOURCE_DIR}/src/lcd/test.cpp
 
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/lcd/)
+
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/socket/)
