@@ -159,6 +159,7 @@ set(VERSION_PATCH "0")
 set(PROJECT_VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH})
 set(SHARED_LIBRARY_VERSION ${VERSION_MAJOR}.${VERSION_MINOR})
 
+#设置依赖库的位置 是交叉编译需要的 不是系统的 不一样 一个x64 一个是arm
 set(PNG_DIR "/home/hansolo/CplusplusLearn/r329_arm64/tools/png")
 set(ZLIB_DIR "/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib")
 
@@ -167,7 +168,7 @@ set(ZLIB_FOUND 1)
 # Compiler definitions for building the library
 add_definitions(-DFT2_BUILD_LIBRARY)
 
-
+## 直接运行./configure 有问题 反正不用BZip2和HarfBuzz 注释下面 
 # Find dependencies
 # foreach (d ZLIB BZip2 PNG HarfBuzz)
 #   string(TOUPPER "${d}" D)
@@ -377,6 +378,7 @@ else ()
   set(MAYBE_PRIVATE "PRIVATE")
 endif ()
 
+#直接暴力修改
 set(ZLIB_INCLUDE_DIRS ${ZLIB_DIR}/include)
 set(PNG_INCLUDE_DIRS ${PNG_DIR}/include/libpng16)
 # include_directories(${PNG_DIR}/include/libpng16)
