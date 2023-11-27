@@ -1,0 +1,212 @@
+[
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/autofit/autofit.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/autofit/autofit.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/autofit/autofit.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftbase.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftbase.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftbase.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftbbox.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftbbox.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftbbox.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftbdf.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftbdf.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftbdf.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftbitmap.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftbitmap.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftbitmap.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftcid.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftcid.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftcid.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftfntfmt.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftfntfmt.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftfntfmt.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftfstype.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftfstype.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftfstype.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftgasp.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftgasp.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftgasp.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftglyph.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftglyph.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftglyph.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftgxval.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftgxval.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftgxval.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftinit.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftinit.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftinit.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftlcdfil.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftlcdfil.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftlcdfil.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftmm.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftmm.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftmm.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftotval.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftotval.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftotval.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftpatent.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftpatent.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftpatent.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftpfr.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftpfr.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftpfr.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftstroke.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftstroke.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftstroke.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftsynth.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftsynth.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftsynth.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftsystem.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftsystem.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftsystem.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/fttype1.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/fttype1.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/fttype1.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftwinfnt.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftwinfnt.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftwinfnt.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/bdf/bdf.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/bdf/bdf.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/bdf/bdf.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/bzip2/ftbzip2.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/bzip2/ftbzip2.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/cache/ftcache.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/cache/ftcache.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/cache/ftcache.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/cff/cff.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/cff/cff.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/cff/cff.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/cid/type1cid.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/cid/type1cid.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/cid/type1cid.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/gzip/ftgzip.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/gzip/ftgzip.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/gzip/ftgzip.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/lzw/ftlzw.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/lzw/ftlzw.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/lzw/ftlzw.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/pcf/pcf.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/pcf/pcf.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/pcf/pcf.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/pfr/pfr.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/pfr/pfr.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/pfr/pfr.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/psaux/psaux.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/psaux/psaux.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/psaux/psaux.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/pshinter/pshinter.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/pshinter/pshinter.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/pshinter/pshinter.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/psnames/psnames.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/psnames/psnames.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/psnames/psnames.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/raster/raster.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/raster/raster.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/raster/raster.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/sfnt/sfnt.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/sfnt/sfnt.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/sfnt/sfnt.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/smooth/smooth.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/smooth/smooth.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/smooth/smooth.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/truetype/truetype.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/truetype/truetype.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/truetype/truetype.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/type1/type1.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/type1/type1.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/type1/type1.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/type42/type42.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/type42/type42.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/type42/type42.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/winfonts/winfnt.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/winfonts/winfnt.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/winfonts/winfnt.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc -DFT2_BUILD_LIBRARY -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build/include -I/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/zlib/include -I/home/hansolo/CplusplusLearn/r329_arm64/tools/png/include/libpng16 -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -g -o CMakeFiles/freetype.dir/src/base/ftdebug.c.o -c /home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftdebug.c",
+  "file": "/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/src/base/ftdebug.c"
+}
+]

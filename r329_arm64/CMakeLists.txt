@@ -1,12 +1,19 @@
 cmake_minimum_required(VERSION  3.20)
 
-
+# set(CMAKE_FIND_ROOT_PATH  ${PROJECT_SOURCE_DIR}/tools)
 set(CMAKE_SYSTEM_PROCESSOR arm)
 set(SYSTEM_NAME linux)
-set(CMAKE_C_COMPILER " aarch64-linux-gnu-gcc")
-set(CMAKE_CXX_COMPILER " aarch64-linux-gnu-g++")
+set(CMAKE_C_COMPILER "/usr/bin/aarch64-linux-gnu-gcc")
+set(CMAKE_CXX_COMPILER "/usr/bin/aarch64-linux-gnu-g++")
+
+# SET(CMAKE_FIND_ROOT_PATH  /home/hansolo/CplusplusLearn/r329_arm64/tools)
+
+
 
 project(hello_world)
+
+
+
 
 
 
@@ -20,3 +27,6 @@ include_directories(${PROJECT_SOURCE_DIR}/src/lcd/include)
 
 add_executable(lcd2 ${PROJECT_SOURCE_DIR}/src/lcd/test.cpp
                     ${PROJECT_SOURCE_DIR}/src/lcd/lcd.cpp                 )
+
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/lcd/)

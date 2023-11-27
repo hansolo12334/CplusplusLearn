@@ -13,6 +13,8 @@
 #include<linux/fb.h>
 #include<time.h>
 
+
+
 #define argb8888_to_rgn565(color) ({\
                 unsigned int temp = (color); \
                 ( (temp & 0xF80000UL)>>8) |\

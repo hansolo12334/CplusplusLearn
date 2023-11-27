@@ -1,0 +1,13 @@
+/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build/CMakeFiles/zlib.dir
+/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build/CMakeFiles/zlibstatic.dir
+/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build/CMakeFiles/example.dir
+/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build/CMakeFiles/minigzip.dir
+/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build/CMakeFiles/example64.dir
+/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build/CMakeFiles/minigzip64.dir
+/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build/CMakeFiles/test.dir
+/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build/CMakeFiles/edit_cache.dir
+/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build/CMakeFiles/rebuild_cache.dir
+/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build/CMakeFiles/list_install_components.dir
+/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build/CMakeFiles/install.dir
+/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build/CMakeFiles/install/local.dir
+/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build/CMakeFiles/install/strip.dir

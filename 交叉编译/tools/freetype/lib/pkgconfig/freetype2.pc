@@ -1,0 +1,14 @@
+prefix=/home/hansolo/CplusplusLearn/交叉编译/tools/freetype
+exec_prefix=/home/hansolo/CplusplusLearn/交叉编译/tools/freetype
+libdir=/home/hansolo/CplusplusLearn/交叉编译/tools/freetype/lib
+includedir=/home/hansolo/CplusplusLearn/交叉编译/tools/freetype/include
+
+Name: FreeType 2
+URL: http://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 20.0.14
+Requires:
+Requires.private: 
+Libs: -L${libdir} -lfreetype
+Libs.private: -lz
+Cflags: -I${includedir}/freetype2

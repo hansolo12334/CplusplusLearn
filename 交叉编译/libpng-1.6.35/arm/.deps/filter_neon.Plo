@@ -1,0 +1,13 @@
+arm/filter_neon.lo: arm/filter_neon.S \
+ /usr/aarch64-linux-gnu/include/stdc-predef.h arm/../pngpriv.h config.h \
+ arm/../pnglibconf.h arm/../png.h
+
+/usr/aarch64-linux-gnu/include/stdc-predef.h:
+
+arm/../pngpriv.h:
+
+config.h:
+
+arm/../pnglibconf.h:
+
+arm/../png.h:

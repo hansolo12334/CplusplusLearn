@@ -1,0 +1,1 @@
+/usr/bin/aarch64-linux-gnu-gcc -g -rdynamic CMakeFiles/minigzip.dir/test/minigzip.o -o minigzip  -Wl,-rpath,/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build libz.so.1.2.10 
