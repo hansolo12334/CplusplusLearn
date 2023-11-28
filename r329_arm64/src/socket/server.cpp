@@ -8,8 +8,11 @@
 #include<ctype.h>
 
 #define MAXLINE 80
-#define SERV_PORT 16555
-#define SERVER_IP "192.168.206.197"
+#define SERV_PORT 2223
+// #define SERVER_IP "192.168.39.197"
+#define SERVER_IP "127.0.0.1"
+
+
 int main(void)
 {
     struct sockaddr_in servaddr, cliaddr;
@@ -20,17 +23,25 @@ int main(void)
     int i, n;
 
     listenfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (listenfd==-1)
+    {
+        printf("Socket error\n");
+        exit(0);
+    }
+
 
     bzero(&servaddr, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
-
-    // servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-     servaddr.sin_addr.s_addr = inet_addr(SERVER_IP);
-
-
+    servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
+    //servaddr.sin_addr.s_addr = inet_addr("0.0.0.0");
     servaddr.sin_port = htons(SERV_PORT);
 
-    bind(listenfd, (struct sockaddr *)&servaddr, sizeof(servaddr));
+    if(bind(listenfd, (struct sockaddr *)&servaddr, sizeof(servaddr))==-1)
+    {
+        printf("bind error\n");
+        close(listenfd);
+        exit(0);
+    }
 
     listen(listenfd, 20);
 
@@ -40,13 +51,21 @@ int main(void)
         connfd = accept(listenfd,
                 (struct sockaddr *)&cliaddr, &cliaddr_len);
 
+        if (connfd==-1)
+        {
+            printf("accept error\n");
+            exit(0);
+        }
+
+
         n = read(connfd, buf, MAXLINE);
         printf("received from %s at PORT %d\n",
                inet_ntop(AF_INET, &cliaddr.sin_addr, str, sizeof(str)),
                ntohs(cliaddr.sin_port));
 
-        for (i = 0; i < n; i++)
+        for (i = 0; i < n; i++){
             buf[i] = toupper(buf[i]);
+        }
         write(connfd, buf, n);
         close(connfd);
     }

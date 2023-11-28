@@ -7,8 +7,8 @@
 #include <arpa/inet.h>
 
 #define MAXLINE 80
-#define SERV_PORT 16555
-#define SERVER_IP "192.168.206.197"
+#define SERV_PORT 2223
+#define SERVER_IP "192.168.79.2"
 
 
 int main(int argc, char *argv[])
@@ -18,25 +18,31 @@ int main(int argc, char *argv[])
     int sockfd, n;
     char *str;
 
-    if (argc != 2) {
-        fputs("usage: ./client message\n", stderr);
+    char *server_ip;
+
+
+    if (argc != 3) {
+        fputs("usage: ./client server_ip message \n", stderr);
         exit(1);
     }
-    str = argv[1];
+
+    server_ip = argv[1];
+
+    str = argv[2];
 
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
     bzero(&servaddr, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
-    printf("%u\n",servaddr.sin_addr.s_addr);
+
 
 
     servaddr.sin_port = htons(SERV_PORT);
-    servaddr.sin_addr.s_addr = inet_addr(SERVER_IP);
+    // servaddr.sin_addr.s_addr = inet_addr(SERVER_IP);
+    servaddr.sin_addr.s_addr = inet_addr(server_ip);
 
-    inet_pton(AF_INET, SERVER_IP, &(servaddr.sin_addr));
-    servaddr.sin_port = htons(SERV_PORT);
-    servaddr.sin_addr.s_addr = inet_addr(SERVER_IP);
+    inet_pton(AF_INET, server_ip, &(servaddr.sin_addr));
+     printf("%u\n",servaddr.sin_addr.s_addr);
 
     connect(sockfd, (struct sockaddr *)&servaddr, sizeof(servaddr));
 

@@ -15,14 +15,9 @@ link_directories(${PNG_DIR}/lib)
 link_directories(${ZLIB_DIR}/lib)
 link_directories(${FREETYPE_DIR}/lib)
 
-add_executable(test_png ${PROJECT_SOURCE_DIR}/src/lcd/test_png.cpp)
-target_link_libraries(test_png libpng.so)
 
-add_executable(test_type ${PROJECT_SOURCE_DIR}/src/lcd/test_type.cpp)
-target_link_libraries(test_type libfreetype.so libpng.so)
-
-
-add_executable(lcd2 ${PROJECT_SOURCE_DIR}/src/lcd/test.cpp)
-target_link_libraries(lcd2
-                        lcds
-                        )
+##生成lcds库
+add_library(lcds
+            ${PROJECT_SOURCE_DIR}/src/lcd_libs/lcd.cpp)
+target_link_libraries(lcds
+                        libfreetype.so libpng.so )
