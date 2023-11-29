@@ -1,0 +1,17 @@
+cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-gcc -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-g++ -S/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10 -B/home/hansolo/CplusplusLearn/交叉编译/zlib-1.2.10/build -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/
+
+
+export LDFLAGS="${LDFLAGS} -L/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/lib"
+export CFLAGS="${CFLAGS} -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include"
+export CPPFLAGS="${CPPFLAGS} -I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include"
+
+./configure --prefix=/home/hansolo/CplusplusLearn/交叉编译/tools/png --host=aarch64-linux-gnu
+
+./configure --prefix=/home/hansolo/CplusplusLearn/交叉编译/tools/freetype/ --host=aarch64-linux-gnu --with-zlib=yes --with-bzip2=no --with-png=yes --with-harfbuzz=no LIBPNG_CFLAGS="-I/home/hansolo/CplusplusLearn/交叉编译/tools/png/include/libpng16 -L/home/hansolo/CplusplusLearn/r329_arm64/tools/png/lib" LIBPNG_LIBS=-lpng ZLIB_CFLAGS="-I/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/include -L/home/hansolo/CplusplusLearn/交叉编译/tools/zlib/lib" ZLIB_LIBS=-lz 
+
+
+cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-gcc -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-g++ -S/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8 -B/home/hansolo/CplusplusLearn/交叉编译/freetype-2.8/build -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/home/hansolo/CplusplusLearn/交叉编译/tools/freetype/
+
+
+
+/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf

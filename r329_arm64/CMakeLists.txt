@@ -27,3 +27,9 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/lcd/)
 
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/socket/)
+
+
+
+add_executable(test_button ${PROJECT_SOURCE_DIR}/src/buttons/test_button.c)
+add_executable(test_button_pthread ${PROJECT_SOURCE_DIR}/src/buttons/test_button_pthread.c)
+target_link_libraries(test_button_pthread pthread)
