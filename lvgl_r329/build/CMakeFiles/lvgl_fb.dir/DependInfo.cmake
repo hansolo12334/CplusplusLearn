@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/lv_port_indev_hansolo.c" "CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o" "gcc" "CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o.d"
-  "/home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/mouse_cursor_icon.c" "CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o" "gcc" "CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o.d"
-  "/home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/project/demo/main.c" "CMakeFiles/lvgl_fb.dir/project/demo/main.c.o" "gcc" "CMakeFiles/lvgl_fb.dir/project/demo/main.c.o.d"
+  "/home/hansolo/CplusplusLearn/lvgl_r329/lv_port_indev_hansolo.c" "CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o" "gcc" "CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o.d"
+  "/home/hansolo/CplusplusLearn/lvgl_r329/mouse_cursor_icon.c" "CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o" "gcc" "CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o.d"
+  "/home/hansolo/CplusplusLearn/lvgl_r329/project/demo/main.c" "CMakeFiles/lvgl_fb.dir/project/demo/main.c.o" "gcc" "CMakeFiles/lvgl_fb.dir/project/demo/main.c.o.d"
   )
 
 # Targets to which this target links.

@@ -29,8 +29,8 @@ CMAKE_BUILD_TYPE:STRING=Debug
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-//No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-g++
+//CXX compiler
+CMAKE_CXX_COMPILER:STRING=/usr/bin/aarch64-linux-gnu-g++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -55,8 +55,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//No help, variable specified on the command line.
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-gcc
+//C compiler
+CMAKE_C_COMPILER:STRING=/usr/bin/aarch64-linux-gnu-gcc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -236,7 +236,7 @@ lv_drivers_BINARY_DIR:STATIC=/home/hansolo/CplusplusLearn/lvgl_r329/build/lv_dri
 lv_drivers_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-lv_drivers_SOURCE_DIR:STATIC=/home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/lv_drivers
+lv_drivers_SOURCE_DIR:STATIC=/home/hansolo/CplusplusLearn/lvgl_r329/lv_drivers
 
 //Value Computed by CMake
 lvgl_BINARY_DIR:STATIC=/home/hansolo/CplusplusLearn/lvgl_r329/build/lvgl
@@ -245,7 +245,7 @@ lvgl_BINARY_DIR:STATIC=/home/hansolo/CplusplusLearn/lvgl_r329/build/lvgl
 lvgl_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-lvgl_SOURCE_DIR:STATIC=/home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/lvgl
+lvgl_SOURCE_DIR:STATIC=/home/hansolo/CplusplusLearn/lvgl_r329/lvgl
 
 //Value Computed by CMake
 lvgl_fb_BINARY_DIR:STATIC=/home/hansolo/CplusplusLearn/lvgl_r329/build
@@ -254,7 +254,7 @@ lvgl_fb_BINARY_DIR:STATIC=/home/hansolo/CplusplusLearn/lvgl_r329/build
 lvgl_fb_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-lvgl_fb_SOURCE_DIR:STATIC=/home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer
+lvgl_fb_SOURCE_DIR:STATIC=/home/hansolo/CplusplusLearn/lvgl_r329
 
 
 ########################
@@ -339,7 +339,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/hansolo/CplusplusLearn/lvgl_r329
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

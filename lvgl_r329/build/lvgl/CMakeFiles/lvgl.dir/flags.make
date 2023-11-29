@@ -4,7 +4,7 @@
 # compile C with /usr/bin/aarch64-linux-gnu-gcc
 C_DEFINES = -DLV_CONF_INCLUDE_SIMPLE -DLV_LVGL_H_INCLUDE_SIMPLE
 
-C_INCLUDES = -I/home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/. -isystem /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/lvgl
+C_INCLUDES = -I/home/hansolo/CplusplusLearn/lvgl_r329/. -isystem /home/hansolo/CplusplusLearn/lvgl_r329/lvgl
 
 C_FLAGS = -g
 

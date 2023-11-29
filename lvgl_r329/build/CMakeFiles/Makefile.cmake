@@ -7,13 +7,13 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/home/hansolo/CplusplusLearn/lvgl_r329/CMakeLists.txt"
   "CMakeFiles/3.25.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.25.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.25.2/CMakeSystem.cmake"
-  "/home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/CMakeLists.txt"
-  "/home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/lv_drivers/CMakeLists.txt"
-  "/home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/lvgl/CMakeLists.txt"
-  "/home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/lvgl/env_support/cmake/custom.cmake"
+  "/home/hansolo/CplusplusLearn/lvgl_r329/lv_drivers/CMakeLists.txt"
+  "/home/hansolo/CplusplusLearn/lvgl_r329/lvgl/CMakeLists.txt"
+  "/home/hansolo/CplusplusLearn/lvgl_r329/lvgl/env_support/cmake/custom.cmake"
   "/usr/share/cmake-3.25/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.25/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake"

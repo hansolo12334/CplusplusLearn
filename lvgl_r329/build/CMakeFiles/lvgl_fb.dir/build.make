@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer
+CMAKE_SOURCE_DIR = /home/hansolo/CplusplusLearn/lvgl_r329
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/hansolo/CplusplusLearn/lvgl_r329/build
@@ -70,46 +70,46 @@ include CMakeFiles/lvgl_fb.dir/progress.make
 include CMakeFiles/lvgl_fb.dir/flags.make
 
 CMakeFiles/lvgl_fb.dir/project/demo/main.c.o: CMakeFiles/lvgl_fb.dir/flags.make
-CMakeFiles/lvgl_fb.dir/project/demo/main.c.o: /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/project/demo/main.c
+CMakeFiles/lvgl_fb.dir/project/demo/main.c.o: /home/hansolo/CplusplusLearn/lvgl_r329/project/demo/main.c
 CMakeFiles/lvgl_fb.dir/project/demo/main.c.o: CMakeFiles/lvgl_fb.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hansolo/CplusplusLearn/lvgl_r329/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lvgl_fb.dir/project/demo/main.c.o"
-	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lvgl_fb.dir/project/demo/main.c.o -MF CMakeFiles/lvgl_fb.dir/project/demo/main.c.o.d -o CMakeFiles/lvgl_fb.dir/project/demo/main.c.o -c /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/project/demo/main.c
+	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lvgl_fb.dir/project/demo/main.c.o -MF CMakeFiles/lvgl_fb.dir/project/demo/main.c.o.d -o CMakeFiles/lvgl_fb.dir/project/demo/main.c.o -c /home/hansolo/CplusplusLearn/lvgl_r329/project/demo/main.c
 
 CMakeFiles/lvgl_fb.dir/project/demo/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lvgl_fb.dir/project/demo/main.c.i"
-	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/project/demo/main.c > CMakeFiles/lvgl_fb.dir/project/demo/main.c.i
+	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hansolo/CplusplusLearn/lvgl_r329/project/demo/main.c > CMakeFiles/lvgl_fb.dir/project/demo/main.c.i
 
 CMakeFiles/lvgl_fb.dir/project/demo/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lvgl_fb.dir/project/demo/main.c.s"
-	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/project/demo/main.c -o CMakeFiles/lvgl_fb.dir/project/demo/main.c.s
+	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hansolo/CplusplusLearn/lvgl_r329/project/demo/main.c -o CMakeFiles/lvgl_fb.dir/project/demo/main.c.s
 
 CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o: CMakeFiles/lvgl_fb.dir/flags.make
-CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o: /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/mouse_cursor_icon.c
+CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o: /home/hansolo/CplusplusLearn/lvgl_r329/mouse_cursor_icon.c
 CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o: CMakeFiles/lvgl_fb.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hansolo/CplusplusLearn/lvgl_r329/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o"
-	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o -MF CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o.d -o CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o -c /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/mouse_cursor_icon.c
+	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o -MF CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o.d -o CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o -c /home/hansolo/CplusplusLearn/lvgl_r329/mouse_cursor_icon.c
 
 CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.i"
-	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/mouse_cursor_icon.c > CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.i
+	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hansolo/CplusplusLearn/lvgl_r329/mouse_cursor_icon.c > CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.i
 
 CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.s"
-	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/mouse_cursor_icon.c -o CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.s
+	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hansolo/CplusplusLearn/lvgl_r329/mouse_cursor_icon.c -o CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.s
 
 CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o: CMakeFiles/lvgl_fb.dir/flags.make
-CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o: /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/lv_port_indev_hansolo.c
+CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o: /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_indev_hansolo.c
 CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o: CMakeFiles/lvgl_fb.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hansolo/CplusplusLearn/lvgl_r329/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o"
-	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o -MF CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o.d -o CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o -c /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/lv_port_indev_hansolo.c
+	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o -MF CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o.d -o CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o -c /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_indev_hansolo.c
 
 CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.i"
-	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/lv_port_indev_hansolo.c > CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.i
+	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_indev_hansolo.c > CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.i
 
 CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.s"
-	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer/lv_port_indev_hansolo.c -o CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.s
+	/usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_indev_hansolo.c -o CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.s
 
 # Object files for target lvgl_fb
 lvgl_fb_OBJECTS = \
@@ -142,6 +142,6 @@ CMakeFiles/lvgl_fb.dir/clean:
 .PHONY : CMakeFiles/lvgl_fb.dir/clean
 
 CMakeFiles/lvgl_fb.dir/depend:
-	cd /home/hansolo/CplusplusLearn/lvgl_r329/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer /home/hansolo/CplusplusLearn/lvgl_r329/build /home/hansolo/CplusplusLearn/lvgl_r329/build /home/hansolo/CplusplusLearn/lvgl_r329/build/CMakeFiles/lvgl_fb.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hansolo/CplusplusLearn/lvgl_r329/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hansolo/CplusplusLearn/lvgl_r329 /home/hansolo/CplusplusLearn/lvgl_r329 /home/hansolo/CplusplusLearn/lvgl_r329/build /home/hansolo/CplusplusLearn/lvgl_r329/build /home/hansolo/CplusplusLearn/lvgl_r329/build/CMakeFiles/lvgl_fb.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lvgl_fb.dir/depend
 

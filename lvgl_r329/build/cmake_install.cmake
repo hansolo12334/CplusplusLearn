@@ -1,4 +1,4 @@
-# Install script for directory: /home/hansolo/CplusplusLearn/lvgl_r329/lv_port_linux_frame_buffer
+# Install script for directory: /home/hansolo/CplusplusLearn/lvgl_r329
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
