@@ -1,0 +1,1 @@
+/usr/bin/aarch64-linux-gnu-gcc -g -rdynamic CMakeFiles/lvgl_fb.dir/project/demo/main.c.o CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o CMakeFiles/lvgl_fb.dir/lv_port_indev_hansolo.c.o -o lvgl_fb  lib/liblvgl.a lvgl/liblvgl_examples.a lvgl/liblvgl_demos.a lib/liblv_drivers.a -lpthread lib/liblvgl.a 
