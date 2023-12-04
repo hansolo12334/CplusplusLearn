@@ -86,6 +86,10 @@ struct fb_fix_screeninfo {
 #include<unistd.h>
 #include<sys/ioctl.h>
 #include<linux/fb.h>
+#include<string.h>
+#include <sys/mman.h>
+
+
 
 int main(int argc, char* argv[])
 {
@@ -94,7 +98,7 @@ int main(int argc, char* argv[])
     struct fb_var_screeninfo fb_var;
     int fd;
 
-    if( (fd=open("/dev/fb0",O_WRONLY)) < 0)
+    if( (fd=open("/dev/fb0",O_RDWR)) < 0)
     {
         perror("open error");
         exit(-1);
@@ -118,7 +122,21 @@ int main(int argc, char* argv[])
             // 一行的字节数:480
             // 像素格式:R<11 5>G<5 6>B<0 5>
 
+    unsigned short int *screen_base = NULL;
+    unsigned int screen_size = fb_fix.line_length * fb_var.yres;
 
+
+    screen_base = (short unsigned int *)mmap(NULL, screen_size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+    if (MAP_FAILED == (void *)screen_base)
+    {
+        perror("mmap error");
+        close(fd);
+        exit(EXIT_FAILURE);
+    }
+
+    memset(screen_base, 0x4A, screen_size); //内存填充
+
+    munmap(screen_base, screen_size);
     close(fd);
     exit(0);
 }

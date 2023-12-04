@@ -33,3 +33,22 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/socket/)
 add_executable(test_button ${PROJECT_SOURCE_DIR}/src/buttons/test_button.c)
 add_executable(test_button_pthread ${PROJECT_SOURCE_DIR}/src/buttons/test_button_pthread.c)
 target_link_libraries(test_button_pthread pthread)
+
+add_executable(test_memory ${PROJECT_SOURCE_DIR}/src/内存操作/test_memory.c)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/ffmpeg/)
+
+add_executable(test_thread ${PROJECT_SOURCE_DIR}/src/线程/线程结束/test_thread.c)
+target_link_libraries(test_thread pthread)
+
+
+add_executable(test_thread1 ${PROJECT_SOURCE_DIR}/src/线程/线程回收/test.c)
+target_link_libraries(test_thread1 pthread)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/线程/取消线程/)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/线程/取消点/)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/线程/分离线程/)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/线程/注册线程清理函数/)

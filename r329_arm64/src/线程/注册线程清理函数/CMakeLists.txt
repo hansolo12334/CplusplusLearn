@@ -1,0 +1,2 @@
+add_executable(register_threads_cleanup test.c)
+target_link_libraries(register_threads_cleanup pthread)

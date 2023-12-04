@@ -426,3 +426,9 @@ add_executable(14_6 ${PROJECT_SOURCE_DIR}/src/第十四章/14_6访问函数/14_6
 
 message("编译14_7")
 add_executable(14_7 ${PROJECT_SOURCE_DIR}/src/第十四章/14_7返回对数据成员的引用的成员函数/14_7.cc)
+
+message("编译14_9")
+add_executable(14_9 ${PROJECT_SOURCE_DIR}/src/第十四章/14_9构造函数简介/14_9.cc)
+
+message("编译14_10")
+add_executable(14_10 ${PROJECT_SOURCE_DIR}/src/第十四章/14_10构造函数成员初始值设定列表/14_10.cc)
