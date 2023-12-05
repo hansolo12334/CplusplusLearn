@@ -25,11 +25,17 @@ public:
     // }
 
     int re{0};
-    for (size_t i = 0; i < prices.size()-1; i++)
+    int minValue{prices.at(0)};
+
+    for (size_t i = 1; i < prices.size() ; i++)
     {
-        if( (prices[i+1]-prices[i])>=0)
+        if(prices.at(i)<minValue)
         {
-            re=prices[i+1]-prices[i]+re;
+            minValue = prices.at(i);
+        }
+        if( (prices.at(i)-minValue) >re)
+        {
+            re = prices.at(i) - minValue;
         }
     }
     return re;

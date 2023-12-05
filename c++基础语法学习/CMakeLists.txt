@@ -432,3 +432,9 @@ add_executable(14_9 ${PROJECT_SOURCE_DIR}/src/第十四章/14_9构造函数简�
 
 message("编译14_10")
 add_executable(14_10 ${PROJECT_SOURCE_DIR}/src/第十四章/14_10构造函数成员初始值设定列表/14_10.cc)
+
+message("编译14_10quiz")
+add_executable(14_10quiz ${PROJECT_SOURCE_DIR}/src/第十四章/14_10构造函数成员初始值设定列表/14_10quiz.cc)
+
+message("编译14_11")
+add_executable(14_11 ${PROJECT_SOURCE_DIR}/src/第十四章/14_11默认构造函数和默认参数/14_11.cc)

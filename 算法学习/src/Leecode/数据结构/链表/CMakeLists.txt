@@ -1,0 +1,4 @@
+add_executable(learn_lb 链表.cc)
+add_executable(LCR123 LCR123图书整理1.cc)
+add_executable(LCR136 LCR136删除链表的节点.cc)
+add_executable(LCR141 LCR141训练计划.cc)
