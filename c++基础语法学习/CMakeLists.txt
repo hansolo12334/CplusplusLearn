@@ -438,3 +438,16 @@ add_executable(14_10quiz ${PROJECT_SOURCE_DIR}/src/第十四章/14_10构造函�
 
 message("编译14_11")
 add_executable(14_11 ${PROJECT_SOURCE_DIR}/src/第十四章/14_11默认构造函数和默认参数/14_11.cc)
+
+message("编译14_12")
+add_executable(14_12 ${PROJECT_SOURCE_DIR}/src/第十四章/14_12委派构造函数/14_12.cc)
+
+message("编译14_12quiz")
+add_executable(14_12quiz ${PROJECT_SOURCE_DIR}/src/第十四章/14_12委派构造函数/14_12quiz.cc)
+
+message("编译14_13")
+add_executable(14_13 ${PROJECT_SOURCE_DIR}/src/第十四章/14_13临时类对象/14_13.cc)
+
+message("编译14_14")
+add_executable(14_14 ${PROJECT_SOURCE_DIR}/src/第十四章/14_14复制构造函数/14_14.cc)
+#
