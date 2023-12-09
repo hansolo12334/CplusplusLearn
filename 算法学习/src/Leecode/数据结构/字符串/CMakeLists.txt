@@ -1,0 +1,7 @@
+add_executable(LCR122 LCR122路径加密.cc)
+add_executable(LCR181 LCR181字符串中的单词反转.cc)
+add_executable(LCR182 LCR182动态口令.cc)
+add_executable(8 8字符串转整数.cc)
+add_executable(344 344反转字符串.cc)
+add_executable(387 387字符串中的第一个唯一字符.cc)
+add_executable(65 65有效数字.cc)
