@@ -31,3 +31,5 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/数据结构/链表/)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/数据结构/字符串/)
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/数据结构/队列/)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/数据结构/栈/)
