@@ -72,7 +72,7 @@ public:
         goods.push(value);
 
 
-        while(!maxPrices.empty() && maxPrices.back()<value)
+        while(!maxPrices.empty() && maxPrices.back()<value) //maxPrices 尾部小于Value的值全部出队
         {
             maxPrices.pop_back();
         }
