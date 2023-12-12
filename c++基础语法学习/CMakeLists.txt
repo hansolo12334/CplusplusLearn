@@ -463,3 +463,14 @@ add_executable(14quiz1 ${PROJECT_SOURCE_DIR}/src/第十四章/14总结quiz/14qui
 
 message("编译15_1")
 add_executable(15_1 ${PROJECT_SOURCE_DIR}/src/第十五章/15_1隐藏的this指针和成员函数链接/15_1.cc)
+
+message("编译15_2")
+add_executable(15_2 ${PROJECT_SOURCE_DIR}/src/第十五章/15_2类和头文件/15_2.cc)
+target_link_libraries(15_2 ${PROJECT_SOURCE_DIR}/src/第十五章/15_2类和头文件/Date.cc)
+
+
+message("编译15_3")
+add_executable(15_3 ${PROJECT_SOURCE_DIR}/src/第十五章/15_3嵌套类型/15_3.cc)
+
+message("编译15_4")
+add_executable(15_4 ${PROJECT_SOURCE_DIR}/src/第十五章/15_4析构函数/15_4.cc)
