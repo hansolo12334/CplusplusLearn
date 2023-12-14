@@ -34,7 +34,6 @@ int findRepeatDocument1(vector<int>& documents) {
     unordered_map<int, int> map;
     for(int doc:documents)
     {
-    std:;
 
         if (map[doc] >=1 )
         {
