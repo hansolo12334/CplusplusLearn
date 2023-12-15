@@ -18,3 +18,9 @@ add_executable(242 242有效的字母异位词.cc)
 add_executable(459 459重复的子字符串.cc)
 
 add_executable(13 13罗马数字转整数.cc)
+
+add_executable(58 58最后一个单词的长度.cc)
+
+add_executable(709 709转换成小写字母.cc)
+
+add_executable(682 682棒球比赛.cc)

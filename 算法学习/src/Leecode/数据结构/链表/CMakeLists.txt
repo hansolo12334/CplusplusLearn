@@ -10,3 +10,6 @@ add_executable(LCR171 LCR171训练计划5.cc)
 add_executable(LCR154 LCR154复杂链表的复制.cc)
 add_executable(141 141环形链表.cc)
 add_executable(2 2两数相加.cc)
+
+add_executable(206 206反转链表.cc)
+add_executable(445 445两数相加2.cc)
