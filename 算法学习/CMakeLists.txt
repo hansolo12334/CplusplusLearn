@@ -37,3 +37,5 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/数据结构/栈/)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/数据结构/树/)
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/算法/排序/)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/算法/查找/)

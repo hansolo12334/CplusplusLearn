@@ -71,10 +71,39 @@ public:
             }
         }
     }
-
+int calculateDepth2(TreeNode * root)
+{
+    if(!root)
+    {
+        return 0;
+    }
+    return max(calculateDepth2(root->left), calculateDepth2(root->right)) + 1;
+}
 // 方法二 层序遍历 bfs
-    int calculateDepth2(TreeNode* root) {
+    int calculateDepth3(TreeNode* root) {
+        vector<TreeNode *> que{};
+        que.push_back(root);
 
+        int re{0};
+        while (!que.empty())
+        {
+            vector<TreeNode *> temp;
+            for(TreeNode *node :que)
+            {
+                if(node->left)
+                {
+                    temp.push_back(node->left);
+                }
+                if(node->right)
+                {
+                    temp.push_back(node->right);
+                }
+            }
+            que = temp;
+            re++;
+        }
+
+        return re;
     }
 };
 
@@ -108,7 +137,7 @@ int main()
     t23->right = t34;
 
     Solution s;
-    int re = s.calculateDepth(root);
+    int re = s.calculateDepth3(root);
     cout << re << '\n';
     return 0;
 }
