@@ -92,3 +92,6 @@ int main()
     captureOneFrame();
     return 0;
 }
+
+
+//ffmpeg -f video4linux2 -s 640x480 -i /dev/video0 ./test.avi

@@ -1,0 +1,6 @@
+add_executable(LCR189 LCR189设计机械累加器.cc)
+add_executable(LCR129 LCR129字母迷宫.cc)
+add_executable(LCR130 LCR130衣橱整理.cc)
+add_executable(LCR153 LCR153二叉树中和为目标值的路径.cc)
+add_executable(LCR157 LCR157套餐内商品的排列顺序.cc)
+add_executable(LCR157_dfs 没理解/LCR157套餐内商品的排列顺序_dfs剪枝.cc)
