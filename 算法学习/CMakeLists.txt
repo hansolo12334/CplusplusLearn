@@ -43,3 +43,5 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/算法/查找/)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/算法/回溯/)
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/算法/模拟/)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/算法/数学/)

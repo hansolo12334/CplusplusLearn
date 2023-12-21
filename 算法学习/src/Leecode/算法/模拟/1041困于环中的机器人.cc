@@ -20,14 +20,12 @@ using namespace std;
 class Solution {
 public:
     bool isRobotBounded(string instructions) {
-        // set<pair<int, int>> pos_sets;
-        int x{0}, y{0};
-        double heading{90*M_PI/180};
 
-        int lengthX{0};
-        int lengthY{0};
+        int x{0}, y{0};
+        int heading{90};
+
         int j{};
-        for (int t = 0; t < 4;t++)
+        for (int t = 0; t <4;t++)
         {
             for (int i = 0; i < instructions.size(); i++)
             {
@@ -35,39 +33,64 @@ public:
 
                 if (ins == 'G')
                 {
-                    lengthX += cos(heading);
-                    lengthY += sin(heading);
+                    if(heading==0){
+                        x += 1;
+                    }
+                    if(heading==90){
+                        y += 1;
+                    }
+                    if(heading==180){
+                        x -= 1;
+                    }
+                    if(heading==270){
+                        y -= 1;
+                    }
+                    if(heading==360){
+                        x += 1;
+                    }
 
-                    x += cos(heading);
-                    y += sin(heading);
-                    j++;
-                    cout << x << ' ' << y << '\n';
+                    // x += cos(heading* M_PI / 180);
+                    // y += sin(heading* M_PI / 180);
                 }
-
+                j++;
 
                 if (ins == 'L')
                 {
-                    heading += (90 * M_PI / 180);
+                    heading += 90;
                 }
                 if (ins == 'R')
                 {
-                    heading -= (90 * M_PI / 180);
+                    heading -= 90;
                 }
 
+                while(heading>=360){
+                    heading -= 360;
+                }
+                while(heading<0){
+                    heading += 360;
+                }
 
-                // if (pos_sets.find(make_pair(x, y)) != pos_sets.end())
-                // {
-                //     return true;
-                // }
-                if (j>2 && lengthX==0 && lengthY==0)
+                char derect{};
+                if (heading == 0 || heading == 360)
                 {
-                    return true;
+                    derect = 'E';
                 }
-                // pos_sets.insert(make_pair(x,y));
-            }
-        }
+                if(heading==90){
+                    derect = 'N';
+                }
+                if(heading==180){
+                    derect = 'W';
+                }
+                if(heading==270){
+                   derect = 'S';
+                }
+                cout << x << ' ' << y << ' ' <<derect<<' '<<ins<<'\n';
 
-        return false;
+            }
+            cout << "--------------" << '\n';
+        }
+        return (x == 0 && y == 0);
+        // return false;
     }
 };
 
@@ -75,7 +98,7 @@ public:
 
 int main()
 {
-    string instructions{"GLGLGGLGL"};
+    string instructions{"GLRLGLLGLGRGLGL"};
     Solution ss;
     cout << ss.isRobotBounded(instructions) << '\n';
     return 0;
