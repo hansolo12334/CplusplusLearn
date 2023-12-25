@@ -474,3 +474,16 @@ add_executable(15_3 ${PROJECT_SOURCE_DIR}/src/第十五章/15_3嵌套类型/15_3
 
 message("编译15_4")
 add_executable(15_4 ${PROJECT_SOURCE_DIR}/src/第十五章/15_4析构函数/15_4.cc)
+
+message("编译15_5")
+add_executable(15_5 ${PROJECT_SOURCE_DIR}/src/第十五章/15_5具有成员函数的类模板/15_5.cc)
+
+
+message("编译15_5quiz")
+add_executable(15_5quiz ${PROJECT_SOURCE_DIR}/src/第十五章/15_5具有成员函数的类模板/15_5quiz.cc)
+
+message("编译15_6")
+add_executable(15_6 ${PROJECT_SOURCE_DIR}/src/第十五章/15_6静态成员变量/15_6.cc)
+
+message("编译15_6example")
+add_executable(15_6example ${PROJECT_SOURCE_DIR}/src/第十五章/15_6静态成员变量/15_6example.cc)

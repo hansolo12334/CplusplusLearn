@@ -5,7 +5,6 @@
 #include"libavcodec/avcodec.h"
 #include"libavdevice/avdevice.h"
 
-
 char *input_name = "video4linux2";
 
 char *file_name = "/dev/video0";
