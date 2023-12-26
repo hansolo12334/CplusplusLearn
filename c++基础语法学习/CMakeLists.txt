@@ -487,3 +487,12 @@ add_executable(15_6 ${PROJECT_SOURCE_DIR}/src/第十五章/15_6静态成员变�
 
 message("编译15_6example")
 add_executable(15_6example ${PROJECT_SOURCE_DIR}/src/第十五章/15_6静态成员变量/15_6example.cc)
+
+message("编译15_7")
+add_executable(15_7 ${PROJECT_SOURCE_DIR}/src/第十五章/15_7静态成员函数/15_7.cc)
+
+message("编译15_7quiz")
+add_executable(15_7quiz ${PROJECT_SOURCE_DIR}/src/第十五章/15_7静态成员函数/15_7quiz.cc)
+
+message("编译15_8")
+add_executable(15_8 ${PROJECT_SOURCE_DIR}/src/第十五章/15_8友好非成员函数/15_8.cc)
