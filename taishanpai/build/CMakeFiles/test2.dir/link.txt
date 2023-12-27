@@ -1,0 +1,1 @@
+/usr/bin/aarch64-linux-gnu-gcc -g CMakeFiles/test2.dir/src/oled/test2.c.o CMakeFiles/test2.dir/src/oled/src/oled.c.o CMakeFiles/test2.dir/src/oled/src/wiringPi.c.o CMakeFiles/test2.dir/src/oled/src/wiringPiI2C.c.o -o test2  -lpthread -lrt 

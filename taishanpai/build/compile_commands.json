@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/home/hansolo/CplusplusLearn/taishanpai/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/hansolo/CplusplusLearn/taishanpai/src/oled/include -g -o CMakeFiles/test1.dir/src/oled/test.c.o -c /home/hansolo/CplusplusLearn/taishanpai/src/oled/test.c",
+  "file": "/home/hansolo/CplusplusLearn/taishanpai/src/oled/test.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/taishanpai/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/hansolo/CplusplusLearn/taishanpai/src/oled/include -g -o CMakeFiles/test1.dir/src/oled/src/oled.c.o -c /home/hansolo/CplusplusLearn/taishanpai/src/oled/src/oled.c",
+  "file": "/home/hansolo/CplusplusLearn/taishanpai/src/oled/src/oled.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/taishanpai/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/hansolo/CplusplusLearn/taishanpai/src/oled/include -g -o CMakeFiles/test1.dir/src/oled/src/wiringPi.c.o -c /home/hansolo/CplusplusLearn/taishanpai/src/oled/src/wiringPi.c",
+  "file": "/home/hansolo/CplusplusLearn/taishanpai/src/oled/src/wiringPi.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/taishanpai/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/hansolo/CplusplusLearn/taishanpai/src/oled/include -g -o CMakeFiles/test1.dir/src/oled/src/wiringPiI2C.c.o -c /home/hansolo/CplusplusLearn/taishanpai/src/oled/src/wiringPiI2C.c",
+  "file": "/home/hansolo/CplusplusLearn/taishanpai/src/oled/src/wiringPiI2C.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/taishanpai/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/hansolo/CplusplusLearn/taishanpai/src/oled/include -g -o CMakeFiles/test2.dir/src/oled/test2.c.o -c /home/hansolo/CplusplusLearn/taishanpai/src/oled/test2.c",
+  "file": "/home/hansolo/CplusplusLearn/taishanpai/src/oled/test2.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/taishanpai/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/hansolo/CplusplusLearn/taishanpai/src/oled/include -g -o CMakeFiles/test2.dir/src/oled/src/oled.c.o -c /home/hansolo/CplusplusLearn/taishanpai/src/oled/src/oled.c",
+  "file": "/home/hansolo/CplusplusLearn/taishanpai/src/oled/src/oled.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/taishanpai/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/hansolo/CplusplusLearn/taishanpai/src/oled/include -g -o CMakeFiles/test2.dir/src/oled/src/wiringPi.c.o -c /home/hansolo/CplusplusLearn/taishanpai/src/oled/src/wiringPi.c",
+  "file": "/home/hansolo/CplusplusLearn/taishanpai/src/oled/src/wiringPi.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/taishanpai/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/hansolo/CplusplusLearn/taishanpai/src/oled/include -g -o CMakeFiles/test2.dir/src/oled/src/wiringPiI2C.c.o -c /home/hansolo/CplusplusLearn/taishanpai/src/oled/src/wiringPiI2C.c",
+  "file": "/home/hansolo/CplusplusLearn/taishanpai/src/oled/src/wiringPiI2C.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/taishanpai/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/hansolo/CplusplusLearn/taishanpai/src/oled/include -g -o CMakeFiles/button_gpio_control.dir/src/oled/button_gpio_control.c.o -c /home/hansolo/CplusplusLearn/taishanpai/src/oled/button_gpio_control.c",
+  "file": "/home/hansolo/CplusplusLearn/taishanpai/src/oled/button_gpio_control.c"
+}
+]

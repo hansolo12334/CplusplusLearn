@@ -1,0 +1,1 @@
+/usr/bin/aarch64-linux-gnu-gcc -g CMakeFiles/button_gpio_control.dir/src/oled/button_gpio_control.c.o -o button_gpio_control 
