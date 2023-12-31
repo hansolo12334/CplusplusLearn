@@ -155,6 +155,19 @@ button_gpio_control/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/button_gpio_control.dir/build.make CMakeFiles/button_gpio_control.dir/build
 .PHONY : button_gpio_control/fast
 
+#=============================================================================
+# Target rules for targets named test_oled
+
+# Build rule for target.
+test_oled: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_oled
+.PHONY : test_oled
+
+# fast build rule for target.
+test_oled/fast:
+	$(MAKE) $(MAKESILENT) -f src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/build.make src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/build
+.PHONY : test_oled/fast
+
 src/oled/button_gpio_control.o: src/oled/button_gpio_control.c.o
 .PHONY : src/oled/button_gpio_control.o
 
@@ -319,6 +332,7 @@ help:
 	@echo "... button_gpio_control"
 	@echo "... test1"
 	@echo "... test2"
+	@echo "... test_oled"
 	@echo "... src/oled/button_gpio_control.o"
 	@echo "... src/oled/button_gpio_control.i"
 	@echo "... src/oled/button_gpio_control.s"

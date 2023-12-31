@@ -1,0 +1,1 @@
+/usr/bin/aarch64-linux-gnu-gcc -g CMakeFiles/test_oled.dir/src/test.c.o -o test_oled 

@@ -66,17 +66,34 @@ CMAKE_BINARY_DIR = /home/hansolo/CplusplusLearn/taishanpai/build
 all: CMakeFiles/test1.dir/all
 all: CMakeFiles/test2.dir/all
 all: CMakeFiles/button_gpio_control.dir/all
+all: src/oled_with_driver_at_fb0/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: src/oled_with_driver_at_fb0/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/test1.dir/clean
 clean: CMakeFiles/test2.dir/clean
 clean: CMakeFiles/button_gpio_control.dir/clean
+clean: src/oled_with_driver_at_fb0/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src/oled_with_driver_at_fb0
+
+# Recursive "all" directory target.
+src/oled_with_driver_at_fb0/all: src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/all
+.PHONY : src/oled_with_driver_at_fb0/all
+
+# Recursive "preinstall" directory target.
+src/oled_with_driver_at_fb0/preinstall:
+.PHONY : src/oled_with_driver_at_fb0/preinstall
+
+# Recursive "clean" directory target.
+src/oled_with_driver_at_fb0/clean: src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/clean
+.PHONY : src/oled_with_driver_at_fb0/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/test1.dir
@@ -155,6 +172,32 @@ button_gpio_control: CMakeFiles/button_gpio_control.dir/rule
 CMakeFiles/button_gpio_control.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/button_gpio_control.dir/build.make CMakeFiles/button_gpio_control.dir/clean
 .PHONY : CMakeFiles/button_gpio_control.dir/clean
+
+#=============================================================================
+# Target rules for target src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir
+
+# All Build rule for target.
+src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/build.make src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/build.make src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hansolo/CplusplusLearn/taishanpai/build/CMakeFiles --progress-num=13,14 "Built target test_oled"
+.PHONY : src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/all
+
+# Build rule for subdir invocation for target.
+src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hansolo/CplusplusLearn/taishanpai/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hansolo/CplusplusLearn/taishanpai/build/CMakeFiles 0
+.PHONY : src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/rule
+
+# Convenience name for target.
+test_oled: src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/rule
+.PHONY : test_oled
+
+# clean rule for target.
+src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/build.make src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/clean
+.PHONY : src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

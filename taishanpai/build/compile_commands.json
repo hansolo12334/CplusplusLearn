@@ -43,5 +43,10 @@
   "directory": "/home/hansolo/CplusplusLearn/taishanpai/build",
   "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/hansolo/CplusplusLearn/taishanpai/src/oled/include -g -o CMakeFiles/button_gpio_control.dir/src/oled/button_gpio_control.c.o -c /home/hansolo/CplusplusLearn/taishanpai/src/oled/button_gpio_control.c",
   "file": "/home/hansolo/CplusplusLearn/taishanpai/src/oled/button_gpio_control.c"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/taishanpai/build/src/oled_with_driver_at_fb0",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/hansolo/CplusplusLearn/taishanpai/src/oled/include -g -o CMakeFiles/test_oled.dir/src/test.c.o -c /home/hansolo/CplusplusLearn/taishanpai/src/oled_with_driver_at_fb0/src/test.c",
+  "file": "/home/hansolo/CplusplusLearn/taishanpai/src/oled_with_driver_at_fb0/src/test.c"
 }
 ]

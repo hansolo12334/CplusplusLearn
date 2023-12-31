@@ -3,3 +3,6 @@
 /home/hansolo/CplusplusLearn/taishanpai/build/CMakeFiles/button_gpio_control.dir
 /home/hansolo/CplusplusLearn/taishanpai/build/CMakeFiles/edit_cache.dir
 /home/hansolo/CplusplusLearn/taishanpai/build/CMakeFiles/rebuild_cache.dir
+/home/hansolo/CplusplusLearn/taishanpai/build/src/oled_with_driver_at_fb0/CMakeFiles/test_oled.dir
+/home/hansolo/CplusplusLearn/taishanpai/build/src/oled_with_driver_at_fb0/CMakeFiles/edit_cache.dir
+/home/hansolo/CplusplusLearn/taishanpai/build/src/oled_with_driver_at_fb0/CMakeFiles/rebuild_cache.dir

@@ -1,2 +1,5 @@
 add_executable(125 125验证回文串.cc)
 add_executable(392 392判断子序列.cc)
+add_executable(167 167两数之和2输入有序数组.cc)
+add_executable(11 11盛最多水的容器.cc)
+add_executable(15 15三数之和.cc)

@@ -88,6 +88,19 @@
     "span": "c",
     "optional": "c",
     "oled.h": "c",
-    "unistd.h": "c"
+    "unistd.h": "c",
+    "fb.h": "c",
+    "ft2build.h": "c",
+    "functional": "c",
+    "random": "c",
+    "istream": "c",
+    "new": "c",
+    "ostream": "c",
+    "sstream": "c",
+    "streambuf": "c",
+    "type_traits": "c",
+    "*.txx": "c",
+    "tuple": "c",
+    "cstring": "c"
   }
 }

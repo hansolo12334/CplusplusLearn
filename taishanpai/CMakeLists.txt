@@ -40,3 +40,6 @@ target_link_libraries(test2 pthread rt )
 add_executable(button_gpio_control ${PROJECT_SOURCE_DIR}/src/oled/button_gpio_control.c )
 # 终端查看 iic端口
 # sudo i2cdetect -y 2
+
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/oled_with_driver_at_fb0)
