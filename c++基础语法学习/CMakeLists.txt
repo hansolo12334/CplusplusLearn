@@ -496,3 +496,6 @@ add_executable(15_7quiz ${PROJECT_SOURCE_DIR}/src/第十五章/15_7静态成员�
 
 message("编译15_8")
 add_executable(15_8 ${PROJECT_SOURCE_DIR}/src/第十五章/15_8友好非成员函数/15_8.cc)
+
+message("编译15_9")
+add_executable(15_9 ${PROJECT_SOURCE_DIR}/src/第十五章/15_9友好类和友好成员函数/15_9.cc)

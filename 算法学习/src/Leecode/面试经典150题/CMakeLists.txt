@@ -1,3 +1,5 @@
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/面试经典150题/字符串数组/)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/面试经典150题/双指针/)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/面试经典150题/哈希表/)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/面试经典150题/栈/)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/面试经典150题/链表/)
