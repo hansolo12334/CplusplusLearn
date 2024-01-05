@@ -13,3 +13,6 @@ add_executable(2 2两数相加.cc)
 
 add_executable(206 206反转链表.cc)
 add_executable(445 445两数相加2.cc)
+
+add_executable(203 203移除链表元素.cc)
+add_executable(237 237删除链表中的节点.cc)
