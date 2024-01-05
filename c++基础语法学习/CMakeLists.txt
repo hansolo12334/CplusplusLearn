@@ -499,3 +499,17 @@ add_executable(15_8 ${PROJECT_SOURCE_DIR}/src/第十五章/15_8友好非成员�
 
 message("编译15_9")
 add_executable(15_9 ${PROJECT_SOURCE_DIR}/src/第十五章/15_9友好类和友好成员函数/15_9.cc)
+
+message("编译15_9quiz")
+add_executable(15_9quiz ${PROJECT_SOURCE_DIR}/src/第十五章/15_9友好类和友好成员函数/15_9quiz.cc)
+
+
+message("编译15_9quiz2")
+include_directories(${PROJECT_SOURCE_DIR}/src/第十五章/15_9友好类和友好成员函数/quiz/)
+add_executable(15_9quiz2
+${PROJECT_SOURCE_DIR}/src/第十五章/15_9友好类和友好成员函数/quiz2/main.cc
+${PROJECT_SOURCE_DIR}/src/第十五章/15_9友好类和友好成员函数/quiz2/Vector3d.cc
+${PROJECT_SOURCE_DIR}/src/第十五章/15_9友好类和友好成员函数/quiz2/Point3d.cc)
+
+message("编译15_10")
+add_executable(15_10 ${PROJECT_SOURCE_DIR}/src/第十五章/15_10Ref限定符/15_10.cc)

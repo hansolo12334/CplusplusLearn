@@ -40,7 +40,7 @@ public:
         m_displyInit = b;
     }
 };
-
+//class的 友谊不能传递 比如 如果class A是B的朋友，B是C的朋友，但A不是C的朋友
 int main()
 {
     Storage storage{5, 6.7};

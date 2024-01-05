@@ -24,3 +24,5 @@ add_executable(1672 1672最富有客户的资产总量.cc)
 add_executable(1572 1572矩阵对角线元素的和.cc)
 add_executable(54 54螺旋矩阵.cc)
 add_executable(73 73矩阵置零.cc)
+
+add_executable(1603 1603设计停车系统.cc)
