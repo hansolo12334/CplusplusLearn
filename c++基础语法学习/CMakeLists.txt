@@ -513,3 +513,6 @@ ${PROJECT_SOURCE_DIR}/src/第十五章/15_9友好类和友好成员函数/quiz2/
 
 message("编译15_10")
 add_executable(15_10 ${PROJECT_SOURCE_DIR}/src/第十五章/15_10Ref限定符/15_10.cc)
+
+message("编译15quiz")
+add_executable(15quiz ${PROJECT_SOURCE_DIR}/src/第十五章/十五章quiz/quiz.cc)
