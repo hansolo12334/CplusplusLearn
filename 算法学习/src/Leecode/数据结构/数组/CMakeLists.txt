@@ -26,3 +26,9 @@ add_executable(54 54螺旋矩阵.cc)
 add_executable(73 73矩阵置零.cc)
 
 add_executable(1603 1603设计停车系统.cc)
+
+
+add_executable(485 485最大连续1的个数.cc)
+add_executable(495 495提莫攻击.cc)
+add_executable(414 414第三大的数.cc)
+add_executable(628 628三个数的最大乘积.cc)

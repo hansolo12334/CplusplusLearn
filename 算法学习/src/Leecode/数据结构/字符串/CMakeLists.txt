@@ -24,3 +24,10 @@ add_executable(58 58最后一个单词的长度.cc)
 add_executable(709 709转换成小写字母.cc)
 
 add_executable(682 682棒球比赛.cc)
+
+
+add_executable(520 520检测大写字母.cc)
+add_executable(434 434字符串中的单词数.cc)
+add_executable(541 541反转字符串2.cc)
+add_executable(557 557反转字符串中的单词3.cc)
+add_executable(151 151反转字符串中的单词.cc)
