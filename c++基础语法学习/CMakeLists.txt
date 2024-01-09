@@ -516,3 +516,10 @@ add_executable(15_10 ${PROJECT_SOURCE_DIR}/src/第十五章/15_10Ref限定符/15
 
 message("编译15quiz")
 add_executable(15quiz ${PROJECT_SOURCE_DIR}/src/第十五章/十五章quiz/quiz.cc)
+
+
+message("编译16_1")
+add_executable(16_1 ${PROJECT_SOURCE_DIR}/src/第十六章/16_1容器和数组/16_1.cc)
+
+message("编译16_4")
+add_executable(16_4 ${PROJECT_SOURCE_DIR}/src/第十六章/16_4传递和返回vector和语义移动/16_4.cc)
