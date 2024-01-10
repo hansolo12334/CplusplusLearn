@@ -523,3 +523,13 @@ add_executable(16_1 ${PROJECT_SOURCE_DIR}/src/第十六章/16_1容器和数组/1
 
 message("编译16_4")
 add_executable(16_4 ${PROJECT_SOURCE_DIR}/src/第十六章/16_4传递和返回vector和语义移动/16_4.cc)
+
+
+message("编译16_7")
+add_executable(16_7 ${PROJECT_SOURCE_DIR}/src/第十六章/16_7基于范围的for循环/16_7.cc)
+
+message("编译16_9")
+add_executable(16_9 ${PROJECT_SOURCE_DIR}/src/第十六章/16_9vector大小调整和容量/16_9.cc)
+
+message("编译16_10")
+add_executable(16_10 ${PROJECT_SOURCE_DIR}/src/第十六章/16_10vector堆栈行为/16_10.cc)
