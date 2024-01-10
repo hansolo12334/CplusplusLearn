@@ -1,0 +1,8 @@
+/home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/SHARED.dir
+/home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/test.dir
+/home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/test_phonebook.dir
+/home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/read_phoneBook.dir
+/home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/server.dir
+/home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/client.dir
+/home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/edit_cache.dir
+/home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/rebuild_cache.dir

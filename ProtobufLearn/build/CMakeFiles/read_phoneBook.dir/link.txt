@@ -1,0 +1,1 @@
+/usr/local/bin/g++ -g CMakeFiles/read_phoneBook.dir/src/io/read_phoneBook.cc.o CMakeFiles/read_phoneBook.dir/test.pb.cc.o CMakeFiles/read_phoneBook.dir/AddressBook.pb.cc.o -o read_phoneBook  /usr/lib/x86_64-linux-gnu/libprotobuf.so -lpthread 

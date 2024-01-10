@@ -1,0 +1,10 @@
+syntax="proto2";//指定proto的语法 proto2 还是proto3
+package test.msgs;
+
+message Person{
+  optional string name = 1; //分配 字段编号 (不是初始化!) 字段编号必须唯一!   1~ 536870911
+  optional int32 age = 2;  
+  optional int32 id = 3;
+  repeated int32 my_vector=4;
+
+}
