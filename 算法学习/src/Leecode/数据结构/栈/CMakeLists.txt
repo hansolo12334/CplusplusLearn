@@ -4,3 +4,5 @@ add_executable(232 232用栈实现队列.cc)
 
 add_executable(388 388文件的最长绝对路径.cc)
 add_executable(227 227基本计算器2.cc)
+
+add_executable(636 636函数的独占时间.cc)
