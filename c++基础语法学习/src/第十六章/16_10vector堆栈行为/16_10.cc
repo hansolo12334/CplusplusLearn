@@ -2,7 +2,7 @@
 #include <vector>
 #include<string_view>
 
-
+//避免使用 std::vector<bool>
 
 class Hansolo
 {

@@ -7,3 +7,6 @@ add_executable(test test.cc)
 
 
 add_executable(LCR175 LCR175计算二叉树的深度.cc)
+
+add_executable(222 222完全二叉树的节点个数.cc)
+add_executable(144 144二叉树的前序遍历.cc)
