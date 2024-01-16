@@ -533,3 +533,8 @@ add_executable(16_9 ${PROJECT_SOURCE_DIR}/src/第十六章/16_9vector大小调�
 
 message("编译16_10")
 add_executable(16_10 ${PROJECT_SOURCE_DIR}/src/第十六章/16_10vector堆栈行为/16_10.cc)
+
+message("编译17_1")
+add_executable(17_1 ${PROJECT_SOURCE_DIR}/src/第十七章/17_1stdarray/17_1.cc)
+message("编译17_11_CTAD")
+add_executable(17_11_CTAD ${PROJECT_SOURCE_DIR}/src/第十七章/17_1stdarray/17_11_CTAD.cc)
