@@ -541,3 +541,6 @@ add_executable(17_11_CTAD ${PROJECT_SOURCE_DIR}/src/第十七章/17_1stdarray/17
 
 message("编译18_2")
 add_executable(18_2 ${PROJECT_SOURCE_DIR}/src/第十八章/18_2迭代器/18_2.cc)
+
+message("编译18_3")
+add_executable(18_3 ${PROJECT_SOURCE_DIR}/src/第十八章/18_3标准算法库/18_3.cc)
