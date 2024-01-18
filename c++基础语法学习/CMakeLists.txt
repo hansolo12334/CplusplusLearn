@@ -544,3 +544,15 @@ add_executable(18_2 ${PROJECT_SOURCE_DIR}/src/第十八章/18_2迭代器/18_2.cc
 
 message("编译18_3")
 add_executable(18_3 ${PROJECT_SOURCE_DIR}/src/第十八章/18_3标准算法库/18_3.cc)
+
+message("编译18_4")
+add_executable(18_4 ${PROJECT_SOURCE_DIR}/src/第十八章/18_4为代码计时/18_4.cc)
+
+message("编译19_1")
+add_executable(19_1 ${PROJECT_SOURCE_DIR}/src/第十九章/19_1使用新建和删除进行动态内存分配/19_1.cc)
+
+message("编译19_2")
+add_executable(19_2 ${PROJECT_SOURCE_DIR}/src/第十九章/19_2动态分配数组/19_2.cc)
+
+message("编译19_2quiz")
+add_executable(19_2quiz ${PROJECT_SOURCE_DIR}/src/第十九章/19_2动态分配数组/19_2quiz.cc)

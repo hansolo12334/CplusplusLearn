@@ -3,6 +3,8 @@
 #include<algorithm>
 #include<string>
 #include<string_view>
+#include<vector>
+
 
 
 //匹配字符串
@@ -19,6 +21,11 @@ bool smaller(int a,int b)
     return a < b;
 }
 
+//某种规则
+void timeTwoToAll(int &i)
+{
+    i = 2 * i;
+}
 
 int main()
 {
@@ -67,6 +74,18 @@ int main()
     for(auto it : sortVec)
     {
         std::cout << it << ' ';
+    }
+    std::cout << '\n';
+
+
+
+    //std::for_each 来对容器的所有元素执行某些操作
+    std::vector<int> vec{1, 2, 3, 4};
+    std::for_each(vec.begin(), vec.end(), timeTwoToAll);
+
+    for(auto v:vec)
+    {
+        std::cout << v << ' ';
     }
     std::cout << '\n';
 
