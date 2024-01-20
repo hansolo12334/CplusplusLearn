@@ -14,3 +14,6 @@ add_executable(144 二叉树的遍历/深度优先搜索DFS/144二叉树的前�
 add_executable(94 二叉树的遍历/深度优先搜索DFS/94二叉树的中序遍历.cc)
 add_executable(145 二叉树的遍历/深度优先搜索DFS/145二叉树的后序遍历.cc)
 add_executable(102 二叉树的遍历/广度优先搜索BFS/102二叉树的层序遍历.cc)
+
+add_executable(maxDepth  二叉树的遍历/运用递归解决问题/二叉树的最大深度.cc)
+add_executable(isSymmetric  二叉树的遍历/运用递归解决问题/对称二叉树.cc)
