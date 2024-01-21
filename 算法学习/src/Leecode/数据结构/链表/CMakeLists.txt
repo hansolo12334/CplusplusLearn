@@ -16,3 +16,6 @@ add_executable(445 445两数相加2.cc)
 
 add_executable(203 203移除链表元素.cc)
 add_executable(237 237删除链表中的节点.cc)
+
+add_executable(430 430扁平化多级双向链表.cc)
+add_executable(24 24两两交换链表中的节点.cc)

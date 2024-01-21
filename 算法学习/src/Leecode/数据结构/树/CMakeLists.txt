@@ -17,3 +17,6 @@ add_executable(102 二叉树的遍历/广度优先搜索BFS/102二叉树的层�
 
 add_executable(maxDepth  二叉树的遍历/运用递归解决问题/二叉树的最大深度.cc)
 add_executable(isSymmetric  二叉树的遍历/运用递归解决问题/对称二叉树.cc)
+
+add_executable(112  二叉树的遍历/运用递归解决问题/112路径总和.cc)
+add_executable(437  未完成/437路径总和3.cc)
