@@ -556,3 +556,16 @@ add_executable(19_2 ${PROJECT_SOURCE_DIR}/src/第十九章/19_2动态分配数�
 
 message("编译19_2quiz")
 add_executable(19_2quiz ${PROJECT_SOURCE_DIR}/src/第十九章/19_2动态分配数组/19_2quiz.cc)
+
+message("编译19_5")
+add_executable(19_5 ${PROJECT_SOURCE_DIR}/src/第十九章/19_5void指针/19_5.cc)
+
+message("编译20_1")
+add_executable(20_1 ${PROJECT_SOURCE_DIR}/src/第二十章/20_1函数指针/20_1.cc)
+
+message("编译20_1_use_functional")
+add_executable(20_1_use_functional ${PROJECT_SOURCE_DIR}/src/第二十章/20_1函数指针/20_1_use_functional.cc)
+
+
+message("编译20_1quiz.cc")
+add_executable(20_1quiz.cc ${PROJECT_SOURCE_DIR}/src/第二十章/20_1函数指针/20_1quiz.cc)
