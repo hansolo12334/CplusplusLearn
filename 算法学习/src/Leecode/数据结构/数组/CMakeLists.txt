@@ -34,4 +34,7 @@ add_executable(414 414第三大的数.cc)
 add_executable(628 628三个数的最大乘积.cc)
 
 add_executable(645 645错误的集合.cc)
-add_executable(697 未完成/697数组的度.cc)
+add_executable(697 697数组的度.cc)
+
+add_executable(448 448找到所有数组中消失的数字.cc)
+add_executable(442 442数组中重复的数据.cc)
