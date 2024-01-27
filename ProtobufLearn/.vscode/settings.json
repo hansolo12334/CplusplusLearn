@@ -1,4 +1,14 @@
 {
+    "python.analysis.extraPaths": [
+        "/home/hansolo/CplusplusLearn/ProtobufLearn/src/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "./src/catkin_ws/src/proto_msg/src"
+    ],
+    "python.autoComplete.extraPaths": [
+    "/home/hansolo/CplusplusLearn/ProtobufLearn/src/catkin_ws/devel/lib/python3/dist-packages",
+    "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+
     "editor.tabSize": 4,
     "editor.rulers": [
         120
@@ -27,9 +37,17 @@
         "**/.factorypath": true
     },
     "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
         ".clang*": "yaml",
         "*.hpp.in": "cpp",
-        "*.in": "cpp"
+        "*.in": "cpp",
+        "iostream": "cpp",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "span": "cpp"
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,

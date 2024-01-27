@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/build"
+                "${workspaceFolder}/build",
+                "/opt/ros/noetic/include/"
             ],
             "defines": [],
             "intelliSenseMode": "linux-gcc-x64"

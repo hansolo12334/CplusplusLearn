@@ -1,0 +1,1 @@
+/home/hansolo/CplusplusLearn/ProtobufLearn/src/catkin_ws/devel/.private/proto_msg/lib/python3/dist-packages/proto_msg/__init__.py

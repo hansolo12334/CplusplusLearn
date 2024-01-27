@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/hansolo/CplusplusLearn/ProtobufLearn/src/catkin_ws/devel/.private/proto_msg/setup.sh

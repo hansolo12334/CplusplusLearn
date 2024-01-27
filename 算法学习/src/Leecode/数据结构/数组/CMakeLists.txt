@@ -38,3 +38,6 @@ add_executable(697 697数组的度.cc)
 
 add_executable(448 448找到所有数组中消失的数字.cc)
 add_executable(442 442数组中重复的数据.cc)
+
+add_executable(41 困难/41缺失的第一个正数.cc)
+add_executable(274 274H指数.cc)

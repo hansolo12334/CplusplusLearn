@@ -1,0 +1,1 @@
+/home/hansolo/CplusplusLearn/ProtobufLearn/src/catkin_ws/devel/.private/proto_test/share/proto_test/cmake/proto_testConfig-version.cmake

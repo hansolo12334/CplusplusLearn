@@ -13,7 +13,7 @@ include_directories(${Protobuf_INCLUDE_DIRS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ${msgs})
-# protobuf_generate_python(PROTO_PY ${msgs})
+protobuf_generate_python(PROTO_PY ${msgs})
 
 add_library(SHARED ${PROTO_SRCS} ${PROTO_HDRS})
 

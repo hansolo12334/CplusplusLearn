@@ -1,0 +1,8 @@
+prefix=/home/hansolo/CplusplusLearn/ProtobufLearn/src/catkin_ws/devel/.private/proto_msg
+
+Name: proto_msg
+Description: Description of proto_msg
+Version: 0.0.0
+Cflags: -I/home/hansolo/CplusplusLearn/ProtobufLearn/src/catkin_ws/src/proto_msg/include -I/home/hansolo/CplusplusLearn/ProtobufLearn/src/catkin_ws/build/proto_msg/..
+Libs: -L${prefix}/lib -lproto_msg
+Requires: roscpp

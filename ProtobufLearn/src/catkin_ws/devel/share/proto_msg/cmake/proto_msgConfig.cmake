@@ -1,0 +1,1 @@
+/home/hansolo/CplusplusLearn/ProtobufLearn/src/catkin_ws/devel/.private/proto_msg/share/proto_msg/cmake/proto_msgConfig.cmake
