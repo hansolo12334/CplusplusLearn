@@ -12,4 +12,4 @@ add_executable(2_2 2_2传递参数/2_2.cc)
 target_link_libraries(2_2 pthread)
 
 add_executable(test 2_2传递参数/test.cc)
-target_link_libraries(test pthread)
+target_link_libraries(test pthread )

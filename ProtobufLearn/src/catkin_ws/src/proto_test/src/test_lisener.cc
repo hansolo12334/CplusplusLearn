@@ -12,6 +12,7 @@ void proto_sub_callback(const std_msgs::String::ConstPtr &msg)
 
     ROS_INFO("get name %s and age is %d",people.name().c_str(),people.age());
 
+
 }
 
 int main(int argc, char **argv)
