@@ -9,3 +9,7 @@ add_executable(451 451根据字符出频率排序.cc)
 # add_executable(423 423从英文中重建数字.cc)
 
 add_executable(551 551学生出勤记录1.cc)
+
+add_executable(696 696计数二进制子串.cc)
+add_executable(467 467环绕字符串中唯一的子字符串.cc)
+add_executable(535 535TinyURL的加密与解密.cc)

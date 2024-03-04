@@ -8,3 +8,5 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/面试经典150题/矩阵/)
 
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/面试经典150题/数组/)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/Leecode/面试经典150题/二分查找/)
