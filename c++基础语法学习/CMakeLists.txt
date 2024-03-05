@@ -569,3 +569,42 @@ add_executable(20_1_use_functional ${PROJECT_SOURCE_DIR}/src/第二十章/20_1�
 
 message("编译20_1quiz.cc")
 add_executable(20_1quiz.cc ${PROJECT_SOURCE_DIR}/src/第二十章/20_1函数指针/20_1quiz.cc)
+
+message("编译20_2.cc")
+add_executable(20_2 ${PROJECT_SOURCE_DIR}/src/第二十章/20_2栈和堆/20_2.cc)
+
+message("编译20_3.cc")
+add_executable(20_3 ${PROJECT_SOURCE_DIR}/src/第二十章/20_3递归/20_3.cc)
+
+message("编译20_3quiz_factorial.cc")
+add_executable(20_3quiz_factorial ${PROJECT_SOURCE_DIR}/src/第二十章/20_3递归/20_3quiz_factorial.cc)
+
+message("编译20_3quiz_sum.cc")
+add_executable(20_3quiz_sum ${PROJECT_SOURCE_DIR}/src/第二十章/20_3递归/20_3quiz_sum.cc)
+
+message("编译20_3quiz_int2binary.cc")
+add_executable(20_3quiz_int2binary ${PROJECT_SOURCE_DIR}/src/第二十章/20_3递归/20_3quiz_int2binary.cc)
+
+message("编译20_4.cc")
+add_executable(20_4 ${PROJECT_SOURCE_DIR}/src/第二十章/20_4命令行参数/20_4.cc)
+
+message("编译20_5.cc")
+add_executable(20_5 ${PROJECT_SOURCE_DIR}/src/第二十章/20_5省略号/20_5.cc)
+
+message("编译20_6.cc")
+add_executable(20_6 ${PROJECT_SOURCE_DIR}/src/第二十章/20_6匿名函数/20_6.cc)
+
+message("编译20_6_2.cc")
+add_executable(20_6_2 ${PROJECT_SOURCE_DIR}/src/第二十章/20_6匿名函数/20_6_2.cc)
+
+message("编译20_6_quiz.cc")
+add_executable(20_6_quiz ${PROJECT_SOURCE_DIR}/src/第二十章/20_6匿名函数/20_6quiz.cc)
+
+message("编译20_6_quiz2.cc")
+add_executable(20_6_quiz2 ${PROJECT_SOURCE_DIR}/src/第二十章/20_6匿名函数/20_6quiz2.cc)
+
+message("编译20_7.cc")
+add_executable(20_7 ${PROJECT_SOURCE_DIR}/src/第二十章/20_7lambda捕获/20_7.cc)
+
+message("编译20_7_2.cc")
+add_executable(20_7_2 ${PROJECT_SOURCE_DIR}/src/第二十章/20_7lambda捕获/20_7_2.cc)
