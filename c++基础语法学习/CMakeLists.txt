@@ -608,3 +608,45 @@ add_executable(20_7 ${PROJECT_SOURCE_DIR}/src/第二十章/20_7lambda捕获/20_7
 
 message("编译20_7_2.cc")
 add_executable(20_7_2 ${PROJECT_SOURCE_DIR}/src/第二十章/20_7lambda捕获/20_7_2.cc)
+
+message("编译20_7_quiz.cc")
+add_executable(20_7_quiz ${PROJECT_SOURCE_DIR}/src/第二十章/20_7lambda捕获/20_7_quiz.cc)
+
+
+
+message("编译20quiz.cc")
+add_executable(20quiz ${PROJECT_SOURCE_DIR}/src/第二十章/quiz/20quiz.cc)
+
+
+message("编译22_1.cc")
+add_executable(22_1 ${PROJECT_SOURCE_DIR}/src/第二十二章/22_1智能指针和移动语义/22_1.cc)
+
+message("编译22_2.cc")
+add_executable(22_2 ${PROJECT_SOURCE_DIR}/src/第二十二章/22_2移动构造函数和移动赋值/22_2.cc)
+
+message("编译22_4.cc")
+add_executable(22_3 ${PROJECT_SOURCE_DIR}/src/第二十二章/22_3std_move/22_3.cc)
+
+message("编译22_5.cc")
+add_executable(22_5 ${PROJECT_SOURCE_DIR}/src/第二十二章/22_5std_unique_ptr/22_5.cc)
+
+message("编译22_5quiz.cc")
+add_executable(22_5quiz ${PROJECT_SOURCE_DIR}/src/第二十二章/22_5std_unique_ptr/22_5quiz.cc)
+
+message("编译22_6.cc")
+add_executable(22_6 ${PROJECT_SOURCE_DIR}/src/第二十二章/22_6std_shared_ptr/22_6.cc)
+
+message("编译22_7.cc")
+add_executable(22_7 ${PROJECT_SOURCE_DIR}/src/第二十二章/22_7std_shared_ptr和std_weak_ptr的循环依赖问题/22_7.cc)
+
+message("编译22_7_2.cc")
+add_executable(22_7_2 ${PROJECT_SOURCE_DIR}/src/第二十二章/22_7std_shared_ptr和std_weak_ptr的循环依赖问题/22_7_2.cc)
+
+message("编译22_7weak_ptr.cc")
+add_executable(22_7weak_ptr ${PROJECT_SOURCE_DIR}/src/第二十二章/22_7std_shared_ptr和std_weak_ptr的循环依赖问题/22_7weak_ptr.cc)
+
+message("编译22_7weak_ptr2.cc")
+add_executable(22_7weak_ptr2 ${PROJECT_SOURCE_DIR}/src/第二十二章/22_7std_shared_ptr和std_weak_ptr的循环依赖问题/22_7weak_ptr2.cc)
+
+message("编译22_7quiz.cc")
+add_executable(22_7quiz ${PROJECT_SOURCE_DIR}/src/第二十二章/22_7std_shared_ptr和std_weak_ptr的循环依赖问题/22_7quiz.cc)
