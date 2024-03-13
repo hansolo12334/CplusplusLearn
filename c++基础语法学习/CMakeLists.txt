@@ -680,3 +680,18 @@ add_executable(24_6 ${PROJECT_SOURCE_DIR}/src/第二十四章/24_6向派生类�
 
 message("编译24_7.cc")
 add_executable(24_7 ${PROJECT_SOURCE_DIR}/src/第二十四章/24_7调用继承的函数和覆盖行为/24_7.cc)
+
+message("编译24_8.cc")
+add_executable(24_8 ${PROJECT_SOURCE_DIR}/src/第二十四章/24_8隐藏继承的功能/24_8.cc)
+
+message("编译24_9.cc")
+add_executable(24_9 ${PROJECT_SOURCE_DIR}/src/第二十四章/24_9多重继承/24_9.cc)
+
+message("编译24_quiz.cc")
+add_executable(24_quiz ${PROJECT_SOURCE_DIR}/src/第二十四章/24_quiz/24_quiz.cc)
+
+message("编译24_quiz2.cc")
+add_executable(24_quiz2 ${PROJECT_SOURCE_DIR}/src/第二十四章/24_quiz/24_quiz2.cc)
+
+message("编译25_1.cc")
+add_executable(25_1 ${PROJECT_SOURCE_DIR}/src/第二十五章/25_1指向派生对象的基类的指针和引用/25_1.cc)
