@@ -650,3 +650,33 @@ add_executable(22_7weak_ptr2 ${PROJECT_SOURCE_DIR}/src/第二十二章/22_7std_s
 
 message("编译22_7quiz.cc")
 add_executable(22_7quiz ${PROJECT_SOURCE_DIR}/src/第二十二章/22_7std_shared_ptr和std_weak_ptr的循环依赖问题/22_7quiz.cc)
+
+message("编译23_3.cc")
+add_executable(23_3 ${PROJECT_SOURCE_DIR}/src/第二十三章/23_3聚合/23_3.cc)
+
+message("编译23_3quiz.cc")
+add_executable(23_3quiz ${PROJECT_SOURCE_DIR}/src/第二十三章/23_3聚合/23_3quiz.cc)
+
+message("编译23_6.cc")
+add_executable(23_6 ${PROJECT_SOURCE_DIR}/src/第二十三章/23_6容器类/23_6.cc)
+
+message("编译24_2.cc")
+add_executable(24_2 ${PROJECT_SOURCE_DIR}/src/第二十四章/24_2C++的基本继承/24_2.cc)
+
+message("编译24_3.cc")
+add_executable(24_3 ${PROJECT_SOURCE_DIR}/src/第二十四章/24_3派生类的构造顺序/24_3.cc)
+
+message("编译24_4.cc")
+add_executable(24_4 ${PROJECT_SOURCE_DIR}/src/第二十四章/24_4派生类的构造函数和初始化/24_4.cc)
+
+message("编译24_4quiz.cc")
+add_executable(24_4quiz ${PROJECT_SOURCE_DIR}/src/第二十四章/24_4派生类的构造函数和初始化/24_4quiz.cc)
+
+# message("编译24_5.cc")
+# add_executable(24_5 ${PROJECT_SOURCE_DIR}/src/第二十四章/24_5继承和访问说明符/24_5.cc)
+
+message("编译24_6.cc")
+add_executable(24_6 ${PROJECT_SOURCE_DIR}/src/第二十四章/24_6向派生类添加新功能/24_6.cc)
+
+message("编译24_7.cc")
+add_executable(24_7 ${PROJECT_SOURCE_DIR}/src/第二十四章/24_7调用继承的函数和覆盖行为/24_7.cc)
