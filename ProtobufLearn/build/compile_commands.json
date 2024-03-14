@@ -196,6 +196,11 @@
 },
 {
   "directory": "/home/hansolo/CplusplusLearn/ProtobufLearn/build",
+  "command": "/usr/local/bin/g++ -I/home/hansolo/CplusplusLearn/ProtobufLearn/build -I/home/hansolo/CplusplusLearn/ProtobufLearn/src/tcp/include -I/home/hansolo/CplusplusLearn/ProtobufLearn/src/hansolo_thread/./include -I/home/hansolo/CplusplusLearn/ProtobufLearn/src/hansolo_thread/../udp/include -g -std=gnu++11 -o src/hansolo_thread/CMakeFiles/hansolo_core.dir/src/hansolo_tcp.cc.o -c /home/hansolo/CplusplusLearn/ProtobufLearn/src/hansolo_thread/src/hansolo_tcp.cc",
+  "file": "/home/hansolo/CplusplusLearn/ProtobufLearn/src/hansolo_thread/src/hansolo_tcp.cc"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/ProtobufLearn/build",
   "command": "/usr/local/bin/g++ -I/home/hansolo/CplusplusLearn/ProtobufLearn/build -I/home/hansolo/CplusplusLearn/ProtobufLearn/src/tcp/include -I/home/hansolo/CplusplusLearn/ProtobufLearn/src/hansolo_thread/./include -I/home/hansolo/CplusplusLearn/ProtobufLearn/src/hansolo_thread/../udp/include -g -std=gnu++11 -o src/hansolo_thread/CMakeFiles/hansolo_core.dir/__/udp/src/wrap.cc.o -c /home/hansolo/CplusplusLearn/ProtobufLearn/src/udp/src/wrap.cc",
   "file": "/home/hansolo/CplusplusLearn/ProtobufLearn/src/udp/src/wrap.cc"
 },

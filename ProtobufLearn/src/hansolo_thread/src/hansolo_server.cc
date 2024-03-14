@@ -1,6 +1,8 @@
 #include"hansolo_server.h"
 
-
+Color::Modifier green(Color::FG_GREEN);
+Color::Modifier def(Color::FG_DEFAULT);
+Color::Modifier red(Color::FG_RED);
 
 hansolo_core::hansolo_core()
 {
@@ -26,20 +28,43 @@ void hansolo_core::init()
     printf("Accepting connections ...\n");
 }
 
-void hansolo_core::read_client_msg(char *buf,int length)
+bool hansolo_core::read_client_msg(char *buf,int length)
 {
     std::string message;
     message = std::string(buf, length);
-    if(!m_client.ParseFromString(message))
+    if(m_client.ParseFromString(message))
     {
-        std::cout << "序列化失败!\n";
-        return;
+        if(m_client.port()!=0)
+        {
+            std::cout <<"node name: "<< m_client.clientname()<<" ip address: "<<m_client.ip_address() <<" port: "<< m_client.port() << std::endl;
+            m_current_reqType = createNode;
+            auto add = m_clients.add_clit();
+            add->set_clientname(m_client.clientname());
+            add->set_ip_address(m_client.ip_address());
+            add->set_port(m_client.port());
+            return true;
+        }
     }
-    std::cout <<"node name: "<< m_client.clientname()<<" ip address: "<<m_client.ip_address() <<" port: "<< m_client.port() << std::endl;
+    if(pubReqFromClient.ParseFromString(message))
+    {
+        if(pubReqFromClient.publish_name()!="0")
+        {
+            std::cout << "node name: " << pubReqFromClient.clientname()<< " pub topic name: " << pubReqFromClient.publish_name() << std::endl;
+            m_current_reqType = createPublisher;
+
+            m_current_select_port=selectPortForClienPublishReq();
+            std::cout << "create port " << m_current_select_port << std::endl;
+
+            return true;
+        }
+    }
+    return false;
 }
 
 bool hansolo_core::read_from_client()
 {
+
+
     m_cliaddr_len = sizeof(m_cliaddr);
     m_receive_size = recvfrom(m_sockfd, m_buf, MAXLINE, 0, (struct sockaddr *)&m_cliaddr, &m_cliaddr_len);
     if (m_receive_size == -1){
@@ -47,25 +72,48 @@ bool hansolo_core::read_from_client()
         return false;
     }
 
-    printf("received from %s at PORT %d\n",
-            inet_ntop(AF_INET, &m_cliaddr.sin_addr, m_str, sizeof(m_str)),
-            ntohs(m_cliaddr.sin_port));
-    read_client_msg(m_buf, m_receive_size);
+
+    std::cout << green << "received from " << inet_ntop(AF_INET, &m_cliaddr.sin_addr, m_str, sizeof(m_str))
+              << " at PORT " << ntohs(m_cliaddr.sin_port) <<def<< std::endl;
 
 
-    touchIsSuccess.set_clientname(m_client.clientname());
-    touchIsSuccess.set_success(true);
+    // printf("\033[1;31m received from %s at PORT %d\033[0m\n",
+    //        inet_ntop(AF_INET, &m_cliaddr.sin_addr, m_str, sizeof(m_str)),
+    //        ntohs(m_cliaddr.sin_port));
 
-    if(client_names.find(m_client.clientname())!=client_names.end()){
-        std::cout << "错误! 节点名称冲突! :" << m_client.clientname() << std::endl;
-        touchIsSuccess.set_success(false);
+
+    if(!read_client_msg(m_buf,m_receive_size)){
+        return false;
     }
 
 
     std::string temp{};
-    if(!touchIsSuccess.SerializeToString(&temp)){
-        perror("序列化失败");
-        return false;
+
+    if(m_current_reqType==createNode){
+
+        touchIsSuccess.set_clientname(m_client.clientname());
+        touchIsSuccess.set_success(1);
+        if(client_names.find(m_client.clientname())!=client_names.end())
+        {
+            std::cout <<red<< "错误! 节点名称冲突! :" << m_client.clientname() << def<<std::endl;
+            touchIsSuccess.set_success(0);
+        }
+        if(!touchIsSuccess.SerializeToString(&temp))
+        {
+            perror("序列化失败");
+            return false;
+        }
+    }
+
+    if (m_current_reqType == createPublisher)
+    {
+        pubAnsToClient.set_port(m_current_select_port);
+        pubAnsToClient.set_clientname(pubReqFromClient.clientname());
+        if (!pubAnsToClient.SerializeToString(&temp))
+        {
+            perror("序列化失败");
+            return false;
+        }
     }
 
     m_receive_size = sendto(m_sockfd, temp.c_str(), temp.length(), 0, (struct sockaddr *)&m_cliaddr, sizeof(m_cliaddr));
@@ -73,9 +121,21 @@ bool hansolo_core::read_from_client()
         perr_exit("sendto error");
     }
 
-    client_names[m_client.clientname()]++;
-    return true;
 
+    if(m_current_reqType==createNode){
+        client_names[m_client.clientname()]++;
+        m_client.Clear();
+    }
+    if(m_current_reqType==createPublisher){
+        pubReqFromClient.Clear();
+    }
+
+    m_current_reqType = noneType;
+    touchIsSuccess.Clear();
+    pubAnsToClient.Clear();
+
+
+    return true;
 }
 
 /// @brief 一次接收两帧客户端的消息 第一帧是数据长度 第二帧是实际数据
@@ -114,8 +174,9 @@ bool hansolo_core::read_twice_from_client()
                inet_ntop(AF_INET, &m_cliaddr.sin_addr, m_str, sizeof(m_str)),
                ntohs(m_cliaddr.sin_port));
 
-    read_client_msg(buffer_msg,length);
-
+    if(!read_client_msg(buffer_msg,length)){
+        return false;
+    }
 
 
     //向客户端发送成功确认通知
@@ -143,11 +204,23 @@ bool hansolo_core::read_twice_from_client()
     return true;
     // touchIsSuccess
 }
+
+
+int hansolo_core::selectPortForClienPublishReq()
+{
+   while(m_tcp.test_server_port(m_start_portId)==false){
+       m_start_portId++;
+   }
+   m_tcp.tcp_close();
+   int port = m_start_portId;
+   return port;
+}
+
+
 void hansolo_core::main_loop()
 {
     while(1)
     {
-
         read_from_client();
 
     }

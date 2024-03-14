@@ -14,5 +14,16 @@ message hansoloClients{
 
 message firstTouchResultToClient{
     optional string clientName=1;
-    optional bool success=2;
+    optional int32 success=2;
+}
+
+message publisherCreateReqFromClient{
+    optional string publish_name=1;
+    optional string  clientName=2;
+}
+
+message publisherCreateAnsToClient{
+    optional string clientName=1;
+    optional int32 port=2;
+
 }

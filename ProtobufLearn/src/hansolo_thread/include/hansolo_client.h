@@ -15,7 +15,7 @@
 //通信的序列化信息
 #include"coreConnection.pb.h"
 
-#define MAXLINE 80
+#define MAXLINE 1000
 #define SERV_PORT 8000
 #define IP_ADDRESS "127.0.0.1"
 
@@ -27,7 +27,7 @@ private:
     struct sockaddr_in m_servaddr;
     int m_sockfd{};
     int m_receive_size{};
-    char m_buf[MAXLINE];
+
     char m_str[INET_ADDRSTRLEN];
     socklen_t m_servaddr_len;
 
@@ -36,23 +36,24 @@ private:
     std::string m_ip_address{};
 
     test::hansoloClient m_client_info{};
-
+    test::publisherCreateReqFromClient pubReq{};
 
 
     template <typename T>
     bool send_to_server_twice(T &protoData);
     template <typename T>
     bool send_to_server_once(T &protoData);
-    bool touch_once_to_server();
+    template <typename T>
+    bool touch_once_to_server(T &protoData);
 
 public:
     hansolo_client();
     ~hansolo_client();
 
 
-    void init_node(std::string node_name);
+    bool init_node(std::string node_name);
 
-    void create_publisher(std::string topic_name);
+    bool create_publisher(std::string topic_name);
 };
 
 

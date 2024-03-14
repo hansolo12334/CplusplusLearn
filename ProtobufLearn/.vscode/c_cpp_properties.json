@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/build",
-                "/opt/ros/noetic/include/"
+                "/opt/ros/noetic/include/",
+                "${workspaceFolder}/src/hansolo_thread/include"
             ],
             "defines": [],
             "intelliSenseMode": "linux-gcc-x64"

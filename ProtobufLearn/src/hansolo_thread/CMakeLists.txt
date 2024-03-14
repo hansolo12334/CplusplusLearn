@@ -1,6 +1,7 @@
 add_library(hansolo_core
     ./src/hansolo_server.cc
     ./src/hansolo_client.cc
+    ./src/hansolo_tcp.cc
     ../udp/src/wrap.cc)
 include_directories(./include)
 include_directories(../udp/include)

@@ -26,14 +26,17 @@ hansolo_client::~hansolo_client()
     Close(m_sockfd);
 }
 
-void hansolo_client::init_node(std::string node_name)
+bool hansolo_client::init_node(std::string node_name)
 {
     m_node_name = node_name;
     m_client_info.set_ip_address(IP_ADDRESS);
     m_client_info.set_clientname(m_node_name);
     m_client_info.set_port(m_port);
 
-    touch_once_to_server();
+    if(!touch_once_to_server(m_client_info)){
+        return false;
+    }
+    return true;
 }
 
 /// @brief  向客户端发送数据 当数据很大时 一次发送两帧 第一帧是数据大小 第二帧是真实数据
@@ -77,7 +80,7 @@ bool hansolo_client::send_to_server_once(T &protoData)
         perror("序列化失败");
         return false;
     }
-     //不知道数据大小 先发送数据的长度
+
     size_t msg_size = temp.length();
     m_receive_size = sendto(m_sockfd, temp.c_str(), msg_size, 0, (struct sockaddr *)&m_servaddr, sizeof(m_servaddr));
     if (m_receive_size == -1)
@@ -88,10 +91,12 @@ bool hansolo_client::send_to_server_once(T &protoData)
     return true;
 }
 
-
-bool hansolo_client::touch_once_to_server()
+template <typename T>
+bool hansolo_client::touch_once_to_server(T &protoData)
 {
-    if(!send_to_server_once(m_client_info)){
+    char m_buf[MAXLINE];
+
+    if(!send_to_server_once(protoData)){
         return false;
     }
     std::cout << "发送成功\n";
@@ -101,16 +106,45 @@ bool hansolo_client::touch_once_to_server()
         perr_exit("recvfrom error");
         return false;
     }
+
     std::string temp = std::string(m_buf, m_receive_size);
     test::firstTouchResultToClient result{};
-    if(!result.ParseFromString(temp)){
-        perror("反序列化失败");
+    test::publisherCreateAnsToClient pubAns{};
+
+    if (result.ParseFromString(temp))
+    {
+        if(result.success()==1 || result.success()==0){
+            if(result.success()==1){
+                std::cout << "和 master 接触成功！\n";
+                protoData.Clear();
+                result.Clear();
+                return true;
+            }
+        }
+    }
+    if(pubAns.ParseFromString(temp))
+    {
+        if (pubAns.port() != 0 && pubAns.port() != 1)
+        {
+            std::cout << "从server获得分配的port: " << pubAns.port() << std::endl;
+            protoData.Clear();
+            pubAns.Clear();
+            return true;
+        }
+    }
+
+    // Write(STDOUT_FILENO, m_buf, m_receive_size);
+    return false;
+}
+
+/// @brief 生成一个新的发布器 创建一个新的tcp服务器
+/// @param topic_name
+bool hansolo_client::create_publisher(std::string topic_name)
+{
+    pubReq.set_publish_name(topic_name);
+    pubReq.set_clientname(m_node_name);
+    if(!touch_once_to_server(pubReq)){
         return false;
     }
-    if(result.success()){
-        std::cout << "和 master 接触成功！\n";
-        return true;
-    }
-    // Write(STDOUT_FILENO, m_buf, m_receive_size);
     return true;
 }
