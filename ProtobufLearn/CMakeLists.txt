@@ -7,7 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Protobuf REQUIRED)
 
 set(msgs msgs/test.proto
-         msgs/AddressBook.proto)
+         msgs/AddressBook.proto
+         ./src/hansolo_thread/msgs/coreConnection.proto)
 
 include_directories(${Protobuf_INCLUDE_DIRS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -31,3 +32,19 @@ add_executable(server src/tcp/server.cc  ${PROTO_SRCS} ${PROTO_HDRS} )
 target_link_libraries(server ${PROTOBUF_LIBRARY} pthread)
 add_executable(client src/tcp/client.cc  ${PROTO_SRCS} ${PROTO_HDRS} )
 target_link_libraries(client ${PROTOBUF_LIBRARY} pthread)
+
+
+
+
+
+include_directories(src/tcp/include)
+add_executable(tcp_client src/tcp/tcp_client.cc src/tcp/src/tcp_socket.cc  ${PROTO_SRCS} ${PROTO_HDRS})
+target_link_libraries(tcp_client ${PROTOBUF_LIBRARY} pthread)
+
+add_executable(tcp_server src/tcp/tcp_server.cc src/tcp/src/tcp_socket.cc ${PROTO_SRCS} ${PROTO_HDRS})
+target_link_libraries(tcp_server ${PROTOBUF_LIBRARY} pthread)
+
+
+add_subdirectory(./src/udp)
+
+add_subdirectory(./src/hansolo_thread)

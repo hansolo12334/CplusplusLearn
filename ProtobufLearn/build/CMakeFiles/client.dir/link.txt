@@ -1,1 +1,0 @@
-/usr/local/bin/g++ -g CMakeFiles/client.dir/src/tcp/client.cc.o CMakeFiles/client.dir/test.pb.cc.o CMakeFiles/client.dir/AddressBook.pb.cc.o -o client  /usr/lib/x86_64-linux-gnu/libprotobuf.so -lpthread 

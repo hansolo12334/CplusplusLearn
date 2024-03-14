@@ -1,2 +1,0 @@
-/usr/bin/ar qc libSHARED.a CMakeFiles/SHARED.dir/test.pb.cc.o CMakeFiles/SHARED.dir/AddressBook.pb.cc.o
-/usr/bin/ranlib libSHARED.a

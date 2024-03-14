@@ -1,22 +1,17 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/CMakeScratch/TryCompile-GkneNO
+Change Dir: /home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/CMakeScratch/TryCompile-yvVtl7
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_1a1f2/fast && /usr/bin/make  -f CMakeFiles/cmTC_1a1f2.dir/build.make CMakeFiles/cmTC_1a1f2.dir/build
-make[1]: 进入目录“/home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/CMakeScratch/TryCompile-GkneNO”
-Building C object CMakeFiles/cmTC_1a1f2.dir/src.c.o
-/usr/local/bin/gcc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_1a1f2.dir/src.c.o -c /home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/CMakeScratch/TryCompile-GkneNO/src.c
-Linking C executable cmTC_1a1f2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a1f2.dir/link.txt --verbose=1
-/usr/local/bin/gcc CMakeFiles/cmTC_1a1f2.dir/src.c.o -o cmTC_1a1f2 
-/usr/bin/ld: CMakeFiles/cmTC_1a1f2.dir/src.c.o: in function `main':
+Run Build Command(s):/usr/bin/ninja cmTC_41dbb && [1/2] Building C object CMakeFiles/cmTC_41dbb.dir/src.c.o
+[2/2] Linking C executable cmTC_41dbb
+FAILED: cmTC_41dbb 
+: && /usr/local/bin/gcc   CMakeFiles/cmTC_41dbb.dir/src.c.o -o cmTC_41dbb   && :
+/usr/bin/ld: CMakeFiles/cmTC_41dbb.dir/src.c.o: in function `main':
 src.c:(.text+0x2d): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x39): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x45): undefined reference to `pthread_cancel'
 /usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_join'
 collect2: 错误：ld 返回 1
-make[1]: *** [CMakeFiles/cmTC_1a1f2.dir/build.make:99：cmTC_1a1f2] 错误 1
-make[1]: 离开目录“/home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/CMakeScratch/TryCompile-GkneNO”
-make: *** [Makefile:127：cmTC_1a1f2/fast] 错误 2
+ninja: build stopped: subcommand failed.
 
 
 Source file was:
@@ -42,20 +37,15 @@ int main(void)
 
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/CMakeScratch/TryCompile-X2VflO
+Change Dir: /home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/CMakeScratch/TryCompile-vvsnu6
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_3ae69/fast && /usr/bin/make  -f CMakeFiles/cmTC_3ae69.dir/build.make CMakeFiles/cmTC_3ae69.dir/build
-make[1]: 进入目录“/home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/CMakeScratch/TryCompile-X2VflO”
-Building C object CMakeFiles/cmTC_3ae69.dir/CheckFunctionExists.c.o
-/usr/local/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_3ae69.dir/CheckFunctionExists.c.o -c /home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/CMakeScratch/TryCompile-X2VflO/CheckFunctionExists.c
-Linking C executable cmTC_3ae69
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ae69.dir/link.txt --verbose=1
-/usr/local/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_3ae69.dir/CheckFunctionExists.c.o -o cmTC_3ae69  -lpthreads 
+Run Build Command(s):/usr/bin/ninja cmTC_38721 && [1/2] Building C object CMakeFiles/cmTC_38721.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_38721
+FAILED: cmTC_38721 
+: && /usr/local/bin/gcc -DCHECK_FUNCTION_EXISTS=pthread_create  CMakeFiles/cmTC_38721.dir/CheckFunctionExists.c.o -o cmTC_38721  -lpthreads && :
 /usr/bin/ld: 找不到 -lpthreads
 collect2: 错误：ld 返回 1
-make[1]: *** [CMakeFiles/cmTC_3ae69.dir/build.make:99：cmTC_3ae69] 错误 1
-make[1]: 离开目录“/home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/CMakeScratch/TryCompile-X2VflO”
-make: *** [Makefile:127：cmTC_3ae69/fast] 错误 2
+ninja: build stopped: subcommand failed.
 
 
 
