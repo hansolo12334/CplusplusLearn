@@ -127,6 +127,10 @@ bool hansolo_client::touch_once_to_server(T &protoData)
         if (pubAns.port() != 0 && pubAns.port() != 1)
         {
             std::cout << "从server获得分配的port: " << pubAns.port() << std::endl;
+            tcp_port = pubAns.port();
+            if(!init_tcp()){
+                std::cout << "初始化tcp server失败\n";
+            }
             protoData.Clear();
             pubAns.Clear();
             return true;
@@ -146,5 +150,16 @@ bool hansolo_client::create_publisher(std::string topic_name)
     if(!touch_once_to_server(pubReq)){
         return false;
     }
+    return true;
+}
+
+
+
+bool hansolo_client::init_tcp()
+{
+    hansolo_tcp_thread *my_tcp = new hansolo_tcp_thread{tcp_port};
+    my_tcps.push_back(my_tcp);
+    my_tcp->server_start();
+
     return true;
 }

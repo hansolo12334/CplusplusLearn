@@ -18,15 +18,18 @@
 class hansolo_tcp
 {
 private:
-    char m_ip_buf[32] = {0};
-    int m_port = 0;
-    int m_server_fd{};
-    int m_client_fd{};
+
+
+
 
 public:
     hansolo_tcp();
     ~hansolo_tcp();
 
+    int m_server_fd{};
+    int m_client_fd{};
+    char m_ip_buf[32] = {0};
+    int m_port = 0;
 
     int tcp_init(const char *ip, int port);
     int tcp_accept(int sfd);

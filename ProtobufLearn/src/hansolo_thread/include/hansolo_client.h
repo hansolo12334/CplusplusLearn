@@ -12,6 +12,7 @@
 
 #include"wrap.h"
 
+#include"hansolo_tcp_thread.h"
 //通信的序列化信息
 #include"coreConnection.pb.h"
 
@@ -51,9 +52,16 @@ public:
     ~hansolo_client();
 
 
+    std::vector<hansolo_tcp_thread *> my_tcps{};
+    int tcp_port{};
+
     bool init_node(std::string node_name);
 
     bool create_publisher(std::string topic_name);
+
+    bool init_tcp();
+
+
 };
 
 

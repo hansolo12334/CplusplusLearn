@@ -14,5 +14,8 @@ int main()
 
     success = node.create_publisher("test_pub");
     std::cout << (success == true ? "创建话题成功\n" : "创建话题失败\n");
+    while(1)
+    {
 
+    }
 }

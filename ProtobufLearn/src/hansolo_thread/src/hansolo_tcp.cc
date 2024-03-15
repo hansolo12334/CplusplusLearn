@@ -35,6 +35,7 @@ int hansolo_tcp::tcp_init(const char* ip, int port)
     }
 
     /* 解除端口占用 */
+
     if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval)) < 0)
     {
     perror("setsockopt\n");
@@ -80,7 +81,7 @@ int hansolo_tcp::tcp_accept(int server_fd)
 
     int new_fd = accept(server_fd, (struct sockaddr*) &client_addr,(socklen_t *)&addrlen);
 
-    if(new_fd < 0)
+    if (new_fd < 0)
     {
         perror("accept");
         close(server_fd);
@@ -176,6 +177,7 @@ void hansolo_tcp::tcp_close()
 bool hansolo_tcp::init_server_tcp(int port)
 {
     std::cout<<"==================tcp server==================\n";
+
     m_server_fd = tcp_init(NULL, port);
 
     if (m_server_fd < 0)

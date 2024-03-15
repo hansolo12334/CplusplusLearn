@@ -16,5 +16,6 @@
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/src/hansolo_thread/CMakeFiles/test_core.dir
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/src/hansolo_thread/CMakeFiles/test_node.dir
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/src/hansolo_thread/CMakeFiles/test_node1.dir
+/home/hansolo/CplusplusLearn/ProtobufLearn/build/src/hansolo_thread/CMakeFiles/test_server_tcp.dir
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/src/hansolo_thread/CMakeFiles/edit_cache.dir
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/src/hansolo_thread/CMakeFiles/rebuild_cache.dir
