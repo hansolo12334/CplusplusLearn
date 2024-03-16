@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Protobuf REQUIRED)
 
+
 set(msgs msgs/test.proto
          msgs/AddressBook.proto
          ./src/hansolo_thread/msgs/coreConnection.proto)

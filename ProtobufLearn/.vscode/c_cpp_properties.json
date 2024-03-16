@@ -7,6 +7,7 @@
                 "${workspaceFolder}/build",
                 "/opt/ros/noetic/include/",
                 "${workspaceFolder}/src/hansolo_thread/include"
+                "/usr/local/include/protobuf25_1/include"
             ],
             "defines": [],
             "intelliSenseMode": "linux-gcc-x64"
