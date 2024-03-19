@@ -45,6 +45,22 @@ void hansolo_tcp_thread::resume()
 
 void hansolo_tcp_thread::server_update(int port)
 {
+    // my_tcp->init_server_tcp(port);
+    // while (1)
+    // {
+    //     if(!m_stopE)
+    //     {
+    //         std::this_thread::sleep_for(std::chrono::milliseconds(1));
+    //         std::unique_lock<std::mutex> lock(mu);
+    //         m_cv.wait(lock, [this] { return !m_pause; });
+    //     }
+    //     if(m_stopE)
+    //     {
+    //         break;
+    //     }
+    //     // my_tcp->tcp_server_update_once();
+    // }
+
     my_tcp->init_server_tcp(port);
     std::cout << "clinet 连接!\n";
     while (1)
