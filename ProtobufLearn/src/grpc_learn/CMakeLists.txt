@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.20)
 
 project(HelloWorld)
 
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# set(CMAKE_CXX_STANDARD 17)
+# set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(PROTOBUF_GRPC_ROOT "/usr/local/include/protobuf25_1")
 
@@ -36,9 +36,8 @@ set(hw_proto_hdrs "${CMAKE_CURRENT_BINARY_DIR}/hansoloCores.pb.h")
 set(hw_grpc_srcs "${CMAKE_CURRENT_BINARY_DIR}/hansoloCores.grpc.pb.cc")
 set(hw_grpc_hdrs "${CMAKE_CURRENT_BINARY_DIR}/hansoloCores.grpc.pb.h")
 
-
 add_custom_command(
-      OUTPUT   "${hw_proto_srcs}" "${hw_proto_srcs}" "${hw_grpc_srcs}" "${hw_grpc_hdrs}"
+      OUTPUT   "${hw_proto_srcs}" "${hw_proto_hdrs}" "${hw_grpc_srcs}" "${hw_grpc_hdrs}"
       COMMAND ${_PROTOBUF_PROTOC}
       ARGS --grpc_out "${CMAKE_CURRENT_BINARY_DIR}"
         --cpp_out "${CMAKE_CURRENT_BINARY_DIR}"
@@ -50,37 +49,53 @@ add_custom_command(
 # Include generated *.pb.h files
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
-# hw_grpc_proto
+# # hw_grpc_proto
 add_library(hw_grpc_proto
   ${hw_grpc_srcs}
   ${hw_grpc_hdrs}
   ${hw_proto_srcs}
   ${hw_proto_hdrs})
-
 target_link_libraries(hw_grpc_proto
   ${_REFLECTION}
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF})
 
-# Targets greeter_[async_](client|server)
-# foreach(_target
-#   greeter_client greeter_server
-#   greeter_callback_client greeter_callback_server
-#   greeter_async_client greeter_async_client2 greeter_async_server)
-#   add_executable(${_target} "${_target}.cc")
-#   target_link_libraries(${_target}
-#     hw_grpc_proto
-#     absl::flags
-#     absl::flags_parse
-#     ${_REFLECTION}
-#     ${_GRPC_GRPCPP}
-#     ${_PROTOBUF_LIBPROTOBUF})
-# endforeach()
 
-add_executable(test src/test.cc)
-target_link_libraries(test hw_grpc_proto
-                        absl::flags
-                        absl::flags_parse
-                        ${_REFLECTION}
-                        ${_GRPC_GRPCPP}
-                        ${_PROTOBUF_LIBPROTOBUF} pthread)
+# # Targets greeter_[async_](client|server)
+include_directories(./include)
+foreach(_target
+  test_grpc_server
+  test_grpc_client
+  test_grpc_client1
+    )
+  add_executable(${_target} "${_target}.cc" src/grpc_client.cc)
+  target_link_libraries(${_target}
+    hw_grpc_proto
+    absl::flags
+    absl::flags_parse
+    ${_REFLECTION}
+    ${_GRPC_GRPCPP}
+    ${_PROTOBUF_LIBPROTOBUF})
+endforeach()
+# include_directories(./include)
+# add_executable(test_grpc_server test_grpc_server.cc)
+# target_link_libraries(test_grpc_server
+#                         hw_grpc_proto
+#                         absl::flags
+#                         absl::flags_parse
+#                         ${_REFLECTION}
+#                         ${_GRPC_GRPCPP}
+#                         ${_PROTOBUF_LIBPROTOBUF}
+#                          pthread
+#                          )
+
+# add_executable(test_grpc_client test_grpc_client.cc src/grpc_client.cc)
+# target_link_libraries(test_grpc_client
+#                         hw_grpc_proto
+#                         absl::flags
+#                         absl::flags_parse
+#                         ${_REFLECTION}
+#                         ${_GRPC_GRPCPP}
+#                         ${_PROTOBUF_LIBPROTOBUF}
+#                          pthread
+#                          )

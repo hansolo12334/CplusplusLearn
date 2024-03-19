@@ -64,6 +64,7 @@ void hansolo_tcp_thread::server_update(int port)
         char buf[128] = {0};
 
         int recv_len =my_tcp->tcp_blocking_recv(my_tcp->m_client_fd, buf, sizeof(buf));
+        // int recv_len = my_tcp->tcp_nonblocking_recv(my_tcp->m_client_fd, buf, sizeof(buf), 0, 0);
         if (recv_len <= 0)
         {
             printf("clinet 退出!\n");

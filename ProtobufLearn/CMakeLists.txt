@@ -46,6 +46,10 @@ add_executable(tcp_server src/tcp/tcp_server.cc src/tcp/src/tcp_socket.cc ${PROT
 target_link_libraries(tcp_server ${PROTOBUF_LIBRARY} pthread)
 
 
+include_directories(src/udp/include)
+add_executable(tcp_server_select_model src/tcp/tcp_server_select_model.cc src/udp/src/wrap.cc ${PROTO_SRCS} ${PROTO_HDRS})
+target_link_libraries(tcp_server_select_model ${PROTOBUF_LIBRARY} pthread)
+
 add_subdirectory(./src/udp)
 
 add_subdirectory(./src/hansolo_thread)

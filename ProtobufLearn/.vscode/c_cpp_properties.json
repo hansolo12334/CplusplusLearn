@@ -5,8 +5,10 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/build",
+                "${workspaceFolder}/src/grpc_learn/build",
                 "/opt/ros/noetic/include/",
-                "${workspaceFolder}/src/hansolo_thread/include"
+                "${workspaceFolder}/src/hansolo_thread/include",
+                "/usr/local/include/protobuf25_1/include/absl",
                 "/usr/local/include/protobuf25_1/include"
             ],
             "defines": [],

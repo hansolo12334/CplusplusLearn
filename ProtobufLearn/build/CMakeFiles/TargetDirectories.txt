@@ -6,6 +6,7 @@
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/client.dir
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/tcp_client.dir
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/tcp_server.dir
+/home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/tcp_server_select_model.dir
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/edit_cache.dir
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/CMakeFiles/rebuild_cache.dir
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/src/udp/CMakeFiles/udp_server.dir
@@ -17,5 +18,6 @@
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/src/hansolo_thread/CMakeFiles/test_node.dir
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/src/hansolo_thread/CMakeFiles/test_node1.dir
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/src/hansolo_thread/CMakeFiles/test_server_tcp.dir
+/home/hansolo/CplusplusLearn/ProtobufLearn/build/src/hansolo_thread/CMakeFiles/test_select_server.dir
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/src/hansolo_thread/CMakeFiles/edit_cache.dir
 /home/hansolo/CplusplusLearn/ProtobufLearn/build/src/hansolo_thread/CMakeFiles/rebuild_cache.dir

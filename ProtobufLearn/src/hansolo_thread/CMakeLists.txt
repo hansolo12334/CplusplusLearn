@@ -30,3 +30,8 @@ target_link_libraries(test_node1
 
 add_executable(test_server_tcp ./test_server_tcp.cc )
 target_link_libraries(test_server_tcp hansolo_core pthread)
+
+
+#测试多client select 模型
+include_directories(./include/multiClient/)
+add_executable(test_select_server ./include/multiClient/test_select_server.cc ./include/multiClient/wrap.cc ./include/multiClient/hansolo_tcp.cc)
