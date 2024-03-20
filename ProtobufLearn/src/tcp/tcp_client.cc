@@ -1,5 +1,7 @@
 #include "tcp_socket.h"
 
+#include<string>
+#include<iostream>
 int main(int argc, char **argv)
 {
     printf("==================tcp cient==================\n");
@@ -24,15 +26,17 @@ int main(int argc, char **argv)
 
     while (1)
     {
-        char buf[128] = {0};
-        if (scanf("%s", buf))
+        // char buf[128] = {0};
+        char buf[50] = "h";
+        // if (scanf("%s", buf))
+        // {
+
+        int send_len = tcp_send(server_fd, (uint8_t *)buf, strlen(buf));
+        if (send_len <= 0)
         {
-            int send_len = tcp_send(server_fd, (uint8_t *)buf, strlen(buf));
-            if (send_len <= 0)
-            {
-                printf("tcp_send error!\n");
-                tcp_close(server_fd);
-                exit(EXIT_FAILURE);
+            printf("tcp_send error!\n");
+            tcp_close(server_fd);
+            exit(EXIT_FAILURE);
             }
             else
             {
@@ -48,7 +52,7 @@ int main(int argc, char **argv)
                 exit(EXIT_FAILURE);
             }
             printf("recv : %s\n", buf);
-        }
+        // }
     }
 
     return 0;

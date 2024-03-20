@@ -93,10 +93,12 @@ private:
     //为客户端请求的publisher分配端口
     int selectPortForClienPublishReq();
 
+
 public:
     hansolo_core();
     ~hansolo_core();
 };
+
 
 
 #endif

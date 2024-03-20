@@ -3,8 +3,10 @@
 #include "hansolo_tcp_thread.h"
 
 
-hansolo_tcp_thread::hansolo_tcp_thread(int port)
+hansolo_tcp_thread::hansolo_tcp_thread(int port,std::string node_name,std::string topic_name)
     : m_prot{port}
+    , m_node_name{node_name}
+    , m_topic_name{topic_name}
     , my_tcp{new hansolo_tcp{}}
 {
 
@@ -46,6 +48,7 @@ void hansolo_tcp_thread::resume()
 void hansolo_tcp_thread::server_update(int port)
 {
     my_tcp->init_server_tcp(port);
+    hDebug(Color::FG_BLUE) << m_node_name <<' '<<m_topic_name << " publisher启动";
     while (1)
     {
         if(!m_stopE)
@@ -58,54 +61,10 @@ void hansolo_tcp_thread::server_update(int port)
         {
             break;
         }
-        my_tcp->tcp_server_update_once();
+        // my_tcp->tcp_server_update_once();
+        if(sendData.length()>0){
+            my_tcp->tcp_server_update_once_send_msg(sendData);
+        }
+        sendData.clear();
     }
-
-    // my_tcp->init_server_tcp(port);
-    // std::cout << "clinet 连接!\n";
-    // while (1)
-    // {
-    //     if(!m_stopE)
-    //     {
-    //         std::this_thread::sleep_for(std::chrono::milliseconds(1));
-    //         std::unique_lock<std::mutex> lock(mu);
-    //         m_cv.wait(lock, [this] { return !m_pause; });
-    //     }
-    //     if(m_stopE)
-    //     {
-    //         break;
-    //     }
-    //     /////////
-
-    //     char buf[128] = {0};
-
-    //     int recv_len =my_tcp->tcp_blocking_recv(my_tcp->m_client_fd, buf, sizeof(buf));
-    //     // int recv_len = my_tcp->tcp_nonblocking_recv(my_tcp->m_client_fd, buf, sizeof(buf), 0, 0);
-    //     if (recv_len <= 0)
-    //     {
-    //         printf("clinet 退出!\n");
-    //         my_tcp->tcp_close(my_tcp->m_client_fd);
-    //         my_tcp->tcp_close(my_tcp->m_server_fd);
-    //         my_tcp->init_server_tcp(port);
-    //         std::cout << "clinet 连接!\n";
-    //         continue;
-    //         // exit(EXIT_FAILURE);
-    //     }
-    //     printf("recv : %s\n", buf);
-
-    //     int send_len = my_tcp->tcp_send(my_tcp->m_client_fd, (uint8_t*)buf, strlen(buf));
-    //     if (send_len <= 0)
-    //     {
-    //         printf("send error!\n");
-    //         my_tcp->tcp_close(my_tcp->m_client_fd);
-    //         my_tcp->tcp_close(my_tcp->m_server_fd);
-    //         exit(EXIT_FAILURE);
-    //     }
-    //     else
-    //     {
-    //         printf("send success! send: %s, send_len: %d\n", buf, send_len);
-    //     }
-    // }
-    // my_tcp->tcp_close(my_tcp->m_server_fd);
-
 }

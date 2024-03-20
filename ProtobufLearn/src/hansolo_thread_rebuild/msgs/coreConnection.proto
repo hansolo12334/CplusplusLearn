@@ -34,6 +34,8 @@ service Register{
 
     rpc RegistePublisher (RegistePublisherRequest) returns(RegistePublisherReply){}
 
+    rpc RegistOffline  (OfflineRequest) returns (OfflineReply) {}
+
 }
 
 // 申请注册时 向master发送自己的 节点名字
@@ -56,4 +58,12 @@ message RegistePublisherReply{
     string topicName=2;
     int32 port=3;
     bool registStatus=4;
+}
+message OfflineRequest{
+    string nodeName=1;
+    int32 port=2;
+}
+message OfflineReply{
+    bool status=1;
+    string nodeName=2;
 }

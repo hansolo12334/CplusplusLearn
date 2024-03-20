@@ -12,7 +12,7 @@ void bubble_sort(vector<int> &input)
 {
     for (int i = input.size(); i >0 ;i--)
     {
-        for (int j = 0; j < i-1; j++)
+        for (int j = 0; j < i - 1; j++)
             if (input[j] > input[j + 1])
             {
                 swap(input[j], input[j + 1]);

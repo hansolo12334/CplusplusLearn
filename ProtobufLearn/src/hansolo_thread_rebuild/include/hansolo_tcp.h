@@ -12,6 +12,7 @@
 #include <signal.h>
 
 #include<iostream>
+#include<string>
 
 #include "wrap.h"
 
@@ -28,6 +29,8 @@ private:
 public:
     hansolo_tcp();
     ~hansolo_tcp();
+
+    std::string sendData{};
 
     int maxi{};
     int maxfd{};
@@ -50,6 +53,7 @@ public:
     bool init_server_tcp(int port);
 
     bool tcp_server_update_once();
+    bool tcp_server_update_once_send_msg(std::string &message);
 };
 
 

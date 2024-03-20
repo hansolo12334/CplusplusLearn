@@ -1,3 +1,5 @@
+#ifndef HDEBUG_H
+#define HDEBUG_H
 #include <ostream>
 namespace Color {
 
@@ -11,6 +13,8 @@ namespace Color {
         BG_BLUE     = 44,
         BG_DEFAULT  = 49
     };
+
+
     class Modifier {
         Code code;
     public:
@@ -20,4 +24,43 @@ namespace Color {
             return os << "\033[" << mod.code << "m";
         }
     };
+
 }
+
+class hDebug
+{
+
+private:
+    Color::Modifier m_md;
+    Color::Modifier md_bk{Color::BG_DEFAULT};
+public:
+
+    hDebug(Color::Modifier md)
+        : m_md{md}
+    {
+    }
+
+    ~hDebug(){
+        std::cout << '\n';
+    }
+
+    template <typename T>
+    hDebug&  operator<<(const T &item)
+    {
+        // if(std::is_same<T,std::string>::value){
+            std::cout << m_md << item << md_bk;
+        // }
+        // else if(std::is_same<T,int>::value){
+        //     std::cout << md << item << md_bk << '\n';
+        // }
+
+        return *this;
+    }
+
+    friend std::ostream& operator<<(std::ostream& os, const hDebug& debug)
+    {
+        return os;
+    }
+};
+
+#endif
