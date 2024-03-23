@@ -21,13 +21,13 @@ int main(int argc,char **argv)
 
     auto sub = client.create_subscriber<hansolo_stdMsg>("/test_node", sub_callback);
 
-    // HansoloPublisher<hansolo_stdMsg> pub= client.create_publisher<hansolo_stdMsg>("/test_node1");
+    HansoloPublisher<hansolo_stdMsg> pub= client.create_publisher<hansolo_stdMsg>("/test_node1");
 
     while(1){
-        // hansolo_stdMsg msg;
-        // msg.data = 1222;
-        // // sleep(1);
-        // pub.pub(msg);
+        hansolo_stdMsg msg;
+        msg.data = 1222;
+        // sleep(1);
+        pub.pub(msg);
     }
 
 

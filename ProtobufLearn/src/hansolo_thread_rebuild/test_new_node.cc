@@ -18,7 +18,7 @@ int main(int argc,char **argv)
 
     HansoloPublisher<hansolo_stdMsg> pub= client.create_publisher<hansolo_stdMsg>("/test_node");
 
-    // auto sub = client.create_subscriber<hansolo_stdMsg>("/test_node1", sub_callback);
+    auto sub = client.create_subscriber<hansolo_stdMsg>("/test_node1", sub_callback);
 
     while (1)
     {
