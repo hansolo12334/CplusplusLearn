@@ -3,17 +3,36 @@
 
 
 
-ServerUnaryReactor* hansolo_master::SayRegist(CallbackServerContext*context,const RegistRequest*request,RegistReply*reply){
+ServerUnaryReactor* hansolo_master::SayRegist(CallbackServerContext*context,const RegistRequest*request,RegistReply*reply)
+{
 
-    std::string prefix{"master: "};
+    hDebug(Color::FG_GREEN)  << "节点 " << request->nodename() << " 申请注册";
+
     reply->set_nodename(request->nodename());
 
     //记录
-    node_items node;
-    node.node_name = request->nodename();
-    m_all_nodes.push_back(node);
+    bool alreadyHasSameNodeName = false;
+    for (int i = 0; i < m_all_nodes.size(); i++)
+    {
+        //目前已经有注册相同名字的节点
+        if(m_all_nodes[i].node_name==request->nodename()){
+            alreadyHasSameNodeName = true;
+            break;
+        }
+    }
+    if(alreadyHasSameNodeName){
+        reply->set_registstatus(requestStatus::RegistNodeAlreadyHaveSameNodeName);
+        hDebug(Color::FG_RED) << "已存在相同名称的节点! " << request->nodename() << '\n';
+    }
+    else{
+        node_items node;
+        node.node_name = request->nodename();
+        m_all_nodes.push_back(node);
+        reply->set_registstatus(requestStatus::RegistNodeSuccess);
+        hDebug(Color::FG_GREEN) << "节点注册成功";
+    }
 
-    hDebug(Color::FG_GREEN)  << "节点 " << request->nodename() << " 申请注册";
+
     ServerUnaryReactor *reactor = context->DefaultReactor();
     reactor->Finish(Status::OK);
     return reactor;
@@ -24,10 +43,23 @@ ServerUnaryReactor* hansolo_master::RegistePublisher(CallbackServerContext*conte
     reply->set_topicname(request->topicname());
     reply->set_port(m_port);
 
+    //首先查找 是否离线时 有否订阅者为自己注册了端口
+    // for (int i = 0; i < m_all_nodes.size();i++){
+    //     if(m_all_nodes[i].node_name=="")
+    //     for(auto pb_tps: m_all_nodes[i].publish_topics){
+    //         //发现存在话题名
+    //         if(pb_tps.published_topic_name==request->topicname() ){
+
+    //         }
+    //     }
+    // }
+
     //记录节点的申请发布的话题名称和端口
-    for (int i = 0; i < m_all_nodes.size();i++){
-        if(m_all_nodes[i].node_name==request->nodename()){
-            std::pair<std::string, int> pr{request->topicname(), m_port};
+    for (int i = 0; i < m_all_nodes.size(); i++)
+    {
+        if (m_all_nodes[i].node_name == request->nodename())
+        {
+            node_publish_item pr{request->topicname(), m_port};
             m_all_nodes[i].publish_topics.push_back(pr);
             break;
         }
@@ -35,6 +67,70 @@ ServerUnaryReactor* hansolo_master::RegistePublisher(CallbackServerContext*conte
 
     m_port++;
     hDebug(Color::FG_GREEN) << "节点 " << request->nodename() << " 申请注册 publisher端口";
+    ServerUnaryReactor *reactor = context->DefaultReactor();
+    reactor->Finish(Status::OK);
+    return reactor;
+}
+
+
+ServerUnaryReactor *hansolo_master::RegisteSubscriber(CallbackServerContext *context,
+                                          const RegisteSubscriberRequest *request,
+                                          RegisteSubscriberReply *reply)
+{
+    bool isFoundTopic = false;
+    //查询当前已注册的publisher是否有 这个请求订阅的话题名称
+    for (int i = 0; i < m_all_nodes.size();i++){
+        for (int j = 0; j < m_all_nodes[i].publish_topics.size();j++){
+            if(m_all_nodes[i].publish_topics[j].published_topic_name==request->topicname()){
+                reply->set_port(m_all_nodes[i].publish_topics[j].self_port);
+                reply->set_targetnodename(m_all_nodes[i].node_name);
+                reply->set_topicname(m_all_nodes[i].publish_topics[j].published_topic_name);
+
+                //将订阅的话题 存入申请者的列表中
+                node_subscribe_item newItem;
+                for (int m = 0; m < m_all_nodes.size();m++){
+                    if(m_all_nodes[m].node_name==request->nodename()){
+                        newItem.subscribed_topic_name = m_all_nodes[i].publish_topics[j].published_topic_name;
+                        newItem.subscribed_node_name = m_all_nodes[i].node_name;
+                        m_all_nodes[m].subscribe_topics.push_back(newItem);
+                        break;
+                    }
+                }
+                hDebug(Color::FG_GREEN) << "发布者: " << newItem.subscribed_node_name << "<-->"
+                                        << " 订阅者 " << request->nodename() << " 话题名称: " << request->topicname();
+                isFoundTopic = true;
+                break;
+            }
+        }
+    }
+    if(!isFoundTopic){
+        reply->set_registstatus(requestStatus::RegisteSubscribeTargetOffline);
+        // //给未来上线的server 提前注册一个端口ip
+        // node_subscribe_item newItem;
+        // newItem.subscribed_node_name = "";
+        // newItem.subscribed_topic_name = request->topicname();
+        // for (int i = 0; i < m_all_nodes.size();i++){
+        //     if(m_all_nodes[i].node_name==request->nodename()){
+        //         m_all_nodes[i].subscribe_topics.push_back(newItem);
+        //         break;
+        //     }
+        // }
+
+        // reply->set_port(m_port);
+        // node_publish_item pr{request->topicname(), m_port};
+        // node_items node;
+        // //名字设为空
+        // node.node_name = "";
+        // node.publish_topics.push_back(pr);
+        hDebug(Color::FG_RED) << "不存在该话题名称 现为未来的该话题发布者建立档案 发布者 '' 端口: " << m_port;
+        // m_port++;
+    }
+    else{
+        reply->set_registstatus(requestStatus::RegisteSubscribeSuccess);
+    }
+    reply->set_nodename(request->nodename());
+
+
     ServerUnaryReactor *reactor = context->DefaultReactor();
     reactor->Finish(Status::OK);
     return reactor;

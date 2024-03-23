@@ -20,6 +20,10 @@ public:
         msg.set_data(data);
         return msg;
     }
+    void write_msg(){
+        data = msg.data();
+        // msg.set_data(data);
+    }
 };
 
 #endif

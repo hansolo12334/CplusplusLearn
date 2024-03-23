@@ -1,7 +1,7 @@
 #include "tcp_socket.h"
 
-#include<string>
-#include<iostream>
+#include <iostream>
+#include <string>
 int main(int argc, char **argv)
 {
     printf("==================tcp cient==================\n");
@@ -37,21 +37,21 @@ int main(int argc, char **argv)
             printf("tcp_send error!\n");
             tcp_close(server_fd);
             exit(EXIT_FAILURE);
-            }
-            else
-            {
-                printf("send success! send: %s, send_len: %d\n", buf, send_len);
-            }
+        }
+        else
+        {
+            printf("send success! send: %s, send_len: %d\n", buf, send_len);
+        }
 
-            bzero(buf, sizeof(buf));
-            int recv_len = tcp_blocking_recv(server_fd, buf, sizeof(buf));
-            if (recv_len <= 0)
-            {
-                printf("tcp_blocking_recv error!\n");
-                tcp_close(server_fd);
-                exit(EXIT_FAILURE);
-            }
-            printf("recv : %s\n", buf);
+        bzero(buf, sizeof(buf));
+        int recv_len = tcp_blocking_recv(server_fd, buf, sizeof(buf));
+        if (recv_len <= 0)
+        {
+            printf("tcp_blocking_recv error!\n");
+            tcp_close(server_fd);
+            exit(EXIT_FAILURE);
+        }
+        printf("recv : %s\n", buf);
         // }
     }
 

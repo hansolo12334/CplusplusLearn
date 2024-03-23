@@ -40,9 +40,13 @@ using hansolo::RegistRequest;
 using hansolo::RegistePublisherReply;
 using hansolo::RegistePublisherRequest;
 
+using hansolo::RegisteSubscriberReply;
+using hansolo::RegisteSubscriberRequest;
+
 using hansolo::OfflineReply;
 using hansolo::OfflineRequest;
 
+using hansolo::requestStatus;
 
 class hansolo_master final : public Register::CallbackService
 {
@@ -51,13 +55,24 @@ private:
     int m_port{4321};
     std::unordered_map<std::string, int> m_node_names{};
 
+
+    struct node_publish_item
+    {
+        std::string published_topic_name{};
+        int self_port{};
+    };
+    struct node_subscribe_item
+    {
+        std::string subscribed_topic_name{};
+        std::string subscribed_node_name{};
+    };
     struct node_items
     {
         std::string node_name;
         //  pair 自己发布的 话题名称  端口名称
-        std::vector<std::pair<std::string,int>> publish_topics{};
+        std::vector<node_publish_item> publish_topics{};
         //  pair : 订阅的话题名称 发布该话题名称的节点名字
-        std::vector<std::pair<std::string,std::string>> subscribe_topics{};
+        std::vector<node_subscribe_item> subscribe_topics{};
     };
     std::vector<node_items> m_all_nodes{};
 
@@ -71,6 +86,10 @@ public:
     ServerUnaryReactor *RegistePublisher(CallbackServerContext *context,
                                          const RegistePublisherRequest *request,
                                          RegistePublisherReply *reply) override;
+
+    ServerUnaryReactor *RegisteSubscriber(CallbackServerContext *context,
+                                          const RegisteSubscriberRequest *request,
+                                          RegisteSubscriberReply *reply) override;
 
     ServerUnaryReactor *RegistOffline(CallbackServerContext *context,
                                          const OfflineRequest *request,

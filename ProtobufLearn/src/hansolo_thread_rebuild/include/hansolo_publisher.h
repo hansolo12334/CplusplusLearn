@@ -40,6 +40,9 @@ public:
 
     void pub(T &msg)
     {
+        if(!my_tcp->already){
+            return;
+        }
         std::string temp;
         msg.get_msg().SerializeToString(&temp);
         my_tcp->sendData = temp;

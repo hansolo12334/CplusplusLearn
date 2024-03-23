@@ -8,8 +8,8 @@
 
 void sub_callback(const hansolo_stdMsg &msg)
 {
-    hDebug(Color::FG_DEFAULT) <<"node1 recevie data "<< msg.data;
-    sleep(2);
+    hDebug(Color::FG_DEFAULT) <<"node2 recevie data "<< msg.data;
+    sleep(1);
 }
 
 
@@ -17,17 +17,12 @@ int main(int argc,char **argv)
 {
     // absl::ParseCommandLine(argc, argv);
 
-    hansolo_node client{"hansolo node1"};
+    hansolo_node client{"hansolo node2"};
 
     auto sub = client.create_subscriber<hansolo_stdMsg>("/test_node", sub_callback);
 
-    // HansoloPublisher<hansolo_stdMsg> pub= client.create_publisher<hansolo_stdMsg>("/test_node1");
-
     while(1){
-        // hansolo_stdMsg msg;
-        // msg.data = 1222;
-        // // sleep(1);
-        // pub.pub(msg);
+
     }
 
 

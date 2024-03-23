@@ -120,7 +120,7 @@ add_library(hansolo_core
     ./src/hansolo_master_new.cc
     ./src/hansolo_tcp.cc
     ./src/hansolo_tcp_thread.cc
-    ../udp/src/wrap.cc
+    ./src/wrap.cc
     )
 target_link_libraries(hansolo_core hw_grpc_proto)
 
@@ -128,6 +128,7 @@ foreach(_target
   test_new_core
   test_new_node
   test_new_node1
+  test_new_node2
 )
   add_executable(${_target} "./${_target}.cc")
   target_link_libraries(${_target}

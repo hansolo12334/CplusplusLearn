@@ -123,7 +123,7 @@ int main()
     l11->right = l22;
 
     Solution s;
-    vector<int> re = s.postorderTraversal1(root);
+    vector<int> re = s.postorderTraversal(root);
 
     for(auto r:re)
     {

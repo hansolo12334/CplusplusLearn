@@ -22,6 +22,9 @@ int main()
                 swap(vec[j], vec[j - 1]);
             }
         }
+        // for (int j = i; j > 0 && vec[j] < vec[j - 1];j++){
+        //     swap(vec[j], vec[j - 1]);
+        // }
     }
     printVector(vec);
 }

@@ -30,10 +30,14 @@ void Bind(int fd, const struct sockaddr *sa, socklen_t salen)
         perr_exit("bind error");
 }
 
-void Connect(int fd, const struct sockaddr *sa, socklen_t salen)
+bool Connect(int fd, const struct sockaddr *sa, socklen_t salen)
 {
     if (connect(fd, sa, salen) < 0)
-        perr_exit("connect error");
+    {
+        return false;
+    }
+    return true;
+    // perr_exit("connect error");
 }
 
 void Listen(int fd, int backlog)

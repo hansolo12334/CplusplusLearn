@@ -16,13 +16,13 @@ int main()
     int n = vec.size();
     for (int i = 0; i < n;i++){
         bool isSwap = false;
-        for (int j = i+1; j < n - i;j++){
+        for (int j = 1; j < n - i;j++){
             if(vec[j]<vec[j-1]){
                 swap(vec[j], vec[j-1]);
                 isSwap = true;
             }
         }
-        if(isSwap){
+        if(!isSwap){
             break;
         }
     }

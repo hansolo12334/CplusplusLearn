@@ -38,9 +38,12 @@ bool hansolo_tcp::init_server_tcp(int port)
 }
 
 
-
+/// @brief 使用select模型的tcp服务端
+/// @param message
+/// @return
 bool hansolo_tcp::tcp_server_update_once_send_msg(std::string &message)
 {
+
     int i = 0;
     rset = allset; /* structure assignment */
     nready = select(maxfd + 1, &rset, NULL, NULL, NULL);
@@ -103,11 +106,12 @@ bool hansolo_tcp::tcp_server_update_once_send_msg(std::string &message)
             }
             else
             {
-                std::cout << "收到来自 " << ntohs(cliaddr.sin_port) << " 的消息 " << std::string(buf,data_size) << std::endl;
+                // std::cout << "收到来自 " << ntohs(cliaddr.sin_port) << " 的消息 " << std::string(buf,data_size) << std::endl;
                 int j;
-                for (j = 0; j < data_size; j++){
-                    buf[j] = toupper(buf[j]);
-                }
+                // for (j = 0; j < data_size; j++){
+                //     buf[j] = toupper(buf[j]);
+                // }
+                // std::cout << "send message: " << message << std::endl;
                 Write(sockfd, message.data(), message.length());
                 // Write(sockfd, buf, data_size);
             }
@@ -118,7 +122,7 @@ bool hansolo_tcp::tcp_server_update_once_send_msg(std::string &message)
         }
 
     }
-
+    message.clear();
     return true;
 }
 bool hansolo_tcp::tcp_server_update_once()
@@ -201,4 +205,27 @@ bool hansolo_tcp::tcp_server_update_once()
     }
 
     return true;
+}
+
+
+/// @brief tcp客户端实现
+/// @param port
+/// @return
+bool hansolo_tcp::init_client_tcp(int port)
+{
+    serverfd = Socket(AF_INET, SOCK_STREAM, 0);
+    bzero(&servaddr, sizeof(struct sockaddr));
+
+    servaddr.sin_family = AF_INET;
+    servaddr.sin_port = htons(port);
+    servaddr.sin_addr.s_addr = inet_addr(SERVER_IP);
+
+    while(!Connect(serverfd, (struct sockaddr *)&servaddr, sizeof(struct sockaddr))){
+
+    }
+    // {
+    return  true;
+    // }
+
+    // return false;
 }

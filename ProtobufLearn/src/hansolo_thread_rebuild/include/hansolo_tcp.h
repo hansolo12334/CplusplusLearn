@@ -19,6 +19,8 @@
 #define MAXLINE 120
 #define SERV_PORT 8000
 
+#define SERVER_IP "127.0.0.1"
+
 class hansolo_tcp
 {
 private:
@@ -30,6 +32,7 @@ public:
     hansolo_tcp();
     ~hansolo_tcp();
 
+    //tcp服务端
     std::string sendData{};
 
     int maxi{};
@@ -54,6 +57,11 @@ public:
 
     bool tcp_server_update_once();
     bool tcp_server_update_once_send_msg(std::string &message);
+
+
+    //tcp客户端
+    int serverfd{};
+    bool init_client_tcp(int port);
 };
 
 
