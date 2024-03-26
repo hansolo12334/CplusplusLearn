@@ -695,3 +695,12 @@ add_executable(24_quiz2 ${PROJECT_SOURCE_DIR}/src/第二十四章/24_quiz/24_qui
 
 message("编译25_1.cc")
 add_executable(25_1 ${PROJECT_SOURCE_DIR}/src/第二十五章/25_1指向派生对象的基类的指针和引用/25_1.cc)
+
+message("编译25_2.cc")
+add_executable(25_2 ${PROJECT_SOURCE_DIR}/src/第二十五章/25_2虚函数和多态性/25_2.cc)
+
+message("编译25_2_test.cc")
+add_executable(25_2_test ${PROJECT_SOURCE_DIR}/src/第二十五章/25_2虚函数和多态性/25_2_test.cc)
+
+message("编译25_3.cc")
+add_executable(25_3 ${PROJECT_SOURCE_DIR}/src/第二十五章/25_3覆盖和最终说明符以及协变返回类型/25_3.cc)

@@ -39,7 +39,7 @@ void readBuffer(int new_socket, std::string &msg)
 
 
 
-/// @brief  将字符串反序列化 
+/// @brief  将字符串反序列化
 /// @param newAddressBook  test::AddressBook类
 /// @param message  获得的字符串
 void showMsg(test::AddressBook &newAddressBook,std::string &message)

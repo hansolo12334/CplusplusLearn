@@ -1,0 +1,3 @@
+/home/hansolo/CplusplusLearn/sql/build/CMakeFiles/test_sql.dir
+/home/hansolo/CplusplusLearn/sql/build/CMakeFiles/edit_cache.dir
+/home/hansolo/CplusplusLearn/sql/build/CMakeFiles/rebuild_cache.dir

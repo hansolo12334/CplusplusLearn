@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/hansolo/CplusplusLearn/sql/build",
+  "command": "/usr/local/bin/g++ -g -o CMakeFiles/test_sql.dir/test_sql.cc.o -c /home/hansolo/CplusplusLearn/sql/test_sql.cc",
+  "file": "/home/hansolo/CplusplusLearn/sql/test_sql.cc"
+}
+]

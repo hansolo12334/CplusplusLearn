@@ -1,6 +1,6 @@
 #include <unistd.h>
 #include <sys/socket.h>
-#include <arpa/inet.h> 
+#include <arpa/inet.h>
 #include <stdlib.h>
 #include <netinet/in.h>
 #include <string>
@@ -25,7 +25,7 @@ void listBook(string filePath,test::AddressBook &my_addressBook)
   // string filePath;
   // cin >> filePath;
   fstream input(filePath, ios::in | ios::binary);
-  
+
   if (!my_addressBook.ParseFromIstream(&input))
   {
     cerr << "读取文件失败\n";
@@ -35,7 +35,7 @@ void listBook(string filePath,test::AddressBook &my_addressBook)
 
 void sendMsg(int sock,string &msg)
 {
-  
+
   size_t msg_size = msg.length();
   char header[sizeof(size_t)];
   memset(header,'\0',sizeof(size_t));// 八位 全部填充为 0
