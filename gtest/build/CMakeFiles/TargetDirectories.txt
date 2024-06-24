@@ -1,0 +1,4 @@
+/home/hansolo/CplusplusLearn/gtest/build/CMakeFiles/test.dir
+/home/hansolo/CplusplusLearn/gtest/build/CMakeFiles/test2.dir
+/home/hansolo/CplusplusLearn/gtest/build/CMakeFiles/edit_cache.dir
+/home/hansolo/CplusplusLearn/gtest/build/CMakeFiles/rebuild_cache.dir

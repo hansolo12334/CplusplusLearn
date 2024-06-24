@@ -703,4 +703,7 @@ message("编译25_2_test.cc")
 add_executable(25_2_test ${PROJECT_SOURCE_DIR}/src/第二十五章/25_2虚函数和多态性/25_2_test.cc)
 
 message("编译25_3.cc")
-add_executable(25_3 ${PROJECT_SOURCE_DIR}/src/第二十五章/25_3覆盖和最终说明符以及协变返回类型/25_3.cc)
+add_executable(25_3 ${PROJECT_SOURCE_DIR}/src/第二十五章/25_3重写和最终说明符以及协变返回类型/25_3.cc)
+
+message("编译25_3_2.cc")
+add_executable(25_3_2 ${PROJECT_SOURCE_DIR}/src/第二十五章/25_3重写和最终说明符以及协变返回类型/25_3_2.cc)

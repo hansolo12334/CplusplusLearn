@@ -3,7 +3,7 @@
 int main(int argc, char **argv)
 {
     printf("==================tcp server==================\n");
-    int server_fd = tcp_init(NULL, 4321);
+    int server_fd = tcp_init("192.168.144.197", 4321);
     if (server_fd < 0)
     {
         printf("tcp_init error!\n");

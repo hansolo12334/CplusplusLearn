@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/hansolo/CplusplusLearn/gtest/build",
+  "command": "/usr/local/bin/g++ -g -o CMakeFiles/test.dir/src/test.cc.o -c /home/hansolo/CplusplusLearn/gtest/src/test.cc",
+  "file": "/home/hansolo/CplusplusLearn/gtest/src/test.cc"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/gtest/build",
+  "command": "/usr/local/bin/g++ -g -o CMakeFiles/test2.dir/src/test2.cc.o -c /home/hansolo/CplusplusLearn/gtest/src/test2.cc",
+  "file": "/home/hansolo/CplusplusLearn/gtest/src/test2.cc"
+}
+]

@@ -103,11 +103,9 @@ public:
     }
 };
 
-
-
 int main()
 {
-    string s{"{}{}{}{}()()"};
+    string s{"{{}{}{}()()}"};
     Solution ss;
     cout << ss.isValid1(s) << '\n';
     return 0;

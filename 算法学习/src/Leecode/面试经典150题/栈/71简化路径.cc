@@ -95,8 +95,8 @@ vector<string> split(const string &s,char delim)
     for(char ch:s)
     {
         if(ch==delim){
-            // ans.push_back(cur);
-            ans.push_back(move(cur));
+            ans.push_back(cur);
+            // ans.push_back(move(cur));
             cur.clear();
         }
         else{
@@ -114,7 +114,9 @@ string simplifyPath1(string path) {
     vector<string> stack{};
     for(string &name:names)
     {
-        if(name==".."){
+        cout << name << ' ';
+        if (name == "..")
+        {
             if(!stack.empty()){
                 stack.pop_back();
             }
@@ -123,6 +125,7 @@ string simplifyPath1(string path) {
             stack.push_back(move(name));
         }
     }
+    cout << '\n';
     string ans{};
     if(stack.empty()){
         ans = "/";

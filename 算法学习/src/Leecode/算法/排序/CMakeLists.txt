@@ -16,3 +16,6 @@ add_executable(quick_sort_ex1 ./练习1/快排.cc sort_tools.cc)
 add_executable(bubble_sort_ex1 ./练习1/冒泡.cc sort_tools.cc)
 add_executable(choise_sort_ex1 ./练习1/选择.cc sort_tools.cc)
 add_executable(insert_sort_ex1 ./练习1/插入.cc sort_tools.cc)
+
+#2024 0326
+add_executable(quick_sort_ex2 ./练习2/quick_sort.cc sort_tools.cc)
