@@ -1,0 +1,10 @@
+# cmake_minimum_required(VERSION 3.25)
+# project()
+add_executable(3_1_codeing_interview src/3_1_codeing_interview.cc)
+add_executable(9_1_codeing_interview src/9_1_codeing_interview.cc)
+add_executable(30_codeing_interview src/30_codeing_interview.cc)
+add_executable(6_codeing_interview src/6_codeing_interview.cc)
+add_executable(24_codeing_interview src/24_codeing_interview.cc)
+
+add_executable(35_codeing_interview src/35_codeing_interview.cc)
+add_executable(5_codeing_interview src/5_codeing_interview.cc)
