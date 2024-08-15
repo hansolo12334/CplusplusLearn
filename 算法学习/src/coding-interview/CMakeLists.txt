@@ -24,3 +24,9 @@ add_executable(32_3_coding_interview src/32_3_coding_interview.cc)
 
 add_executable(18_coding_interview src/18_coding_interview.cc)
 add_executable(22_coding_interview src/22_coding_interview.cc)
+
+add_executable(25_coding_interview src/25_coding_interview.cc)
+add_executable(52_coding_interview src/52_coding_interview.cc)
+add_executable(21_coding_interview src/21_coding_interview.cc)
+add_executable(57_1_coding_interview src/57_1_coding_interview.cc)
+add_executable(58_1_coding_interview src/58_1_coding_interview.cc)
