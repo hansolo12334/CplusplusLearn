@@ -4,7 +4,8 @@
 #include<string>
 
 #include<mysql/mysql.h>
-
+#include<regex>
+#include<boost/regex.h>
 using namespace std;
 
 
@@ -134,7 +135,7 @@ bool DataBase::implement(const std::string &sentence)
 {
     if(!m_state)
     {
-        return "";
+        return false;
     }
 
     char query[150];
@@ -181,5 +182,26 @@ int main()
     myDataBase.connect("localhost", "hansolo", "dxy6964363", "database_hansolo",3306);
 
     auto re=myDataBase.query("user");
+
+    // re = myDataBase.implement("INSERT INTO user VALUES (4, 'mark', '122545', 'asdhasi@qq.com')");
+
+    //  myDataBase.implement("insert into students values(" + idStr + ",'" + nameStr + "','" + sexStr + "'," + ageStr + ",'" + telStr + "')");
     std::cout << re << '\n';
+
+    const char *reg_esp = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}";
+    const char *passwd_esp = "^[a-zA-Z0-9][a-zA-Z0-9._!@#$%&]*$";
+    std::regex rgx(reg_esp);
+    std::regex rgx1(passwd_esp);
+    std::cmatch match;
+    const char *email = "289898@qq.com";
+    if(std::regex_search(email,rgx))
+    {
+        cout << "222\n";
+    }
+    const char *passwd = "2sa2334";
+    if(std::regex_search(passwd,rgx1))
+    {
+        cout << "444\n";
+    }
+    return 0;
 }

@@ -138,6 +138,7 @@
     "qpushbutton": "cpp",
     "qtwidgets": "cpp",
     "qtableview": "cpp",
-    "qstandarditemmodel": "cpp"
+    "qstandarditemmodel": "cpp",
+    "regex": "cpp"
   }
 }

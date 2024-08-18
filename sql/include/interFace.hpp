@@ -13,6 +13,8 @@
 #include<QStandardItemModel>
 
 
+#include<regex>
+
 #include"mysqlDataBase.hpp"
 
 
@@ -51,4 +53,5 @@ private:
   void refresh_data();
 private slots:
   void connect_to_database();
+  void insert_data();
 };

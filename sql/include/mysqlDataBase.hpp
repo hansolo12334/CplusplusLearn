@@ -21,6 +21,11 @@ public:
 
     bool connect(const std::string &ip, const std::string &name, const std::string &password, const std::string &dataBaseName, int port);
 
+    bool checkState()
+    {
+        return m_state;
+    }
+    
     bool disconnect();
     
     int getTableField(const std::string &tableName);

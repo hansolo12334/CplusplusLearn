@@ -118,7 +118,7 @@ bool DataBase::implement(const std::string &sentence)
 {
     if(!m_state)
     {
-        return "";
+        return false;
     }
 
     char query[150];
