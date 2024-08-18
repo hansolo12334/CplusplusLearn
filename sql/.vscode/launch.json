@@ -18,7 +18,8 @@
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ]
+      ],
+      "visualizerFile": "/home/hansolo/.vscode-server/data/User/workspaceStorage/e476f0202c433d55ff10b8572bcdd416/tonka3000.qtvsctools/qt.natvis.xml"
     }
   ]
 }
