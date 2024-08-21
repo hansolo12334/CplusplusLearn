@@ -69,7 +69,8 @@ int DataBase::getTableField(const std::string &tableName)
     return mysql_affected_rows(m_connect);
 }
 
-std::vector<std::vector<std::string>> DataBase::query(const std::string &tableName)
+//选择一定范围内的数据 -1 -1 是全部数据
+std::vector<std::vector<std::string>> DataBase::query(const std::string &tableName,int minIndex,int maxIndex)
 {
     if(!m_state)
     {
@@ -79,7 +80,15 @@ std::vector<std::vector<std::string>> DataBase::query(const std::string &tableNa
     int field = getTableField(tableName);
 
     char query[150];
-    sprintf(query, "SELECT * FROM %s", tableName.c_str());
+    if(minIndex<0&&maxIndex<0){
+        sprintf(query, "SELECT * FROM %s", tableName.c_str());
+    }
+    else if(minIndex>=0 && maxIndex>minIndex){
+        sprintf(query, "SELECT * FROM %s LIMIT %d, %d", tableName.c_str(),minIndex,maxIndex-minIndex);
+    }
+    else{
+        return {{}};
+    }
 
     if(mysql_query(m_connect,query))
     {
@@ -129,4 +138,87 @@ bool DataBase::implement(const std::string &sentence)
         return false;
     }
     return true;
+}
+
+
+std::vector<std::string> DataBase::getTableFieldStrings(const std::string &tableName)
+{
+  if(!m_state)
+    {
+        return {};
+    }
+
+    char query[150];
+    //命令
+    sprintf(query, "SHOW COLUMNS FROM %s", tableName.c_str());
+
+    //执行查询
+    if (mysql_query(m_connect, query))
+    {
+        return {};
+    }
+    m_res = mysql_store_result(m_connect);
+
+    std::cout << m_res << '\n';
+    auto field = mysql_affected_rows(m_connect); // 获取标头列数
+
+    std::cout << field << '\n'; 
+
+    sprintf(query, "SELECT * FROM %s", tableName.c_str());
+
+    if(mysql_query(m_connect,query))
+    {
+        return {};
+    }
+    m_res = mysql_store_result(m_connect);
+    if(!m_res)
+    {
+        return {};
+    }
+    // 将查询结果转化为字符串输出
+    m_fd.reserve(field);
+    m_field.reserve(field);
+    m_fd.resize(field);
+    m_field.resize(field);
+
+    for (int i = 0; i < field;i++){
+      m_fd[i] = mysql_fetch_field(m_res);
+      m_field[i] = m_fd[i]->name;
+    }
+
+    return m_field;
+}
+
+
+std::vector<std::string> DataBase::getTablesStrings()
+{
+  if (!m_state)
+  {
+    return {};
+  }
+
+  char query[150];
+  // 命令
+  sprintf(query, "SHOW TABLES");
+
+  if (mysql_query(m_connect, query))
+  {
+    return {};
+  }
+  m_res = mysql_store_result(m_connect);
+  if (!m_res)
+  {
+    return {};
+  }
+  auto field = mysql_affected_rows(m_connect);
+
+  std::cout << field << '\n';
+
+  std::vector<std::string> re;
+  for (int i = 0; i < field; i++)
+  {     
+      re.push_back(*mysql_fetch_row(m_res));
+  }
+
+  return re;
 }

@@ -4,6 +4,19 @@
 interFace::interFace(QWidget *parent)
     : QMainWindow(parent)
 {
+  
+  b1.setText("<");
+  b2.setText(">");
+  hblt2.addWidget(&b1);
+  for (int i = 0; i < 5; i++)
+  {
+    QLabel *l1 = new QLabel();
+    switch_labels.push_back(l1);
+    l1->setText(QString::number(i+1));
+    hblt2.addWidget(l1);
+  }
+  hblt2.addWidget(&b2);
+  switch_frame.setLayout(&hblt2);
 
   vblt1.addWidget(&m_lable1);
   vblt1.addWidget(&m_bt1);
@@ -11,18 +24,32 @@ interFace::interFace(QWidget *parent)
   vblt2.addWidget(&m_lable2);
   vblt2.addWidget(&m_bt2);
 
+  vblt4.addWidget(&m_combbx_lable);
+  vblt4.addWidget(&m_comboBx);
+
+  vblt5.addWidget(&m_refrashLb);
+  vblt5.addWidget(&m_refrashBt);
+
   hblt1.addLayout(&vblt1);
   hblt1.addLayout(&vblt2);
+  hblt1.addLayout(&vblt4);
+  hblt1.addLayout(&vblt5);
 
   m_frame1.setLayout(&hblt1);
 
+  vblt3.addWidget(&switch_frame);
   vblt3.addWidget(&m_table);
   vblt3.addWidget(&m_frame1);
+
+ 
 
   m_bt1.setText("插入");
   m_bt2.setText("连接数据库");
   m_lable1.setText("xxxxxxx");
   m_lable2.setText("ssssss");
+  m_combbx_lable.setText("选择表");
+  // m_refrashLb.setText("刷新数据");
+  m_refrashBt.setText("刷新数据");
 
   m_frame.setLayout(&vblt3);
 
@@ -30,6 +57,8 @@ interFace::interFace(QWidget *parent)
 
   connect(&m_bt1, SIGNAL(clicked()), this, SLOT(insert_data()));
   connect(&m_bt2, SIGNAL(clicked()), this, SLOT(connect_to_database()));
+  connect(&m_refrashBt, SIGNAL(clicked()), this, SLOT(refresh_data()));
+
 
   m_model.setHorizontalHeaderLabels({"id", "name", "password", "email"});
 
@@ -42,6 +71,13 @@ interFace::interFace(QWidget *parent)
 
 interFace::~interFace()
 {
+  for (int i = 0; i < switch_labels.size();i++){
+    if(switch_labels[i] == nullptr){
+      delete switch_labels[i];
+      switch_labels[i] = nullptr;
+    }
+    
+  }
 }
 
 void interFace::connect_to_database()
@@ -106,10 +142,39 @@ void interFace::connect_to_database()
 
 void interFace::refresh_data()
 {
+  
+  if(m_first_init){
 
-  auto re = m_db.query("user");
+    auto table_names = m_db.getTablesStrings();
+    if(table_names.size()<=0){
+      return;
+    }
+    m_first_init = false;
+    m_comboBx.clear();
+    for (int i = 0; i < table_names.size(); i++)
+    {
+      m_comboBx.addItem(QString::fromStdString(table_names[i]));
+    }
+    if (m_comboBx.currentIndex() < 0)
+    {
+      return;
+    }
+  }
+
+  m_table_name = m_comboBx.currentText();
+
+  qDebug() << m_table_name;
+
+  auto re = m_db.query(m_table_name.toStdString(),0,25);
   m_model.clear();
-  m_model.setHorizontalHeaderLabels({"id", "name", "password", "email"});
+
+  QStringList headerLables;
+  auto stringlabels = m_db.getTableFieldStrings(m_table_name.toStdString());
+  for (int i = 0; i < stringlabels.size();i++){
+    headerLables.append(QString::fromStdString(stringlabels[i]));
+  }
+
+  m_model.setHorizontalHeaderLabels(headerLables);
   for (int i = 0; i < re.size(); i++)
   {
     QList<QStandardItem *> lst;

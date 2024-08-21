@@ -140,6 +140,47 @@ build test_sql: CXX_EXECUTABLE_LINKER__test_sql_Debug CMakeFiles/test_sql.dir/te
   TARGET_FILE = test_sql
   TARGET_PDB = test_sql.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target test_sql_rrys
+
+
+#############################################
+# Order-only phony target for test_sql_rrys
+
+build cmake_object_order_depends_target_test_sql_rrys: phony || test_sql_rrys_autogen
+
+build CMakeFiles/test_sql_rrys.dir/test_sql_rrys_autogen/mocs_compilation.cpp.o: CXX_COMPILER__test_sql_rrys_Debug /home/hansolo/CplusplusLearn/sql/build/test_sql_rrys_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_test_sql_rrys
+  DEP_FILE = CMakeFiles/test_sql_rrys.dir/test_sql_rrys_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/hansolo/CplusplusLearn/sql/build -I/home/hansolo/CplusplusLearn/sql -I/home/hansolo/CplusplusLearn/sql/build/test_sql_rrys_autogen/include
+  OBJECT_DIR = CMakeFiles/test_sql_rrys.dir
+  OBJECT_FILE_DIR = CMakeFiles/test_sql_rrys.dir/test_sql_rrys_autogen
+
+build CMakeFiles/test_sql_rrys.dir/test_sql_rrys.cc.o: CXX_COMPILER__test_sql_rrys_Debug /home/hansolo/CplusplusLearn/sql/test_sql_rrys.cc || cmake_object_order_depends_target_test_sql_rrys
+  DEP_FILE = CMakeFiles/test_sql_rrys.dir/test_sql_rrys.cc.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/hansolo/CplusplusLearn/sql/build -I/home/hansolo/CplusplusLearn/sql -I/home/hansolo/CplusplusLearn/sql/build/test_sql_rrys_autogen/include
+  OBJECT_DIR = CMakeFiles/test_sql_rrys.dir
+  OBJECT_FILE_DIR = CMakeFiles/test_sql_rrys.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_sql_rrys
+
+
+#############################################
+# Link the executable test_sql_rrys
+
+build test_sql_rrys: CXX_EXECUTABLE_LINKER__test_sql_rrys_Debug CMakeFiles/test_sql_rrys.dir/test_sql_rrys_autogen/mocs_compilation.cpp.o CMakeFiles/test_sql_rrys.dir/test_sql_rrys.cc.o || test_sql_rrys_autogen
+  FLAGS = -g
+  LINK_FLAGS = -rdynamic
+  LINK_LIBRARIES = -lmysqlclient
+  OBJECT_DIR = CMakeFiles/test_sql_rrys.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = test_sql_rrys
+  TARGET_PDB = test_sql_rrys.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -177,6 +218,12 @@ build test_sql_autogen: phony CMakeFiles/test_sql_autogen test_sql_autogen/mocs_
 
 
 #############################################
+# Utility command for test_sql_rrys_autogen
+
+build test_sql_rrys_autogen: phony CMakeFiles/test_sql_rrys_autogen test_sql_rrys_autogen/mocs_compilation.cpp
+
+
+#############################################
 # Custom command for CMakeFiles/main_autogen
 
 build CMakeFiles/main_autogen main_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}CMakeFiles/main_autogen ${cmake_ninja_workdir}main_autogen/mocs_compilation.cpp: CUSTOM_COMMAND
@@ -193,6 +240,15 @@ build CMakeFiles/test_sql_autogen test_sql_autogen/mocs_compilation.cpp | ${cmak
   DESC = Automatic MOC for target test_sql
   restat = 1
 
+
+#############################################
+# Custom command for CMakeFiles/test_sql_rrys_autogen
+
+build CMakeFiles/test_sql_rrys_autogen test_sql_rrys_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}CMakeFiles/test_sql_rrys_autogen ${cmake_ninja_workdir}test_sql_rrys_autogen/mocs_compilation.cpp: CUSTOM_COMMAND
+  COMMAND = cd /home/hansolo/CplusplusLearn/sql/build && /usr/bin/cmake -E cmake_autogen /home/hansolo/CplusplusLearn/sql/build/CMakeFiles/test_sql_rrys_autogen.dir/AutogenInfo.json Debug
+  DESC = Automatic MOC for target test_sql_rrys
+  restat = 1
+
 # =============================================================================
 # Target aliases.
 
@@ -204,7 +260,7 @@ build CMakeFiles/test_sql_autogen test_sql_autogen/mocs_compilation.cpp | ${cmak
 #############################################
 # Folder: /home/hansolo/CplusplusLearn/sql/build
 
-build all: phony main test_sql
+build all: phony main test_sql test_sql_rrys
 
 # =============================================================================
 # Unknown Build Time Dependencies.

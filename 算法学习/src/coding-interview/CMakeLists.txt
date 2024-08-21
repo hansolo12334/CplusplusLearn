@@ -44,3 +44,9 @@ add_executable(10_1_coding_interview src/10_1_coding_interview.cc)
 add_executable(10_2_coding_interview src/10_2_coding_interview.cc)
 add_executable(63_coding_interview src/63_coding_interview.cc)
 add_executable(42_coding_interview src/42_coding_interview.cc)
+
+
+add_executable(60_coding_interview src/60_coding_interview.cc)
+add_executable(46_coding_interview src/46_coding_interview.cc)
+add_executable(48_coding_interview src/48_coding_interview.cc)
+add_executable(LRC089 src/LRC089打家劫舍.cc)

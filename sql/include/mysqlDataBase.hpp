@@ -30,7 +30,11 @@ public:
     
     int getTableField(const std::string &tableName);
 
-    std::vector<std::vector<std::string>> query(const std::string &tableName);
+    std::vector<std::vector<std::string>> query(const std::string &tableName,int minIndex,int maxIndex);
+
+    std::vector<std::string> getTableFieldStrings(const std::string &tableName);
+
+    std::vector<std::string> getTablesStrings();
 
     bool implement(const std::string &sentence);
 };

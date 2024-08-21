@@ -78,3 +78,6 @@ list(APPEND NODE_LIST ${NODE_NAME})
 
 add_executable(test_sql ./test_sql.cc)
 target_link_libraries(test_sql mysqlclient)
+
+add_executable(test_sql_rrys ./test_sql_rrys.cc)
+target_link_libraries(test_sql_rrys mysqlclient)
