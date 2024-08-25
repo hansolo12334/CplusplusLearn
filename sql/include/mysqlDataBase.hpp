@@ -5,6 +5,8 @@
 
 #include<mysql/mysql.h>
 
+#include<QStandardItemModel>
+
 class DataBase
 {
 private:
@@ -31,10 +33,15 @@ public:
     int getTableField(const std::string &tableName);
 
     std::vector<std::vector<std::string>> query(const std::string &tableName,int minIndex,int maxIndex);
+    void query(const std::string &tableName, int minIndex, int maxIndex, QStandardItemModel &q_model);
 
     std::vector<std::string> getTableFieldStrings(const std::string &tableName);
 
     std::vector<std::string> getTablesStrings();
+
+    std::string getSpecificData(const std::string &tableName,int row,int col);
+
+    void getDataSize(const std::string &tableName,int &row,int &col);
 
     bool implement(const std::string &sentence);
 };

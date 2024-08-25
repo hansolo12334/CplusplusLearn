@@ -7,7 +7,7 @@ int main(int argc,char **argv)
 
   interFace iface;
 
-  iface.resize(800, 600);
+  iface.resize(1800, 900);
 
   iface.show();
 

@@ -85,6 +85,12 @@
 			null
 		],
 		[
+			"/home/hansolo/CplusplusLearn/sql/include/myPushButton.hpp",
+			"Mu",
+			"6YEA5652QU/moc_myPushButton.cpp",
+			null
+		],
+		[
 			"/home/hansolo/CplusplusLearn/sql/include/mysqlDataBase.hpp",
 			"Mu",
 			"6YEA5652QU/moc_mysqlDataBase.cpp",
@@ -149,6 +155,7 @@
 	[
 		[ "/home/hansolo/CplusplusLearn/sql/src/interFace.cc", "Mu", null ],
 		[ "/home/hansolo/CplusplusLearn/sql/src/main.cc", "Mu", null ],
+		[ "/home/hansolo/CplusplusLearn/sql/src/myPushButton.cc", "Mu", null ],
 		[ "/home/hansolo/CplusplusLearn/sql/src/mysqlDataBase.cc", "Mu", null ]
 	],
 	"VERBOSITY" : 0

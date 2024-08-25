@@ -28,9 +28,7 @@ file(GLOB SRCS
   "src/*.cc"
   "src/*.hpp"
 )
-file(GLOB NODES
-  "nodes/*.cc"
-)
+
 
 ###
 ### QT stuff (required if you want a GUI)
@@ -70,10 +68,11 @@ get_filename_component(NODE_NAME ${NODE_FILE} NAME_WE)
 message("  - " ${NODE_NAME})
 
 add_executable(${NODE_NAME} ${NODE_FILE} ${HDRS} ${SRCS} ${UI} ${QRC})
-target_link_libraries (${NODE_NAME} ${EXTERNAL_DEPENDS_LIB} mysqlclient )
+target_link_libraries(${NODE_NAME} ${EXTERNAL_DEPENDS_LIB} mysqlclient jsoncpp)
 target_include_directories(${NODE_NAME} PRIVATE "include/")
 
 list(APPEND NODE_LIST ${NODE_NAME})
+
 
 
 add_executable(test_sql ./test_sql.cc)

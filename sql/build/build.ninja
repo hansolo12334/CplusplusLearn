@@ -73,6 +73,14 @@ build CMakeFiles/main.dir/src/interFace.cc.o: CXX_COMPILER__main_Debug /home/han
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir/src
 
+build CMakeFiles/main.dir/src/myPushButton.cc.o: CXX_COMPILER__main_Debug /home/hansolo/CplusplusLearn/sql/src/myPushButton.cc || cmake_object_order_depends_target_main
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/main.dir/src/myPushButton.cc.o.d
+  FLAGS = -g -fPIC
+  INCLUDES = -I/home/hansolo/CplusplusLearn/sql/build -I/home/hansolo/CplusplusLearn/sql -I/home/hansolo/CplusplusLearn/sql/build/main_autogen/include -I/home/hansolo/CplusplusLearn/sql/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport
+  OBJECT_DIR = CMakeFiles/main.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.dir/src
+
 build CMakeFiles/main.dir/src/mysqlDataBase.cc.o: CXX_COMPILER__main_Debug /home/hansolo/CplusplusLearn/sql/src/mysqlDataBase.cc || cmake_object_order_depends_target_main
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/main.dir/src/mysqlDataBase.cc.o.d
@@ -89,10 +97,10 @@ build CMakeFiles/main.dir/src/mysqlDataBase.cc.o: CXX_COMPILER__main_Debug /home
 #############################################
 # Link the executable main
 
-build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.o CMakeFiles/main.dir/src/main.cc.o CMakeFiles/main.dir/src/interFace.cc.o CMakeFiles/main.dir/src/mysqlDataBase.cc.o | /usr/lib/x86_64-linux-gnu/libQt5PrintSupport.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8 || main_autogen
+build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.o CMakeFiles/main.dir/src/main.cc.o CMakeFiles/main.dir/src/interFace.cc.o CMakeFiles/main.dir/src/myPushButton.cc.o CMakeFiles/main.dir/src/mysqlDataBase.cc.o | /usr/lib/x86_64-linux-gnu/libQt5PrintSupport.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8 || main_autogen
   FLAGS = -g
   LINK_FLAGS = -rdynamic
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt5PrintSupport.so.5.12.8  -lmysqlclient  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt5PrintSupport.so.5.12.8  -lmysqlclient  -ljsoncpp  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
   OBJECT_DIR = CMakeFiles/main.dir
   POST_BUILD = :
   PRE_LINK = :

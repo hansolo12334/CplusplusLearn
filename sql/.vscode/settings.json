@@ -151,6 +151,8 @@
     "codecvt": "cpp",
     "core": "cpp",
     "*.txx": "cpp",
-    "*.inc": "cpp"
+    "*.inc": "cpp",
+    "qspaceritem": "cpp",
+    "qframe": "cpp"
   }
 }

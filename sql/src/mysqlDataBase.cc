@@ -123,6 +123,56 @@ std::vector<std::vector<std::string>> DataBase::query(const std::string &tableNa
     return res;
 }
 
+void DataBase::query(const std::string &tableName,int minIndex,int maxIndex,QStandardItemModel &q_model)
+{
+    if(!m_state)
+    {
+        return ;
+    }
+
+    int field = getTableField(tableName);
+
+    char query[150];
+    if(minIndex<0&&maxIndex<0){
+        sprintf(query, "SELECT * FROM %s", tableName.c_str());
+    }
+    else if(minIndex>=0 && maxIndex>minIndex){
+        sprintf(query, "SELECT * FROM %s LIMIT %d, %d", tableName.c_str(),minIndex,maxIndex-minIndex);
+    }
+    else{
+        return;
+    }
+
+    if(mysql_query(m_connect,query))
+    {
+        return;
+    }
+    m_res = mysql_store_result(m_connect);
+    if(!m_res)
+    {
+        return;
+    }
+    // 将查询结果转化为字符串输出
+    m_fd.reserve(field);
+
+    m_fd.resize(field);
+
+    for (int i = 0; i < field;i++)
+    {
+        m_fd[i] = mysql_fetch_field(m_res);
+    }
+    
+    while(m_column=mysql_fetch_row(m_res))
+    {
+        QList<QStandardItem *> lst;
+        for (int i = 0; i < field; i++)
+        {
+            lst.push_back(new QStandardItem(QString::fromStdString(m_column[i])));
+        }
+        q_model.appendRow(lst);
+    }
+}
+
 bool DataBase::implement(const std::string &sentence)
 {
     if(!m_state)
@@ -221,4 +271,75 @@ std::vector<std::string> DataBase::getTablesStrings()
   }
 
   return re;
+}
+
+std::string DataBase::getSpecificData(const std::string &tableName,int row,int col)
+{
+    if (!m_state)
+    {
+        return "";
+    }
+
+    int field = getTableField(tableName);
+
+    char query[150];
+    // 命令
+    sprintf(query, "SELECT * FROM %s LIMIT 1 OFFSET %d",tableName.c_str(),row);
+
+    if (mysql_query(m_connect, query))
+    {
+        return "";
+    }
+
+    m_res = mysql_store_result(m_connect);
+    if(!m_res)
+    {
+        return "";
+    }
+
+    
+    std::string re;
+    while (m_column = mysql_fetch_row(m_res))
+    {
+        QList<QStandardItem *> lst;
+        for (int i = 0; i < field; i++)
+        {
+            
+            if (i == col)
+            {
+                re = m_column[i];
+                break;
+            }
+        }
+    }
+    return re;
+}
+
+
+void DataBase::getDataSize(const std::string &tableName,int &row,int &col)
+{
+    if(!m_state)
+    {
+        return;
+    }
+
+    col=getTableField(tableName);
+
+    char query[150];
+    // 命令
+    sprintf(query, "SELECT COUNT(*) FROM %s",tableName.c_str());
+    if (mysql_query(m_connect, query))
+    {
+        return;
+    }
+
+    m_res = mysql_store_result(m_connect);
+    if(!m_res)
+    {
+        return;
+    }
+    MYSQL_ROW mysqlrow=mysql_fetch_row(m_res);
+    if(mysqlrow){
+        row = atoi(mysqlrow[0]);
+    }
 }

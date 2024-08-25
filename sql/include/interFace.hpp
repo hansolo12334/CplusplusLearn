@@ -1,3 +1,6 @@
+#ifndef INTERFACE_H
+#define INTERFACE_H
+
 #include<QtWidgets/QtWidgets>
 
 #include<QPushButton>
@@ -8,6 +11,8 @@
 #include<QVBoxLayout>
 #include<QDialogButtonBox>
 #include<QMessageBox>
+#include<QSpacerItem>
+
 
 #include<QComboBox>
 #include<QTableView>
@@ -18,6 +23,9 @@
 
 #include"mysqlDataBase.hpp"
 
+#include"myPushButton.hpp"
+
+#include<jsoncpp/json/json.h>
 
 
 class interFace : public QMainWindow
@@ -30,7 +38,17 @@ public:
 private:
   DataBase m_db;
 
+  int data_rows = -1;
+  int data_cols = -1;
+  int maxShowOnePage = 100;
+  int maxPages = 1;
+  QFont m_font;
+
   QString m_table_name;
+  int m_current_switch_index = 0;
+  QStringList m_headerLables;
+
+  
 
   QFrame m_frame;
   QFrame m_frame1;
@@ -63,15 +81,39 @@ private:
   QVBoxLayout vblt4;
   QVBoxLayout vblt5;
 
+  myPushButton b11;
+  myPushButton b22;
+
   QPushButton b1;
   QPushButton b2;
-  
-  QVector<QLabel *> switch_labels;
+
+  QHBoxLayout maxItemsOnePagelt;
+  QLabel maxItemsOnePageLable;
+  QLineEdit maxItemsOnePageLineEdit;
+
+  QMenuBar mainMenuBar;
+  QMenu *chooseDataTable_action = nullptr;
+
+  QVector<QPair<QPushButton *, int>> switch_labels;
   bool m_first_init = true;
   // private:
   // void refresh_data();
+
+private:
+  bool getJsonData(std::string &str,QTreeWidget &treeWiget);
 private slots:
   void refresh_data();
   void connect_to_database();
   void insert_data();
+
+  void maxButtonEnter();
+  void maxButtonLeave();
+  void maxButtonClicked();
+
+  void switch_button_clicked();
+
+  void show_hidden_data(const QModelIndex &index);
 };
+
+
+#endif

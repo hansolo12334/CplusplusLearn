@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_interFace_t {
-    QByteArrayData data[5];
-    char stringdata0[56];
+    QByteArrayData data[12];
+    char stringdata0[160];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,11 +35,20 @@ QT_MOC_LITERAL(0, 0, 9), // "interFace"
 QT_MOC_LITERAL(1, 10, 12), // "refresh_data"
 QT_MOC_LITERAL(2, 23, 0), // ""
 QT_MOC_LITERAL(3, 24, 19), // "connect_to_database"
-QT_MOC_LITERAL(4, 44, 11) // "insert_data"
+QT_MOC_LITERAL(4, 44, 11), // "insert_data"
+QT_MOC_LITERAL(5, 56, 14), // "maxButtonEnter"
+QT_MOC_LITERAL(6, 71, 14), // "maxButtonLeave"
+QT_MOC_LITERAL(7, 86, 16), // "maxButtonClicked"
+QT_MOC_LITERAL(8, 103, 21), // "switch_button_clicked"
+QT_MOC_LITERAL(9, 125, 16), // "show_hidden_data"
+QT_MOC_LITERAL(10, 142, 11), // "QModelIndex"
+QT_MOC_LITERAL(11, 154, 5) // "index"
 
     },
     "interFace\0refresh_data\0\0connect_to_database\0"
-    "insert_data"
+    "insert_data\0maxButtonEnter\0maxButtonLeave\0"
+    "maxButtonClicked\0switch_button_clicked\0"
+    "show_hidden_data\0QModelIndex\0index"
 };
 #undef QT_MOC_LITERAL
 
@@ -49,7 +58,7 @@ static const uint qt_meta_data_interFace[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -57,14 +66,24 @@ static const uint qt_meta_data_interFace[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   29,    2, 0x08 /* Private */,
-       3,    0,   30,    2, 0x08 /* Private */,
-       4,    0,   31,    2, 0x08 /* Private */,
+       1,    0,   54,    2, 0x08 /* Private */,
+       3,    0,   55,    2, 0x08 /* Private */,
+       4,    0,   56,    2, 0x08 /* Private */,
+       5,    0,   57,    2, 0x08 /* Private */,
+       6,    0,   58,    2, 0x08 /* Private */,
+       7,    0,   59,    2, 0x08 /* Private */,
+       8,    0,   60,    2, 0x08 /* Private */,
+       9,    1,   61,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 10,   11,
 
        0        // eod
 };
@@ -78,10 +97,14 @@ void interFace::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 0: _t->refresh_data(); break;
         case 1: _t->connect_to_database(); break;
         case 2: _t->insert_data(); break;
+        case 3: _t->maxButtonEnter(); break;
+        case 4: _t->maxButtonLeave(); break;
+        case 5: _t->maxButtonClicked(); break;
+        case 6: _t->switch_button_clicked(); break;
+        case 7: _t->show_hidden_data((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject interFace::staticMetaObject = { {
@@ -113,13 +136,13 @@ int interFace::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 8)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 3;
+        _id -= 8;
     }
     return _id;
 }
