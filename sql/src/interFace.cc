@@ -36,16 +36,23 @@ interFace::interFace(QWidget *parent)
   toolMenu->addAction(refreshData_action);
   toolMenu->setFont(m_font);
 
-
-
   this->setMenuBar(&mainMenuBar);
 
   connect(quit_action, &QAction::triggered, this, [=]()
-          { auto re=QMessageBox::warning(nullptr, "提示", "退出程序?", QMessageBox::StandardButton::Yes, QMessageBox::StandardButton::No);
+        { 
+            
+          QMessageBox myBox;
+          myBox.setWindowTitle("提示");
+          myBox.setText("退出程序？");
+          myBox.setFont(m_font);
+          myBox.setStandardButtons(QMessageBox::Yes|QMessageBox::No);
+          auto re=myBox.exec();  
           if(re=QMessageBox::Yes)
           {
             exit(0);
-          } });
+          } 
+        }
+  );
   connect(connect_action, SIGNAL(triggered()), this, SLOT(connect_to_database()));
   connect(insertData_action, SIGNAL(triggered()), this, SLOT(insert_data()));
 
@@ -77,17 +84,21 @@ interFace::interFace(QWidget *parent)
   hblt2.addWidget(&b1);
   for (int i = 0; i < 5; i++)
   {
-    QPushButton *l1 = new QPushButton();
-    switch_labels.push_back({l1, i});
-    l1->setText(QString::number(i + 1));
-    l1->setObjectName(QString("switch_bt_" + QString::number(i)));
-    l1->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Minimum);
-    l1->setStyleSheet(QString("background-color: rgba(255, 255, 255,50)"));
-    l1->setFont(m_font);
-    hblt2.addWidget(l1);
+    myPushButton *b1 = new myPushButton();
+    switch_labels.push_back({b1, i});
+    b1->setText(QString::number(i + 1));
+    b1->setObjectName(QString("switch_bt_" + QString::number(i)));
+    b1->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Minimum);
+    b1->setStyleSheet(QString("background-color: rgba(255, 255, 255,50)"));
+    b1->setFont(m_font);
+    hblt2.addWidget(b1);
 
-    connect(l1, SIGNAL(clicked()), this, SLOT(switch_button_clicked()));
+    connect(b1, SIGNAL(clicked()), this, SLOT(switch_button_clicked()));
+ 
+    connect(b1,SIGNAL(myPushButtonWheelUpDown(int)), this, SLOT(switch_button_mouseWheelRolled(int)));
   }
+
+
   switch_labels[m_current_switch_index].first->setStyleSheet(QString("background-color: rgba(200, 200, 200,50)"));
   hblt2.addWidget(&b2);
   hblt2.addWidget(&b22);
@@ -105,7 +116,7 @@ interFace::interFace(QWidget *parent)
   connect(&b22, SIGNAL(myPushButtonLeave()), this, SLOT(maxButtonLeave()));
   connect(&b22, SIGNAL(clicked()), this, SLOT(maxButtonClicked()));
 
-  vblt1.addWidget(&m_lable1);
+  // vblt1.addWidget(&m_lable1);
   vblt1.addWidget(&m_bt1);
 
   // vblt2.addWidget(&m_lable2);
@@ -145,8 +156,8 @@ interFace::interFace(QWidget *parent)
 
   m_bt2.setStyleSheet(QString("background-color: rgba(180, 0, 0,150)"));
 
-  m_lable1.setText("xxxxxxx");
-  m_lable2.setText("ssssss");
+  // m_lable1.setText("xxxxxxx");
+  // m_lable2.setText("ssssss");
   m_combbx_lable.setText("选择表");
   // m_refrashLb.setText("刷新数据");
   m_refrashBt.setText("刷新数据");
@@ -180,10 +191,13 @@ interFace::interFace(QWidget *parent)
   maxItemsOnePageLineEdit.setFont(m_font);
   m_bt1.setFont(m_font);
   m_bt2.setFont(m_font);
-  m_lable1.setFont(m_font);
-  m_lable2.setFont(m_font);
+  // m_lable1.setFont(m_font);
+  // m_lable2.setFont(m_font);
   m_combbx_lable.setFont(m_font);
   m_refrashBt.setFont(m_font);
+#if DEBUG_H
+  QObject::dumpObjectTree();
+#endif
 }
 
 interFace::~interFace()
@@ -202,7 +216,12 @@ void interFace::connect_to_database()
 {
   if (m_db.checkState())
   {
-    QMessageBox::warning(nullptr, "警告", "已有打开的数据库");
+    QMessageBox myBox;
+    myBox.setWindowTitle("警告");
+    myBox.setText("已有打开的数据库");
+    myBox.setFont(m_font);
+    myBox.setStandardButtons(QMessageBox::Yes);
+    myBox.exec();
     return;
   }
   QDialog dlg;
@@ -262,11 +281,23 @@ void interFace::connect_to_database()
   {
     if (!m_db.connect(ld1.text().toStdString(), ld2.text().toStdString(), ld3.text().toStdString(), ld4.text().toStdString(), ld4.text().toInt()))
     {
-      QMessageBox::warning(&dlg, "警告", "填写错误");
+      QMessageBox myBox;
+      myBox.setWindowTitle("警告");
+      myBox.setText("填写错误");
+      myBox.setFont(m_font);
+      myBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+      myBox.exec();
+
     }
     else
     {
-      QMessageBox::warning(&dlg, "提示", "登陆成功");
+      QMessageBox myBox(&dlg);
+      myBox.setWindowTitle("提示");
+      myBox.setText("登陆成功");
+      myBox.setFont(m_font);
+      myBox.setStandardButtons(QMessageBox::Yes);
+      myBox.exec();
+
       m_bt2.setStyleSheet(QString("background-color: rgba(0, 180, 0,150)"));
       refresh_data();
       return;
@@ -294,9 +325,14 @@ void interFace::refresh_data()
       QAction *tb_action = new QAction(QString::fromStdString(table_names[i]));
       chooseDataTable_action->addAction(tb_action);
       chooseDataTable_action->setFont(m_font);
-      connect(tb_action, &QAction::triggered, this, [&]() {
 
-      });
+      connect(tb_action, &QAction::triggered, this, [&]()
+              {
+                auto tb_act = qobject_cast<QAction *>(this->sender());
+                m_table_name = tb_act->text();
+                qDebug() << m_table_name;
+                m_comboBx.setCurrentText(m_table_name);
+              });
     }
     m_comboBx.setFont(m_font);
     if (m_comboBx.currentIndex() < 0)
@@ -368,7 +404,12 @@ void interFace::insert_data()
 {
   if (!m_db.checkState())
   {
-    QMessageBox::warning(nullptr, "警告", "请先登陆");
+    QMessageBox myBox;
+    myBox.setWindowTitle("警告");
+    myBox.setText("请先登陆");
+    myBox.setStandardButtons(QMessageBox::Yes);
+    myBox.setFont(m_font);
+    myBox.exec();
     return;
   }
 
@@ -542,6 +583,7 @@ void interFace::insert_data()
 
 void interFace::switch_button_clicked()
 {
+  //处理左右两个快速返回的点击事件
   QPushButton *button = qobject_cast<QPushButton *>(this->sender());
   if (button->objectName() == "left_bt")
   {
@@ -583,7 +625,7 @@ void interFace::switch_button_clicked()
       }
     }
   }
-
+  //处理中间 索引按钮的点击事件
   for (int i = 0; i < switch_labels.size(); i++)
   {
     if (switch_labels[i].first == button)
@@ -594,6 +636,60 @@ void interFace::switch_button_clicked()
   qDebug() << m_current_switch_index;
   qDebug() << switch_labels[m_current_switch_index].second;
 
+  //改变按钮样式
+  for (int i = 0; i < switch_labels.size(); i++)
+  {
+    if (i == m_current_switch_index)
+    {
+      switch_labels[i].first->setStyleSheet(QString("background-color: rgba(200, 200, 200,50)"));
+    }
+    else
+    {
+      switch_labels[i].first->setStyleSheet(QString("background-color: rgba(255, 255, 255,50)"));
+    }
+  }
+  refresh_data();
+}
+
+
+void interFace::switch_button_mouseWheelRolled(int delta)
+{
+  if(delta<0){
+    m_current_switch_index++;
+  }
+  else{
+    m_current_switch_index--;
+  }
+
+  if (m_current_switch_index + 1 > switch_labels.size())
+  { // 索引超出 刷新switch table
+    m_current_switch_index = m_current_switch_index - 1;
+    if (switch_labels[m_current_switch_index].second + 1 < maxPages)
+    {
+      for (int i = 0; i < switch_labels.size(); i++)
+      {
+        switch_labels[i].second++;
+        switch_labels[i].first->setObjectName(QString("switch_bt_" + QString::number(switch_labels[i].second)));
+        switch_labels[i].first->setText(QString::number(switch_labels[i].second + 1));
+      }
+    }
+  }
+  else if (m_current_switch_index < 0)
+  {
+    m_current_switch_index = 0;
+    if (switch_labels[0].second > 0)
+    {
+      for (int i = 0; i < switch_labels.size(); i++)
+      {
+        switch_labels[i].second--;
+        switch_labels[i].first->setObjectName(QString("switch_bt_" + QString::number(switch_labels[i].second)));
+        switch_labels[i].first->setText(QString::number(switch_labels[i].second + 1));
+      }
+    }
+  }
+
+
+  //改变按钮样式
   for (int i = 0; i < switch_labels.size(); i++)
   {
     if (i == m_current_switch_index)
@@ -614,7 +710,8 @@ void interFace::show_hidden_data(const QModelIndex &index)
   QDialog big_data_frame;
   QTreeWidget treeWiget;
 
-  QTextEdit data_browser;
+  QTextBrowser data_browser;
+  
   QVBoxLayout vlb;
 
   big_data_frame.resize(1200, 600);
@@ -627,9 +724,15 @@ void interFace::show_hidden_data(const QModelIndex &index)
   }
   else
   {
+    QString text = QString::fromStdString(re);
+    if (checkUrl(text))
+    {
+
+    }
     vlb.addWidget(&data_browser);
-    data_browser.setText(QString::fromStdString(re));
+    data_browser.setText(text);
     data_browser.setFont(m_font);
+    data_browser.setOpenExternalLinks(true);
   }
 
   big_data_frame.setWindowTitle(m_headerLables[index.column()]);
@@ -724,6 +827,7 @@ bool interFace::getJsonData(std::string &str, QTreeWidget &treeWiget)
     for (auto it = value.begin(); it != value.end(); ++it)
     {
       QTreeWidgetItem *item = new QTreeWidgetItem();
+    
       item->setText(0, QString::fromStdString(it.key().asString()));
       QFont font = item->font(0);
       font.setPointSize(12);
@@ -734,10 +838,12 @@ bool interFace::getJsonData(std::string &str, QTreeWidget &treeWiget)
       }
       else
       {
-        item->setText(1, QString::fromStdString(it->asString()));
+        QString text = QString::fromStdString(it->asString());
+        item->setText(1, text);
         QFont font = item->font(1);
         font.setPointSize(12);
         item->setFont(1, font);
+        
       }
       item->setFlags(item->flags() | Qt::ItemIsEditable);
       parent->insertChild(0, item);
@@ -747,7 +853,32 @@ bool interFace::getJsonData(std::string &str, QTreeWidget &treeWiget)
   treeWiget.setColumnCount(2);
   treeWiget.setColumnWidth(0, 300);
   treeWiget.setColumnWidth(1, 800);
+
+  connect(&treeWiget, &QTreeWidget::itemDoubleClicked, this, [&](QTreeWidgetItem *item, int column)
+          {
+            QString label = item->text(0);
+            if (column == 0)
+            {
+              return;
+            }
+            QString text = item->text(column);
+            if (checkUrl(text))
+            {
+
+            }
+            QDialog data_frame;
+            data_frame.setWindowTitle(label);
+            QTextBrowser browser;
+            QVBoxLayout vl;
+            vl.addWidget(&browser);
+            data_frame.setLayout(&vl);
+
+            browser.setText(text);
+            data_frame.exec();
+          });
+
   QTreeWidgetItem *rootItem = new QTreeWidgetItem(&treeWiget);
+
 
   rootItem->setText(0, "root");
   QFont font = rootItem->font(0);
@@ -863,4 +994,17 @@ bool interFace::getJsonData(std::string &str, QTreeWidget &treeWiget)
   // }
 
   return true;
+}
+
+
+bool interFace::checkUrl(QString &str)
+{
+  QRegExp urlRegExp("(http(s)?://\\S+)");
+  if(urlRegExp.indexIn(str)!=-1)
+  {
+    qDebug() << "url";
+    str = "<a href=\"" + str + "\">" + str + "</a>";
+    return true;
+  }
+  return false;
 }

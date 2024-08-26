@@ -17,4 +17,8 @@ void myPushButton::leaveEvent(QEvent *event)
   emit(myPushButtonLeave());
 } 
 
+void myPushButton::wheelEvent(QWheelEvent *event) 
+{
 
+  emit myPushButtonWheelUpDown(event->delta());
+}

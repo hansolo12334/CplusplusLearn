@@ -7,6 +7,7 @@
 
 #include<QDebug>
 #include<QEvent>
+#include<QWheelEvent>
 
 class myPushButton : public QPushButton
 {
@@ -18,10 +19,13 @@ protected:
   void enterEvent(QEvent *event) override;
   void leaveEvent(QEvent *event) override;
 
+  void wheelEvent(QWheelEvent *event) override;
+
 signals:
   void myPushButtonEnter();
   void myPushButtonLeave();
 
+  void myPushButtonWheelUpDown(int delta);
 };
 
 #endif

@@ -1,6 +1,9 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
+
+#define DEBUG_H 0
+
 #include<QtWidgets/QtWidgets>
 
 #include<QPushButton>
@@ -101,6 +104,8 @@ private:
 
 private:
   bool getJsonData(std::string &str,QTreeWidget &treeWiget);
+  bool checkUrl(QString &str);
+
 private slots:
   void refresh_data();
   void connect_to_database();
@@ -111,8 +116,30 @@ private slots:
   void maxButtonClicked();
 
   void switch_button_clicked();
+  void switch_button_mouseWheelRolled(int delta);
 
   void show_hidden_data(const QModelIndex &index);
+
+protected:
+  void closeEvent(QCloseEvent *event) override
+  {
+    QMessageBox myBox;
+    myBox.setFont(m_font);
+    myBox.setWindowTitle("提示");
+    myBox.setText("退出程序?");
+    myBox.setStandardButtons(QMessageBox::Button::Yes | QMessageBox::Button::No);
+    auto re = myBox.exec();
+
+
+    if(re==QMessageBox::Yes){
+      event->accept();
+      exit(0);
+    }
+    else{
+      event->ignore();
+      return;
+    }
+  }
 };
 
 
