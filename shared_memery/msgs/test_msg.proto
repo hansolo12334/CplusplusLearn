@@ -13,4 +13,5 @@ message std_msg{
 
 message std_msg_array{
     repeated std_msg msg=1;
+    google.protobuf.Timestamp timeStamp = 2;
 }

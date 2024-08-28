@@ -58,6 +58,9 @@ int main()
     // sh_mem.write_data(data_cstr);
 
     sh_mem.unlock();
+
+ 
+
     times++;
     std::this_thread::sleep_for(std::chrono::seconds(1));
 
