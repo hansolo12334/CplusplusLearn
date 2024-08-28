@@ -1,0 +1,16 @@
+syntax="proto3";
+// import "hansoloTime.proto";
+import "google/protobuf/timestamp.proto";
+package hansolo_std;
+
+
+
+message std_msg{
+    string dataType=1;
+    int32 data=2;
+    google.protobuf.Timestamp timeStamp = 3;
+}
+
+message std_msg_array{
+    repeated std_msg msg=1;
+}

@@ -1,0 +1,37 @@
+[
+{
+  "directory": "/home/hansolo/CplusplusLearn/shared_memery/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/hansolo/CplusplusLearn/shared_memery/build -I/home/hansolo/CplusplusLearn/shared_memery/include -isystem /usr/local/include/protobuf25_1/include -g -o CMakeFiles/hw_grpc_proto.dir/test_msg.grpc.pb.cc.o -c /home/hansolo/CplusplusLearn/shared_memery/build/test_msg.grpc.pb.cc",
+  "file": "/home/hansolo/CplusplusLearn/shared_memery/build/test_msg.grpc.pb.cc"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/shared_memery/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/hansolo/CplusplusLearn/shared_memery/build -I/home/hansolo/CplusplusLearn/shared_memery/include -isystem /usr/local/include/protobuf25_1/include -g -o CMakeFiles/hw_grpc_proto.dir/test_msg.pb.cc.o -c /home/hansolo/CplusplusLearn/shared_memery/build/test_msg.pb.cc",
+  "file": "/home/hansolo/CplusplusLearn/shared_memery/build/test_msg.pb.cc"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/shared_memery/build",
+  "command": "/usr/bin/c++ -I/home/hansolo/CplusplusLearn/shared_memery/build -I/home/hansolo/CplusplusLearn/shared_memery/include -g -o CMakeFiles/test_shared_mem.dir/src/test_shared_mem.cc.o -c /home/hansolo/CplusplusLearn/shared_memery/src/test_shared_mem.cc",
+  "file": "/home/hansolo/CplusplusLearn/shared_memery/src/test_shared_mem.cc"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/shared_memery/build",
+  "command": "/usr/bin/c++ -I/home/hansolo/CplusplusLearn/shared_memery/build -I/home/hansolo/CplusplusLearn/shared_memery/include -g -o CMakeFiles/test_shared_mem2.dir/src/test_shared_mem2.cc.o -c /home/hansolo/CplusplusLearn/shared_memery/src/test_shared_mem2.cc",
+  "file": "/home/hansolo/CplusplusLearn/shared_memery/src/test_shared_mem2.cc"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/shared_memery/build",
+  "command": "/usr/bin/c++ -I/home/hansolo/CplusplusLearn/shared_memery/build -I/home/hansolo/CplusplusLearn/shared_memery/include -g -o CMakeFiles/shared_mem.dir/src/shared_mem.cc.o -c /home/hansolo/CplusplusLearn/shared_memery/src/shared_mem.cc",
+  "file": "/home/hansolo/CplusplusLearn/shared_memery/src/shared_mem.cc"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/shared_memery/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/hansolo/CplusplusLearn/shared_memery/build -I/home/hansolo/CplusplusLearn/shared_memery/include -isystem /usr/local/include/protobuf25_1/include -g -o CMakeFiles/test_sm1.dir/test_sm1.cc.o -c /home/hansolo/CplusplusLearn/shared_memery/test_sm1.cc",
+  "file": "/home/hansolo/CplusplusLearn/shared_memery/test_sm1.cc"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/shared_memery/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/hansolo/CplusplusLearn/shared_memery/build -I/home/hansolo/CplusplusLearn/shared_memery/include -isystem /usr/local/include/protobuf25_1/include -g -o CMakeFiles/test_sm2.dir/test_sm2.cc.o -c /home/hansolo/CplusplusLearn/shared_memery/test_sm2.cc",
+  "file": "/home/hansolo/CplusplusLearn/shared_memery/test_sm2.cc"
+}
+]

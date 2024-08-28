@@ -1,0 +1,8 @@
+/home/hansolo/CplusplusLearn/shared_memery/build/CMakeFiles/hw_grpc_proto.dir
+/home/hansolo/CplusplusLearn/shared_memery/build/CMakeFiles/test_shared_mem.dir
+/home/hansolo/CplusplusLearn/shared_memery/build/CMakeFiles/test_shared_mem2.dir
+/home/hansolo/CplusplusLearn/shared_memery/build/CMakeFiles/shared_mem.dir
+/home/hansolo/CplusplusLearn/shared_memery/build/CMakeFiles/test_sm1.dir
+/home/hansolo/CplusplusLearn/shared_memery/build/CMakeFiles/test_sm2.dir
+/home/hansolo/CplusplusLearn/shared_memery/build/CMakeFiles/edit_cache.dir
+/home/hansolo/CplusplusLearn/shared_memery/build/CMakeFiles/rebuild_cache.dir
