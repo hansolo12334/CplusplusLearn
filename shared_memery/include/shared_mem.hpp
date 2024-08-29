@@ -5,6 +5,8 @@
 #include <sys/shm.h>
 #include <sys/sem.h>
 
+#include<signal.h>
+
 #include <stdio.h>
 #include <string.h>
 
@@ -14,6 +16,9 @@
 #include <chrono>
 #include <thread>
 #include<algorithm>
+
+
+
 
 class shared_mem
 {
@@ -33,6 +38,10 @@ private:
   struct sembuf sem_b;
 
   static int m_count;
+
+
+  //计数值的偏移量
+  int counter_size = sizeof(int);
 
 public:
   shared_mem();

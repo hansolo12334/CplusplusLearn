@@ -33,5 +33,10 @@
   "directory": "/home/hansolo/CplusplusLearn/shared_memery/build",
   "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/hansolo/CplusplusLearn/shared_memery/build -I/home/hansolo/CplusplusLearn/shared_memery/include -isystem /usr/local/include/protobuf25_1/include -g -o CMakeFiles/test_sm2.dir/test_sm2.cc.o -c /home/hansolo/CplusplusLearn/shared_memery/test_sm2.cc",
   "file": "/home/hansolo/CplusplusLearn/shared_memery/test_sm2.cc"
+},
+{
+  "directory": "/home/hansolo/CplusplusLearn/shared_memery/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/hansolo/CplusplusLearn/shared_memery/build -I/home/hansolo/CplusplusLearn/shared_memery/include -isystem /usr/local/include/protobuf25_1/include -g -o CMakeFiles/test_sm3.dir/test_sm3.cc.o -c /home/hansolo/CplusplusLearn/shared_memery/test_sm3.cc",
+  "file": "/home/hansolo/CplusplusLearn/shared_memery/test_sm3.cc"
 }
 ]

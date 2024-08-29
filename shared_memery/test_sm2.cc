@@ -50,10 +50,12 @@ int main()
     std::cout << "-------------\nget data : " <<'\n';
     for (int i = 0; i < msg_array.msg_size(); i++){
       auto msgg = msg_array.msg(i);
-      std::cout << msgg.data() << '\n';
+      std::cout << msgg.data() << ' ';
     }
+    std::cout << '\n';
 
     times++;
+    std::cout << sh_mem.get_shm_addr() << '\n';
     std::this_thread::sleep_for(std::chrono::seconds(1));
  
   }

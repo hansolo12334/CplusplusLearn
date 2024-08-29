@@ -25,7 +25,7 @@ int main()
   hansolo_std::std_msg_array msg_array;
 
   data_example d_e;
-  while (times < 100)
+  while (times < 20)
   {
     // msg.set_datatype("ssssss");
     // msg.set_data(times);
@@ -59,7 +59,7 @@ int main()
 
     sh_mem.unlock();
 
- 
+    std::cout << sh_mem.get_shm_addr() << '\n';
 
     times++;
     std::this_thread::sleep_for(std::chrono::seconds(1));

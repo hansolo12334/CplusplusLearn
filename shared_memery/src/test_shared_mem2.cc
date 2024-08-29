@@ -53,32 +53,32 @@ int main()
 
   
 
-  while(true)
-  {
-    // 等待信号量变为0
-    sem_b.sem_op = -1; //尝试将信号量的值减1。
-    //如果信号量的值已经是0（表示共享内存正在被使用），这个操作会阻塞，直到信号量的值不为0（表示共享内存可用）
-    semop(semId, &sem_b, 1);
+  // while(true)
+  // {
+  //   // 等待信号量变为0
+  //   sem_b.sem_op = -1; //尝试将信号量的值减1。
+  //   //如果信号量的值已经是0（表示共享内存正在被使用），这个操作会阻塞，直到信号量的值不为0（表示共享内存可用）
+  //   semop(semId, &sem_b, 1);
 
-    int c_str_length;
-    memcpy(&c_str_length, shm_addr, sizeof(c_str_length));
+  //   int c_str_length;
+  //   memcpy(&c_str_length, shm_addr, sizeof(c_str_length));
 
-    char* data = new char[c_str_length + 1];
-    memcpy(data, (char*)shm_addr + sizeof(c_str_length), c_str_length);
-    data[c_str_length] = '\0';  // Add null terminator
+  //   char* data = new char[c_str_length + 1];
+  //   memcpy(data, (char*)shm_addr + sizeof(c_str_length), c_str_length);
+  //   data[c_str_length] = '\0';  // Add null terminator
 
-    std::cout << "get data  "<<data << '\n';
+  //   std::cout << "get data  "<<data << '\n';
 
 
-    // 将信号量的值增加1
-    sem_b.sem_op = 1;
-    semop(semId, &sem_b, 1);
+  //   // 将信号量的值增加1
+  //   sem_b.sem_op = 1;
+  //   semop(semId, &sem_b, 1);
     
     
 
-    std::this_thread::sleep_for(std::chrono::seconds(1));
+  //   std::this_thread::sleep_for(std::chrono::seconds(1));
 
-  }
+  // }
   // // 取出数据
   // char data[30] = {0};
   // memcpy(&data, shm_addr, sizeof(data));

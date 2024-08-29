@@ -14,6 +14,20 @@ add_library(shared_mem src/shared_mem.cc)
 
 add_executable(test_sm1 test_sm1.cc)
 add_executable(test_sm2 test_sm2.cc)
+add_executable(test_sm3 test_sm3.cc)
+
+
+# foreach( target IN  LISTS test_sm1 test_sm2 test_sm3)
+#   message("linking target:" ${target})
+#   target_link_libraries(${target} shared_mem hw_grpc_proto
+#   absl::flags
+#   absl::flags_parse
+#   ${_REFLECTION}
+#   ${_GRPC_GRPCPP}
+#   ${_PROTOBUF_LIBPROTOBUF}
+#   )
+# endforeach(target)
+
 
 target_link_libraries(test_sm1 shared_mem hw_grpc_proto
 absl::flags
@@ -31,3 +45,12 @@ hw_grpc_proto
     ${_GRPC_GRPCPP}
     ${_PROTOBUF_LIBPROTOBUF}
   )
+
+  target_link_libraries(test_sm3 shared_mem
+  hw_grpc_proto
+      absl::flags
+      absl::flags_parse
+      ${_REFLECTION}
+      ${_GRPC_GRPCPP}
+      ${_PROTOBUF_LIBPROTOBUF}
+    )

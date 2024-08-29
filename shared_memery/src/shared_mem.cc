@@ -2,19 +2,42 @@
 
 int shared_mem::m_count = 0;
 
+
+
 shared_mem::shared_mem()
 {
+
 }
 
 shared_mem::~shared_mem()
 {
-  shmdt(m_shm_addr);
+  
+  int *count = (int *)m_shm_addr;
+  --(*count);
+  int cnt=*count;
 
-  // int sh = shmctl(m_shmId, IPC_RMID, NULL);
-  // if (sh == -1)
-  // {
-  //   perror("shmctl error");
-  // }
+  shmdt(m_shm_addr);
+  if (cnt == 0)
+  {
+    std::cout << "clear shm  shared mem seg\n";
+    int sh = shmctl(m_shmId, IPC_RMID, NULL);
+    if (sh == -1)
+    {
+      perror("shmctl error");
+    }
+
+    std::cout << "clear sem  signal seg\n";
+
+    sh = semctl(m_semId, 0, IPC_RMID);
+    if (sh == -1)
+    {
+      perror("semctl error");
+    }
+
+  }
+  else{
+    std::cout << "instance remain: " << cnt << '\n';
+  }
 }
 
 bool shared_mem::init()
@@ -53,6 +76,17 @@ bool shared_mem::init()
     return false;
   }
 
+  // 计数器
+  int *count = (int *)m_shm_addr;
+  if (*count == 0)
+  {
+    *count = 1;
+  }
+  else
+  {
+    (*count)++;
+  }
+  std::cout << "count: " << *count << '\n';
   return true;
 }
 
@@ -90,17 +124,18 @@ void shared_mem::write_data(std::string &serilized_data)
 {
   const char *c_str = serilized_data.c_str();
   int str_length = serilized_data.length();
-  memcpy(m_shm_addr, &str_length, sizeof(str_length));
-  memcpy((char *)m_shm_addr + sizeof(str_length), c_str, str_length);
+  // 设置偏移量 跳过counter
+  memcpy((char *)m_shm_addr + counter_size, &str_length, sizeof(str_length));
+  memcpy((char *)m_shm_addr + counter_size + sizeof(str_length), c_str, str_length);
 }
 
 void shared_mem::read_data(std::string &serilized_data)
 {
   int c_str_length;
-  memcpy(&c_str_length, m_shm_addr, sizeof(c_str_length));
+  memcpy(&c_str_length, (char *)m_shm_addr + counter_size, sizeof(c_str_length));
 
   char *data = new char[c_str_length + 1];
-  memcpy(data, (char *)m_shm_addr+ sizeof(c_str_length), c_str_length);
+  memcpy(data, (char *)m_shm_addr + counter_size + sizeof(c_str_length), c_str_length);
   data[c_str_length] = '\0'; // Add null terminator
 
   serilized_data = std::string(data);
