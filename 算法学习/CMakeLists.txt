@@ -59,3 +59,4 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/coding-interview/)
 
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/STL/)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/operate_system/)
