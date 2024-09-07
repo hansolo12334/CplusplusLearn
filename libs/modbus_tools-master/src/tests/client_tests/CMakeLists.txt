@@ -1,0 +1,3 @@
+add_subdirectory(rtu_client_tests)
+
+add_subdirectory(tcp_client_tests)

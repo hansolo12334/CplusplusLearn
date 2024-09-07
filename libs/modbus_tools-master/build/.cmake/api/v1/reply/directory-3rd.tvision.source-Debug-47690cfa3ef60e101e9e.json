@@ -1,0 +1,85 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"3rd/tvision/source/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 139,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 147,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 157,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "library",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"3rd/tvision/libtvision.a"
+			],
+			"targetId" : "tvision::@361b3810c8cdc6975f98",
+			"targetIndex" : 1,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "library",
+			"destination" : "lib/cmake/tvision",
+			"exportName" : "tvision-config",
+			"exportTargets" : 
+			[
+				{
+					"id" : "tvision::@361b3810c8cdc6975f98",
+					"index" : 1
+				}
+			],
+			"paths" : 
+			[
+				"3rd/tvision/source/CMakeFiles/Export/92d5138e9b1ebb6cca92ea95da2cb500/tvision-config.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"3rd/tvision/include/tvision"
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "3rd/tvision/source",
+		"source" : "3rd/tvision/source"
+	}
+}

@@ -1,0 +1,180 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "3rd",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd-Debug-67ddda307163f94fc060.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "3rd"
+				},
+				{
+					"build" : "3rd/tvision",
+					"childIndexes" : 
+					[
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd.tvision-Debug-b9f606b94f8dd60f9e9f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "3rd/tvision"
+				},
+				{
+					"build" : "3rd/tvision/source",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd.tvision.source-Debug-47690cfa3ef60e101e9e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "3rd/tvision/source",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "3rd/tvision/test",
+					"jsonFile" : "directory-3rd.tvision.test-Debug-34f64944f3624eb6c5df.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "3rd/tvision/test"
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						6
+					],
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/modbus_tools",
+					"jsonFile" : "directory-src.modbus_tools-Debug-96b56b739971faa5a619.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "src/modbus_tools",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						5,
+						6
+					],
+					"name" : "modbus_test",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"name" : "tvision",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 6,
+					"id" : "modbus_tools::@0167253ac7c24064e930",
+					"jsonFile" : "target-modbus_tools-Debug-4fad775dbdc55ad6c2a0.json",
+					"name" : "modbus_tools",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "tvision::@361b3810c8cdc6975f98",
+					"jsonFile" : "target-tvision-Debug-9ac4a393097b5f3a891e.json",
+					"name" : "tvision",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/hansolo/CplusplusLearn/libs/modbus_tools-master/build",
+		"source" : "/home/hansolo/CplusplusLearn/libs/modbus_tools-master"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
