@@ -1,4 +1,0 @@
-[ZoneTransfer]
-ZoneId=3
-ReferrerUrl=https://github.com/
-HostUrl=https://objects.githubusercontent.com/github-production-release-asset-2e65be/481977/93d3e71b-1423-4aa0-951a-2adbcd42146f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20240907%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240907T063719Z&X-Amz-Expires=300&X-Amz-Signature=21c4751e786c0d12efe8fca27c38fc1d2015ea7d2b08b38fa1c101de25da68a4&X-Amz-SignedHeaders=host&actor_id=48270341&key_id=0&repo_id=481977&response-content-disposition=attachment%3B%20filename%3Dlibmodbus-3.1.10.tar.gz&response-content-type=application%2Foctet-stream
