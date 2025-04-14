@@ -60,3 +60,5 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/coding-interview/)
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/STL/)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/operate_system/)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/设计模式/)
